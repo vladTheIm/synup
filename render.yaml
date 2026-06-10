@@ -4,6 +4,11 @@ services:
     env: static
     buildCommand: npm run build
     staticPublishDir: ./dist
+    envVars:
+      - key: NODE_OPTIONS
+        value: --max-old-space-size=2048
+      - key: NODE_ENV
+        value: production
     headers:
       - path: /*
         name: X-Frame-Options
