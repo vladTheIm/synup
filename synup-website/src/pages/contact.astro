@@ -1,0 +1,60 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<BaseLayout title="Contact" description="Get in touch with SynUp Digital Solutions. Email us or reach out — we'll tell you exactly how we can help.">
+  <Nav currentPath="/contact" />
+  <main>
+    <div class="page-header">
+      <span class="section-tag">Get in touch</span>
+      <h1 class="section-title">Contact Us</h1>
+      <p class="section-sub">Tell us what you need — we'll tell you exactly how we can help.</p>
+    </div>
+
+    <section style="padding-top:0">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;max-width:900px;margin:0 auto">
+        <div>
+          <h2 class="section-title" style="font-size:clamp(20px,2.5vw,28px);margin-bottom:16px">Reach out directly</h2>
+          <p class="section-sub" style="max-width:100%">Prefer email or phone? We're here. Expect a response within 24 hours.</p>
+
+          <div style="margin-top:32px;display:flex;flex-direction:column;gap:20px">
+            <div>
+              <div style="font-size:12px;color:var(--slate);letter-spacing:0.1em;margin-bottom:4px">EMAIL</div>
+              <a href="mailto:hello@synupdigital.com" style="color:var(--cyan);text-decoration:none;font-size:16px">hello@synupdigital.com</a>
+            </div>
+            <div>
+              <div style="font-size:12px;color:var(--slate);letter-spacing:0.1em;margin-bottom:4px">PHONE</div>
+              <a href="tel:+233000000000" style="color:var(--white);text-decoration:none;font-size:16px">+233 000 000 000</a>
+            </div>
+            <div>
+              <div style="font-size:12px;color:var(--slate);letter-spacing:0.1em;margin-bottom:4px">LOCATION</div>
+              <p style="color:rgba(255,255,255,0.75);font-size:15px">Accra, Ghana</p>
+            </div>
+          </div>
+        </div>
+
+        <div style="background:var(--glass);border:1px solid var(--glass-border);border-radius:16px;padding:36px 28px">
+          <h3 style="font-family:'Syne',sans-serif;font-size:18px;font-weight:700;margin-bottom:20px">Send a message</h3>
+          <form action="mailto:hello@synupdigital.com" method="post" enctype="text/plain" style="display:flex;flex-direction:column;gap:16px">
+            <div>
+              <label for="name" style="font-size:13px;color:var(--slate);display:block;margin-bottom:6px">Name</label>
+              <input type="text" id="name" name="name" required style="width:100%;padding:10px 14px;border-radius:8px;border:1px solid var(--glass-border);background:rgba(255,255,255,0.03);color:var(--white);font-size:14px;font-family:'Inter',sans-serif;outline:none" />
+            </div>
+            <div>
+              <label for="email" style="font-size:13px;color:var(--slate);display:block;margin-bottom:6px">Email</label>
+              <input type="email" id="email" name="email" required style="width:100%;padding:10px 14px;border-radius:8px;border:1px solid var(--glass-border);background:rgba(255,255,255,0.03);color:var(--white);font-size:14px;font-family:'Inter',sans-serif;outline:none" />
+            </div>
+            <div>
+              <label for="message" style="font-size:13px;color:var(--slate);display:block;margin-bottom:6px">Message</label>
+              <textarea id="message" name="message" rows="5" required style="width:100%;padding:10px 14px;border-radius:8px;border:1px solid var(--glass-border);background:rgba(255,255,255,0.03);color:var(--white);font-size:14px;font-family:'Inter',sans-serif;outline:none;resize:vertical"></textarea>
+            </div>
+            <button type="submit" class="btn-primary" style="width:100%;text-align:center">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>

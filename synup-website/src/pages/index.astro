@@ -1,0 +1,22 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+import Hero from "../components/Hero.astro";
+import ServicesSection from "../components/ServicesSection.astro";
+import AboutSection from "../components/AboutSection.astro";
+import ProcessSection from "../components/ProcessSection.astro";
+import CTASection from "../components/CTASection.astro";
+---
+
+<BaseLayout title="Home" description="Systems management, website development, networking, and graphics design — SynUp Digital Solutions powers your business end to end.">
+  <Nav currentPath="/" />
+  <main>
+    <Hero />
+    <ServicesSection />
+    <AboutSection />
+    <ProcessSection />
+    <CTASection />
+  </main>
+  <Footer />
+</BaseLayout>
