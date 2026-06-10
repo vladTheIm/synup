@@ -3,8 +3,6 @@ const { currentPath } = Astro.props;
 const links = [
   { href: "/", label: "Home" },
   { href: "/services", label: "Services" },
-  { href: "/sms", label: "SchoolPro" },
-  { href: "/cms", label: "ChurchCMS" },
   { href: "/projects", label: "Projects" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
@@ -24,3 +22,40 @@ const links = [
   </ul>
   <a href="/contact" class="nav-cta">Get Started</a>
 </nav>
+
+<style>
+  .nav-links a {
+    position: relative;
+    padding: 4px 0;
+  }
+
+  .nav-links a::before,
+  .nav-links a::after {
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background: var(--cyan);
+    transition: width 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .nav-links a::before {
+    content: '';
+    left: 50%;
+  }
+
+  .nav-links a::after {
+    content: '';
+    right: 50%;
+  }
+
+  .nav-links a:hover::before,
+  .nav-links a:hover::after {
+    width: 50%;
+  }
+
+  .nav-links a[aria-current]::before,
+  .nav-links a[aria-current]::after {
+    width: 50%;
+  }
+</style>
