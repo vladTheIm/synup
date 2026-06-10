@@ -1,13 +1,13 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --navy: #050A18;
-  --navy2: #0C1530;
-  --indigo: #1A3ADB;
+  --navy: #011538;
+  --navy2: #0A2048;
+  --indigo: #0D3D8C;
   --cyan: #00C2FF;
-  --mid-blue: #1B6CF2;
+  --mid-blue: #114B94;
   --ice: #E8F2FF;
-  --slate: #7A8BAA;
+  --slate: #5D6B8A;
   --white: #FFFFFF;
   --glass: rgba(255,255,255,0.05);
   --glass-border: rgba(255,255,255,0.10);
