@@ -1,8 +1,0 @@
-{
-  "private": true,
-  "scripts": {
-    "dev": "cd synup-website && npm run dev",
-    "build": "cd synup-website && npm run build",
-    "preview": "cd synup-website && npm run preview"
-  }
-}
