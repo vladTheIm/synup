@@ -1,0 +1,36 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+import AboutSection from "../components/AboutSection.astro";
+import CTASection from "../components/CTASection.astro";
+---
+
+<BaseLayout title="About" description="Learn about SynUp Digital Solutions — one team with complete digital capability, serving businesses since 2019.">
+  <Nav currentPath="/about" />
+  <main>
+    <AboutSection />
+
+    <section style="background:var(--navy);text-align:center">
+      <span class="section-tag">Our Story</span>
+      <h2 class="section-title" style="max-width:600px;margin:0 auto 12px">Built from the ground up to simplify digital</h2>
+      <p class="section-sub" style="margin:0 auto 32px;max-width:640px">
+        SynUp Digital Solutions started in 2019 with a simple observation: businesses were being
+        handed off between agencies for different digital needs — systems here, websites there,
+        networks somewhere else. No single point of accountability, no coherent strategy.
+      </p>
+      <p class="section-sub" style="margin:0 auto 32px;max-width:640px">
+        We built SynUp to be that single point. One team that understands your full digital
+        ecosystem — from the server room to the website to the brand your customers see.
+      </p>
+      <p class="section-sub" style="margin:0 auto;max-width:640px;color:rgba(255,255,255,0.55)">
+        Today we've delivered over 200 projects across all four service lines, and we're still
+        growing. The team is lean, experienced, and deeply technical. Every project gets a
+        dedicated project manager, clear timelines, and transparent pricing.
+      </p>
+    </section>
+
+    <CTASection />
+  </main>
+  <Footer />
+</BaseLayout>

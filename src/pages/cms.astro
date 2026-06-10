@@ -1,0 +1,82 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+import CTASection from "../components/CTASection.astro";
+---
+
+<BaseLayout title="ChurchCMS - Church Management System" description="ChurchCMS is a comprehensive church management platform by SynUp Digital Solutions. Member management, attendance, finances, ministries, and pastoral care.">
+  <Nav currentPath="/cms" />
+  <main>
+    <div class="page-header" style="padding-bottom:40px">
+      <span class="section-tag">Product</span>
+      <h1 class="section-title">ChurchCMS</h1>
+      <p class="section-sub" style="max-width:600px">Manage your church community, finances, ministries, and pastoral care — all from one secure platform.</p>
+      <div style="margin-top:24px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+        <a href="https://cms-web-1-mwe4.onrender.com" class="btn-primary" target="_blank">Open ChurchCMS &rarr;</a>
+      </div>
+    </div>
+
+    <section style="padding-top:0;background:var(--navy2)">
+      <div style="max-width:900px;margin:0 auto">
+        <span class="section-tag">Overview</span>
+        <h2 class="section-title">Built for the church, by the church</h2>
+        <p class="section-sub" style="max-width:100%;margin-bottom:32px">
+          ChurchCMS serves 3 churches managing 600+ members with role-based access for Super Admins, Church Admins,
+          Pastors, and Members. It replaces manual record-keeping with a digital platform that every role can use.
+        </p>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:48px">
+          <div class="service-card" style="margin:0">
+            <h3 style="margin-bottom:8px">Member Management</h3>
+            <p>Complete member directory with profiles, contact info, family groupings, membership status, and engagement history.</p>
+          </div>
+          <div class="service-card" style="margin:0">
+            <h3 style="margin-bottom:8px">Attendance Tracking</h3>
+            <p>Service attendance recording, check-in for events, follow-up on absentees, and attendance trends over time.</p>
+          </div>
+          <div class="service-card" style="margin:0">
+            <h3 style="margin-bottom:8px">Financial Management</h3>
+            <p>Tithe and offering tracking, expense recording, budget management, and financial reports for church leadership.</p>
+          </div>
+          <div class="service-card" style="margin:0">
+            <h3 style="margin-bottom:8px">Ministry Management</h3>
+            <p>Ministry/department profiles, leader assignments, member participation, event planning, and communication tools.</p>
+          </div>
+          <div class="service-card" style="margin:0">
+            <h3 style="margin-bottom:8px">Pastoral Care</h3>
+            <p>Prayer request tracking, visitation logs, counseling records, follow-up scheduling, and confidential notes.</p>
+          </div>
+          <div class="service-card" style="margin:0">
+            <h3 style="margin-bottom:8px">Role-Based Access</h3>
+            <p>Four user roles — Super Admin, Church Admin, Pastor, Member — each with appropriate permissions and views tailored to their needs.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="background:var(--navy);text-align:center">
+      <span class="section-tag">Tech Stack</span>
+      <h2 class="section-title" style="max-width:500px;margin:0 auto 24px">Secure, scalable, purpose-built</h2>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;max-width:600px;margin:0 auto">
+        <span class="project-tag" style="font-size:13px;padding:6px 18px">Node.js</span>
+        <span class="project-tag" style="font-size:13px;padding:6px 18px">React</span>
+        <span class="project-tag" style="font-size:13px;padding:6px 18px">PostgreSQL</span>
+        <span class="project-tag" style="font-size:13px;padding:6px 18px">Role-Based Auth</span>
+        <span class="project-tag" style="font-size:13px;padding:6px 18px">Render Hosting</span>
+        <span class="project-tag" style="font-size:13px;padding:6px 18px">REST API</span>
+      </div>
+    </section>
+
+    <section class="cta-section" style="background:var(--navy2)">
+      <span class="section-tag">Get Started</span>
+      <h2 class="cta-title">Interested in ChurchCMS for your church?</h2>
+      <p class="cta-sub">We'll set up a demo and walk your leadership through the platform.</p>
+      <div class="cta-actions">
+        <a href="https://cms-web-1-mwe4.onrender.com" class="btn-primary" target="_blank">Try ChurchCMS &rarr;</a>
+        <a href="/contact" class="btn-ghost">Talk to Us</a>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>

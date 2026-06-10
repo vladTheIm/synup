@@ -1,0 +1,51 @@
+---
+import "../styles/global.css";
+
+export interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title} | SynUp Digital Solutions</title>
+  <meta name="description" content={description} />
+
+  <meta property="og:title" content={`${title} | SynUp Digital Solutions`} />
+  <meta property="og:description" content={description} />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://synupdigital.com" />
+  <meta property="og:image" content="https://synupdigital.com/og-image.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <script type="application/ld+json" set:html={`
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "SynUp Digital Solutions",
+      "description": "Systems management, website development, networking, and graphics design services.",
+      "url": "https://synupdigital.com",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "hello@synupdigital.com",
+        "contactType": "sales"
+      }
+    }
+  `} />
+</head>
+<body>
+  <slot />
+</body>
+</html>

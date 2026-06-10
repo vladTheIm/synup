@@ -1,0 +1,95 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+import CTASection from "../components/CTASection.astro";
+
+const featured = [
+  {
+    title: "SchoolPro — School Management System",
+    description: "A full-featured school management platform serving 50+ staff across 4 schools. Handles student records, attendance, transcripts, scheduling, exam management, and parent communication — all in one system.",
+    tags: ["Web Development", "Systems Management"],
+    link: "/sms",
+    url: "https://sms-web-1.onrender.com",
+  },
+  {
+    title: "ChurchCMS — Church Management System",
+    description: "A comprehensive church management platform used by 3 churches to manage 600+ members. Features secure role-based access (Super Admin, Church Admin, Pastor, Member), attendance tracking, ministry management, financial records, and pastoral care tools.",
+    tags: ["Web Development", "Systems Management"],
+    link: "/cms",
+    url: "https://cms-web-1-mwe4.onrender.com",
+  },
+];
+
+const projects = [
+  {
+    title: "Retail Chain Network Overhaul",
+    description: "Replaced legacy infrastructure across 12 locations with a unified wireless and wired network. Reduced downtime by 85% and cut ISP costs by 30% through centralized management.",
+    tags: ["Networking", "Systems"],
+  },
+  {
+    title: "Healthcare Provider Brand Refresh",
+    description: "Complete rebrand including logo, stationery, clinic signage, patient brochures, and digital assets. Unified visual identity across 5 locations.",
+    tags: ["Graphics Design"],
+  },
+  {
+    title: "Logistics Company IT Consolidation",
+    description: "Consolidated servers, standardized endpoints, and deployed a centralized monitoring system across 3 warehouses. Cut IT support tickets by 60%.",
+    tags: ["Systems Management"],
+  },
+];
+---
+
+<BaseLayout title="Projects" description="See our products and recent projects — SchoolPro, ChurchCMS, and more from SynUp Digital Solutions.">
+  <Nav currentPath="/projects" />
+  <main>
+    <div class="page-header">
+      <span class="section-tag">Our Work</span>
+      <h1 class="section-title">Products &amp; Projects</h1>
+      <p class="section-sub">Live products we built and maintain, plus selected projects across systems, web, networking, and design.</p>
+    </div>
+
+    <section style="padding-top:0">
+      <div style="margin-bottom:48px">
+        <h2 class="section-title" style="font-size:clamp(20px,2.5vw,28px);margin-bottom:24px">Featured Products</h2>
+        <div class="projects-grid">
+          {featured.map((p) => (
+            <a href={p.link} style="text-decoration:none;color:inherit;display:block">
+              <div class="project-card" style="border-color:rgba(0,194,255,0.25);background:rgba(0,194,255,0.03)">
+                <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px">
+                  <span class="project-tag" style="background:rgba(0,194,255,0.15);color:var(--cyan);border-color:rgba(0,194,255,0.3)">Live Product</span>
+                </div>
+                <h3>{p.title}</h3>
+                <p>{p.description}</p>
+                <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:16px">
+                  {p.tags.map((t) => <span class="project-tag">{t}</span>)}
+                </div>
+                <div style="margin-top:16px;color:var(--cyan);font-size:13px;font-weight:500">
+                  View details &rarr;
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <div>
+        <h2 class="section-title" style="font-size:clamp(20px,2.5vw,28px);margin-bottom:24px">Other Projects</h2>
+        <div class="projects-grid">
+          {projects.map((p) => (
+            <div class="project-card">
+              <h3>{p.title}</h3>
+              <p>{p.description}</p>
+              <div style="display:flex;gap:8px;flex-wrap:wrap">
+                {p.tags.map((t) => <span class="project-tag">{t}</span>)}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <CTASection />
+  </main>
+  <Footer />
+</BaseLayout>
