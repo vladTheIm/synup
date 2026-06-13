@@ -26,9 +26,9 @@ import Footer from "../components/Footer.astro";
             </div>
             <div>
               <div style="font-size:12px;color:var(--slate);letter-spacing:0.1em;margin-bottom:4px">PHONE</div>
-              <div style="display:flex;flex-direction:column;gap:4px">
-                <a href="tel:+233545733798" style="color:var(--white);text-decoration:none;font-size:16px">0545733798</a>
-                <a href="tel:+233549984981" style="color:var(--white);text-decoration:none;font-size:16px">+233 54 998 4981</a>
+              <div style="display:flex;flex-direction:column;gap:6px;margin-top:4px">
+                <a href="tel:+233545733798" style="color:#fff;text-decoration:none;font-size:16px;font-weight:500;letter-spacing:0.02em">0545733798</a>
+                <a href="tel:+233549984981" style="color:#fff;text-decoration:none;font-size:16px;font-weight:500;letter-spacing:0.02em">+233 54 998 4981</a>
               </div>
             </div>
             <div>
@@ -40,20 +40,20 @@ import Footer from "../components/Footer.astro";
 
         <div style="background:var(--glass);border:1px solid var(--glass-border);border-radius:16px;padding:36px 28px">
           <h3 style="font-family:'Syne',sans-serif;font-size:18px;font-weight:700;margin-bottom:20px">Send a message</h3>
-          <form id="contact-form" style="display:flex;flex-direction:column;gap:16px">
+          <form action="https://api.web3forms.com/submit" method="POST" style="display:flex;flex-direction:column;gap:16px">
+            <input type="hidden" name="access_key" value="76bbbe99-c42d-4362-ab3b-8d2bcd231d84" />
             <div>
               <label for="name" style="font-size:13px;color:var(--slate);display:block;margin-bottom:6px">Name</label>
-              <input type="text" id="name" name="name" required style="width:100%;padding:10px 14px;border-radius:8px;border:1px solid var(--glass-border);background:rgba(255,255,255,0.03);color:var(--white);font-size:14px;font-family:'Inter',sans-serif;outline:none" />
+              <input type="text" id="name" name="name" placeholder="Your name" required style="width:100%;padding:10px 14px;border-radius:8px;border:1px solid var(--glass-border);background:rgba(255,255,255,0.06);color:#fff;font-size:14px;font-family:'Inter',sans-serif;outline:none" />
             </div>
             <div>
               <label for="email" style="font-size:13px;color:var(--slate);display:block;margin-bottom:6px">Email</label>
-              <input type="email" id="email" name="email" required style="width:100%;padding:10px 14px;border-radius:8px;border:1px solid var(--glass-border);background:rgba(255,255,255,0.03);color:var(--white);font-size:14px;font-family:'Inter',sans-serif;outline:none" />
+              <input type="email" id="email" name="email" placeholder="your@email.com" required style="width:100%;padding:10px 14px;border-radius:8px;border:1px solid var(--glass-border);background:rgba(255,255,255,0.06);color:#fff;font-size:14px;font-family:'Inter',sans-serif;outline:none" />
             </div>
             <div>
               <label for="message" style="font-size:13px;color:var(--slate);display:block;margin-bottom:6px">Message</label>
-              <textarea id="message" name="message" rows="5" required style="width:100%;padding:10px 14px;border-radius:8px;border:1px solid var(--glass-border);background:rgba(255,255,255,0.03);color:var(--white);font-size:14px;font-family:'Inter',sans-serif;outline:none;resize:vertical"></textarea>
+              <textarea id="message" name="message" rows="5" placeholder="Tell us what you need..." required style="width:100%;padding:10px 14px;border-radius:8px;border:1px solid var(--glass-border);background:rgba(255,255,255,0.06);color:#fff;font-size:14px;font-family:'Inter',sans-serif;outline:none;resize:vertical"></textarea>
             </div>
-            <div id="form-result" style="font-size:14px;display:none"></div>
             <button type="submit" class="btn-primary" style="width:100%;text-align:center">Send Message</button>
           </form>
         </div>
@@ -63,36 +63,13 @@ import Footer from "../components/Footer.astro";
   <Footer />
 </BaseLayout>
 
-<script>
-  document.getElementById("contact-form")?.addEventListener("submit", async (e) => {
-    e.preventDefault();
-    const form = e.target;
-    const btn = form.querySelector('button[type="submit"]');
-    const result = document.getElementById("form-result");
-    const origText = btn.textContent;
-    btn.textContent = "Sending...";
-    btn.disabled = true;
-    result.style.display = "none";
-
-    const formData = new FormData(form);
-    formData.append("access_key", "2670e917-ed10-4734-879e-13741d883768");
-
-    try {
-      const res = await fetch("https://api.web3forms.com/submit", {
-        method: "POST", body: formData
-      });
-      const data = await res.json();
-      result.textContent = data.success ? "Thanks! We'll get back to you soon." : "Something went wrong. Try emailing us directly.";
-      result.style.color = data.success ? "var(--cyan)" : "var(--slate)";
-      result.style.display = "block";
-      if (data.success) form.reset();
-    } catch {
-      result.textContent = "Something went wrong. Try emailing us directly.";
-      result.style.color = "var(--slate)";
-      result.style.display = "block";
-    }
-
-    btn.textContent = origText;
-    btn.disabled = false;
-  });
-</script>
+<style>
+  input::placeholder,
+  textarea::placeholder {
+    color: rgba(255,255,255,0.3);
+  }
+  input:focus,
+  textarea:focus {
+    border-color: var(--cyan) !important;
+  }
+</style>
