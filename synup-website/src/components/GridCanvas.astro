@@ -49,7 +49,7 @@
     const COLS = cols;
     const ROWS = (pts.length / COLS) | 0;
 
-    ctx.strokeStyle = 'rgba(0, 150, 220, 0.13)';
+    ctx.strokeStyle = 'rgba(0, 84, 180, 0.16)';
     ctx.lineWidth = 0.75;
 
     for (let r = 0; r < ROWS - 1; r++) {
@@ -77,7 +77,7 @@
         const nearness = Math.hypot(p.bx - mouse.x, p.by - mouse.y);
         if (nearness < 160) {
           ctx.globalAlpha = (1 - nearness / 160) * 0.7;
-          ctx.fillStyle = `rgba(0, 200, 255, 1)`;
+          ctx.fillStyle = `rgba(0, 180, 240, 1)`;
           ctx.beginPath();
           ctx.arc(p.bx + p.ox, p.by + p.oy, 1.5, 0, Math.PI*2);
           ctx.fill();
