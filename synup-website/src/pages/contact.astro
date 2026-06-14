@@ -19,21 +19,36 @@ import Footer from "../components/Footer.astro";
           <h2 class="section-title" style="font-size:clamp(20px,2.5vw,28px);margin-bottom:16px">Reach out directly</h2>
           <p class="section-sub" style="max-width:100%">Prefer email or phone? We're here. Expect a response within 24 hours.</p>
 
-          <div style="margin-top:32px;display:flex;flex-direction:column;gap:20px">
-            <div>
-              <div style="font-size:12px;color:var(--slate);letter-spacing:0.1em;margin-bottom:4px">EMAIL</div>
-              <a href="mailto:Synupinfo@gmail.com" style="color:var(--cyan);text-decoration:none;font-size:16px">Synupinfo@gmail.com</a>
-            </div>
-            <div>
-              <div style="font-size:12px;color:var(--slate);letter-spacing:0.1em;margin-bottom:4px">PHONE</div>
-              <div style="display:flex;flex-direction:column;gap:6px;margin-top:4px">
-                <a href="tel:+233545733798" style="color:var(--ink);text-decoration:none;font-size:16px;font-weight:600;letter-spacing:0.02em">0545733798</a>
-                <a href="tel:+233549984981" style="color:var(--ink);text-decoration:none;font-size:16px;font-weight:600;letter-spacing:0.02em">+233 54 998 4981</a>
+          <div style="margin-top:32px;display:flex;flex-direction:column;gap:24px">
+            <div style="display:flex;align-items:flex-start;gap:16px">
+              <div style="flex:0 0 auto;width:46px;height:46px;border-radius:10px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,rgba(0,84,180,0.1),rgba(0,180,240,0.18));border:1px solid rgba(0,84,180,0.12)">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand-blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              </div>
+              <div>
+                <div style="font-size:11px;color:var(--slate);letter-spacing:0.12em;font-weight:700;text-transform:uppercase;margin-bottom:4px">Email</div>
+                <a href="mailto:Synupinfo@gmail.com" class="contact-link" style="color:var(--brand-blue);text-decoration:none;font-size:15px;font-weight:600">Synupinfo@gmail.com</a>
               </div>
             </div>
-            <div>
-              <div style="font-size:12px;color:var(--slate);letter-spacing:0.1em;margin-bottom:4px">LOCATION</div>
-              <p style="color:var(--slate);font-size:15px">Ataseamanso, Kumasi, Ashanti Region, Ghana</p>
+            <div style="display:flex;align-items:flex-start;gap:16px">
+              <div style="flex:0 0 auto;width:46px;height:46px;border-radius:10px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,rgba(0,84,180,0.1),rgba(0,180,240,0.18));border:1px solid rgba(0,84,180,0.12)">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand-blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div>
+                <div style="font-size:11px;color:var(--slate);letter-spacing:0.12em;font-weight:700;text-transform:uppercase;margin-bottom:4px">Phone</div>
+                <div style="display:flex;flex-direction:column;gap:3px">
+                  <a href="tel:+233545733798" class="contact-link-phone" style="color:var(--ink);text-decoration:none;font-size:15px;font-weight:600">+233 (0) 54 573 3798</a>
+                  <a href="tel:+233549984981" class="contact-link-phone" style="color:var(--ink);text-decoration:none;font-size:15px;font-weight:600">+233 (0) 54 998 4981</a>
+                </div>
+              </div>
+            </div>
+            <div style="display:flex;align-items:flex-start;gap:16px">
+              <div style="flex:0 0 auto;width:46px;height:46px;border-radius:10px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,rgba(0,84,180,0.1),rgba(0,180,240,0.18));border:1px solid rgba(0,84,180,0.12)">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand-blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <div style="font-size:11px;color:var(--slate);letter-spacing:0.12em;font-weight:700;text-transform:uppercase;margin-bottom:4px">Location</div>
+                <p style="color:rgba(0,12,48,0.72);font-size:15px;line-height:1.5">Ataseamanso, Kumasi<br/>Ashanti Region, Ghana</p>
+              </div>
             </div>
           </div>
         </div>
@@ -71,5 +86,11 @@ import Footer from "../components/Footer.astro";
   input:focus,
   textarea:focus {
     border-color: var(--brand-blue) !important;
+  }
+  .contact-link:hover {
+    color: var(--cyan) !important;
+  }
+  .contact-link-phone:hover {
+    color: var(--brand-blue) !important;
   }
 </style>
