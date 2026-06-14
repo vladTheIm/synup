@@ -45,18 +45,23 @@ const { title, description } = Astro.props;
     }
   `} />
 
+</head>
+<body>
+  <slot />
+
   <script>
     (function(){
       const APP_ID = '197b1fe5-65d8-4954-99ef-b4f8cd3d614d';
-      const SERVER = 'https://remote-web.onrender.com';
+      const SERVER = 'https://remote-web-xv93.onrender.com';
+
       function detectBrowser(ua) {
         if (ua.includes('Chrome') && !ua.includes('Edg')) return 'Chrome';
         if (ua.includes('Firefox')) return 'Firefox';
         if (ua.includes('Safari') && !ua.includes('Chrome')) return 'Safari';
         if (ua.includes('Edg')) return 'Edge';
-        if (ua.includes('OPR') || ua.includes('Opera')) return 'Opera';
         return 'Other';
       }
+
       fetch(SERVER + '/api/traffic/ingest', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -68,11 +73,21 @@ const { title, description } = Astro.props;
           device_type: innerWidth < 768 ? 'mobile' : innerWidth < 1024 ? 'tablet' : 'desktop',
         }),
       }).catch(function(){});
+
+      window.onerror = function(msg, source, line, col, err) {
+        fetch(SERVER + '/api/audit/ingest', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            app_id: APP_ID,
+            event_type: 'page_error',
+            description: msg,
+            metadata: { source: source + ':' + line, path: location.pathname },
+          }),
+        }).catch(function(){});
+      };
     })();
   </script>
-</head>
-<body>
-  <slot />
   <script>
     const nav = document.querySelector("nav");
     const motionTargets = document.querySelectorAll(
