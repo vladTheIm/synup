@@ -1,0 +1,59 @@
+
+<style>
+  .root2 { background: #F5E6D0; border-radius: 16px; padding: 8px; font-family: var(--font-sans); }
+  .browser-frame { background: #3E2010; border-radius: 14px; overflow: hidden; }
+  .browser-bar { background: #2A1408; display: flex; align-items: center; gap: 8px; padding: 10px 14px; }
+  .dot2 { width: 10px; height: 10px; border-radius: 50%; }
+  .url-bar { background: #3E2010; border-radius: 20px; padding: 4px 20px; color: #D4B896; font-size: 12px; flex: 1; text-align: center; }
+  .hero-banner { background: #7A4520; padding: 28px 24px; text-align: center; }
+  .hero-title { color: #F5E6D0; font-size: 22px; font-weight: 500; margin: 0; }
+  .content-area { padding: 20px 24px; display: flex; gap: 20px; align-items: flex-start; }
+  .text-lines { flex: 1; }
+  .line { background: #D4B896; border-radius: 4px; height: 10px; margin-bottom: 10px; }
+  .cta-btn { background: #C0392B; color: #F5E6D0; border: none; border-radius: 24px; padding: 10px 22px; font-size: 14px; font-weight: 500; margin-top: 12px; cursor: pointer; }
+  .ranking-card { background: #2A1408; border-radius: 10px; padding: 14px; min-width: 160px; }
+  .rank-label { color: #D4B896; font-size: 12px; margin: 0 0 8px; }
+  .stat-row { display: flex; gap: 12px; padding: 16px 24px 20px; }
+  .stat-card { background: #2A1408; border-radius: 10px; padding: 14px 20px; flex: 1; text-align: center; }
+  .stat-num { color: #C0392B; font-size: 22px; font-weight: 500; margin: 0; }
+  .stat-sub { color: #D4B896; font-size: 12px; margin: 4px 0 0; }
+</style>
+<div class="root2">
+  <div class="browser-frame">
+    <div class="browser-bar">
+      <span class="dot2" style="background:#C0392B"></span>
+      <span class="dot2" style="background:#e67e22"></span>
+      <span class="dot2" style="background:#2ecc71"></span>
+      <div class="url-bar">yourwebsite.com</div>
+    </div>
+    <div class="hero-banner">
+      <p class="hero-title">Grow your online presence</p>
+    </div>
+    <div class="content-area">
+      <div class="text-lines">
+        <div class="line" style="width:90%"></div>
+        <div class="line" style="width:70%"></div>
+        <div class="line" style="width:80%"></div>
+        <button class="cta-btn">Get started →</button>
+      </div>
+      <div class="ranking-card">
+        <p class="rank-label">Search ranking</p>
+        <svg viewBox="0 0 140 80" xmlns="http://www.w3.org/2000/svg" style="width:100%;">
+          <polyline points="10,70 40,65 70,55 100,35 130,10" fill="none" stroke="#C0392B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="130" cy="10" r="4" fill="#C0392B"/>
+          <text x="134" y="14" fill="#F5E6D0" font-size="11">#1</text>
+        </svg>
+      </div>
+    </div>
+    <div class="stat-row">
+      <div class="stat-card">
+        <p class="stat-num">3x</p>
+        <p class="stat-sub">inbound enquiries</p>
+      </div>
+      <div class="stat-card">
+        <p class="stat-num">62%</p>
+        <p class="stat-sub">faster page load</p>
+      </div>
+    </div>
+  </div>
+</div>

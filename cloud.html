@@ -1,0 +1,70 @@
+
+<style>
+  .root { background: #F5E6D0; border-radius: 16px; padding: 28px; font-family: var(--font-sans); }
+  .server-box { background: #3E2010; border-radius: 10px; padding: 10px 16px; display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; color: #F5E6D0; font-size: 14px; font-weight: 500; width: 160px; }
+  .dot { width: 10px; height: 10px; border-radius: 50%; }
+  .section-label { color: #3E2010; font-size: 13px; font-weight: 500; margin-bottom: 10px; }
+  .cloud-label { font-size: 20px; font-weight: 700; fill: #3E2010; }
+  .cloud-sub { font-size: 13px; fill: #7A4520; }
+  .device-box { background: #3E2010; border-radius: 10px; padding: 10px 20px; color: #F5E6D0; font-size: 13px; font-weight: 500; text-align: center; }
+  .cost-bar-bg { background: #D4B896; border-radius: 6px; height: 14px; margin: 6px 0 12px; overflow: hidden; }
+  .bar-label { font-size: 13px; color: #3E2010; font-weight: 500; margin-bottom: 2px; }
+  .cost-box { background: #3E2010; border-radius: 12px; padding: 20px; margin-top: 24px; }
+  .cost-title { color: #D4B896; font-size: 13px; font-weight: 500; }
+  .reduction-badge { color: #C0392B; font-size: 26px; font-weight: 700; }
+  .reduction-sub { color: #D4B896; font-size: 12px; }
+</style>
+<div class="root">
+  <div style="display: flex; gap: 32px; align-items: center; flex-wrap: wrap;">
+    <div>
+      <p class="section-label">On-premise</p>
+      <div class="server-box"><span>Server 01</span><span class="dot" style="background:#2ecc71"></span></div>
+      <div class="server-box"><span>Server 02</span><span class="dot" style="background:#2ecc71"></span></div>
+      <div class="server-box"><span>Server 03</span><span class="dot" style="background:#e67e22"></span></div>
+      <div class="server-box"><span>Server 04</span><span class="dot" style="background:#C0392B"></span></div>
+      <div class="server-box"><span>Server 05</span><span class="dot" style="background:#2ecc71"></span></div>
+    </div>
+    <div style="flex: 1; min-width: 240px;">
+      <svg viewBox="0 0 340 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:340px;">
+        <ellipse cx="185" cy="70" rx="130" ry="65" fill="#3E2010" opacity="0.12"/>
+        <ellipse cx="175" cy="60" rx="100" ry="50" fill="none" stroke="#7A4520" stroke-width="2"/>
+        <ellipse cx="195" cy="75" rx="80" ry="40" fill="none" stroke="#7A4520" stroke-width="2"/>
+        <ellipse cx="175" cy="68" rx="58" ry="30" fill="#3E2010" opacity="0.08"/>
+        <text x="178" y="65" text-anchor="middle" class="cloud-label">Cloud</text>
+        <text x="178" y="82" text-anchor="middle" class="cloud-sub">Infrastructure</text>
+        <line x1="145" y1="105" x2="100" y2="148" stroke="#C0392B" stroke-width="1.5" stroke-dasharray="5,4"/>
+        <polygon points="98,152 100,144 106,148" fill="#C0392B"/>
+        <line x1="178" y1="108" x2="178" y2="148" stroke="#C0392B" stroke-width="1.5" stroke-dasharray="5,4"/>
+        <polygon points="175,152 178,144 181,148" fill="#C0392B"/>
+        <line x1="210" y1="105" x2="255" y2="148" stroke="#C0392B" stroke-width="1.5" stroke-dasharray="5,4"/>
+        <polygon points="252,152 255,144 258,148" fill="#C0392B"/>
+        <rect x="55" y="152" width="90" height="32" rx="8" fill="#3E2010"/>
+        <text x="100" y="172" text-anchor="middle" fill="#F5E6D0" font-size="13" font-weight="500">Laptop</text>
+        <rect x="133" y="152" width="90" height="32" rx="8" fill="#3E2010"/>
+        <text x="178" y="172" text-anchor="middle" fill="#F5E6D0" font-size="13" font-weight="500">Mobile</text>
+        <rect x="210" y="152" width="90" height="32" rx="8" fill="#3E2010"/>
+        <text x="255" y="172" text-anchor="middle" fill="#F5E6D0" font-size="13" font-weight="500">Remote</text>
+        <line x1="10" y1="38" x2="118" y2="38" stroke="#7A4520" stroke-width="1.5" stroke-dasharray="5,4"/>
+        <polygon points="114,35 120,38 114,41" fill="#7A4520"/>
+        <line x1="10" y1="58" x2="118" y2="58" stroke="#7A4520" stroke-width="1.5" stroke-dasharray="5,4"/>
+        <polygon points="114,55 120,58 114,61" fill="#7A4520"/>
+        <line x1="10" y1="78" x2="118" y2="78" stroke="#7A4520" stroke-width="1.5" stroke-dasharray="5,4"/>
+        <polygon points="114,75 120,78 114,81" fill="#7A4520"/>
+      </svg>
+    </div>
+  </div>
+  <div class="cost-box">
+    <div style="display:flex; justify-content:space-between; align-items:center;">
+      <div style="flex:1;">
+        <p class="cost-title">Cost before migration</p>
+        <div class="cost-bar-bg"><div style="background:#C0392B;height:100%;width:88%;border-radius:6px;"></div></div>
+        <p class="cost-title">Cost after migration</p>
+        <div class="cost-bar-bg"><div style="background:#7A4520;height:100%;width:48%;border-radius:6px;"></div></div>
+      </div>
+      <div style="margin-left:24px; text-align:right;">
+        <p class="reduction-badge">-40%</p>
+        <p class="reduction-sub">cost reduction</p>
+      </div>
+    </div>
+  </div>
+</div>
