@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Systems Management Projects — SynUp Digital Solutions</title>
+<meta name="description" content="Explore SynUp's systems management projects including school management systems, IT infrastructure, and more." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.32.0/dist/tabler-icons.min.css" />
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:#0a0a0a;color:#fff}
+.sc-nav{display:flex;align-items:center;justify-content:space-between;padding:18px 48px;background:#0a0a0a;border-bottom:1px solid rgba(255,255,255,0.08);position:sticky;top:0;z-index:100}
+.sc-logo{font-size:20px;font-weight:700;color:#fff;text-decoration:none;letter-spacing:-0.5px}
+.sc-nav-links{display:flex;gap:32px}
+.sc-nav-links a{color:rgba(255,255,255,0.6);text-decoration:none;font-size:14px;font-weight:500;transition:color .2s;position:relative;padding:4px 0}
+.sc-nav-links a::before,.sc-nav-links a::after{content:'';position:absolute;bottom:0;height:2px;width:0;background:linear-gradient(90deg,#7c5cfc,#a78bfa);transition:width 0.35s cubic-bezier(0.22,1,0.36,1)}
+.sc-nav-links a::before{left:50%}
+.sc-nav-links a::after{right:50%}
+.sc-nav-links a:hover::before,.sc-nav-links a:hover::after{width:50%}
+.sc-nav-links a:hover{color:#fff}
+.sc-nav-right{display:flex;gap:12px;align-items:center}
+.sc-btn-primary{background:#fff;color:#0a0a0a;padding:8px 18px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;text-decoration:none;transition:opacity .2s;border:none}
+.sc-btn-primary:hover{opacity:0.88}
+.sc-section-label{font-size:12px;color:#7c5cfc;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;margin-bottom:14px}
+.sc-section-h2{font-size:42px;font-weight:800;letter-spacing:-1.5px;color:#fff;margin-bottom:16px;line-height:1.1}
+.sc-projects-sub{font-size:17px;color:rgba(255,255,255,0.5);max-width:560px;line-height:1.7;font-weight:400;margin-bottom:48px}
+.sc-hero{padding:80px 48px 40px}
+.sc-project-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;padding:0 48px 80px}
+.sc-project-card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:14px;overflow:hidden;transition:border-color .2s}
+.sc-project-card:hover{border-color:rgba(255,255,255,0.16)}
+.sc-project-img{aspect-ratio:16/10;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.sc-project-img img{width:100%;height:100%;object-fit:cover}
+.sc-project-body{padding:24px}
+.sc-project-meta{display:flex;gap:8px;align-items:center;margin-bottom:10px}
+.sc-project-tag{font-size:11px;font-weight:600;color:#7c5cfc;background:rgba(124,92,252,0.1);padding:3px 8px;border-radius:100px}
+.sc-project-card h3{font-size:18px;font-weight:700;letter-spacing:-0.3px;color:#fff;margin-bottom:8px;line-height:1.35}
+.sc-project-card p{font-size:14px;color:rgba(255,255,255,0.5);line-height:1.6;margin-bottom:16px}
+.sc-project-stats{display:flex;gap:24px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.06)}
+.sc-project-stat-num{font-size:18px;font-weight:800;color:#7c5cfc}
+.sc-project-stat-desc{font-size:12px;color:rgba(255,255,255,0.35);margin-top:2px}
+.sc-back-link{display:inline-flex;align-items:center;gap:6px;color:rgba(255,255,255,0.5);text-decoration:none;font-size:14px;margin-bottom:32px;transition:color .2s}
+.sc-back-link:hover{color:#fff}
+@media(max-width:768px){
+  .sc-nav-links,.sc-nav-right{display:none}
+  .sc-nav{padding:16px 20px}
+  .sc-hero{padding:60px 20px 24px}
+  .sc-section-h2{font-size:28px}
+  .sc-project-grid{grid-template-columns:1fr;padding:0 20px 60px}
+}
+</style>
+</head>
+<body>
+
+<nav class="sc-nav">
+  <a href="/" class="sc-logo"><img src="/logo.jpeg" alt="SynUp" style="height:32px;width:auto;display:block"></a>
+  <div class="sc-nav-links">
+    <a href="/">Home</a>
+    <a href="/#services">Services</a>
+    <a href="/#projects">Projects</a>
+    <a href="/#about">About</a>
+    <a href="/#contact">Contact</a>
+  </div>
+  <div class="sc-nav-right">
+    <a href="/#contact" class="sc-btn-primary">Get Started</a>
+  </div>
+</nav>
+
+<section class="sc-hero">
+  <a href="/" class="sc-back-link"><i class="ti ti-arrow-left"></i> Back to home</a>
+  <div class="sc-section-label">Systems Management</div>
+  <h1 class="sc-section-h2">Our Systems Management Projects</h1>
+  <p class="sc-projects-sub">From school management platforms to enterprise IT infrastructure — here are some of the systems we've built and managed for our clients.</p>
+</section>
+
+<div class="sc-project-grid">
+  <div class="sc-project-card">
+    <div class="sc-project-img"><img src="/schoolpro.jpeg" alt="School Pro"></div>
+    <div class="sc-project-body">
+      <div class="sc-project-meta"><span class="sc-project-tag">Education</span></div>
+      <h3>School Pro — School Management System</h3>
+      <p>A comprehensive platform for managing student records, attendance, report cards, staff data, and multi-school administration.</p>
+      <div class="sc-project-stats">
+        <div><div class="sc-project-stat-num">4+</div><div class="sc-project-stat-desc">schools</div></div>
+        <div><div class="sc-project-stat-num">800+</div><div class="sc-project-stat-desc">students</div></div>
+        <div><div class="sc-project-stat-num">40+</div><div class="sc-project-stat-desc">staff</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc-project-card">
+    <div class="sc-project-img" style="background:rgba(124,92,252,0.08)"><div style="font-size:48px;color:rgba(124,92,252,0.3)">🖥️</div></div>
+    <div class="sc-project-body">
+      <div class="sc-project-meta"><span class="sc-project-tag">IT Infrastructure</span></div>
+      <h3>Office Network & Systems Setup</h3>
+      <p>Complete IT infrastructure setup for a mid-size business including servers, workstations, firewall configuration, and backup systems.</p>
+      <div class="sc-project-stats">
+        <div><div class="sc-project-stat-num">30+</div><div class="sc-project-stat-desc">workstations</div></div>
+        <div><div class="sc-project-stat-num">99.9%</div><div class="sc-project-stat-desc">uptime</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc-project-card">
+    <div class="sc-project-img" style="background:rgba(124,92,252,0.08)"><div style="font-size:48px;color:rgba(124,92,252,0.3)">☁️</div></div>
+    <div class="sc-project-body">
+      <div class="sc-project-meta"><span class="sc-project-tag">Cloud</span></div>
+      <h3>Cloud Migration & Management</h3>
+      <p>Migrated on-premise systems to cloud infrastructure, reducing costs and improving accessibility for remote teams.</p>
+      <div class="sc-project-stats">
+        <div><div class="sc-project-stat-num">40%</div><div class="sc-project-stat-desc">cost reduction</div></div>
+        <div><div class="sc-project-stat-num">3x</div><div class="sc-project-stat-desc">faster access</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc-project-card">
+    <div class="sc-project-img" style="background:rgba(124,92,252,0.08)"><div style="font-size:48px;color:rgba(124,92,252,0.3)">🔐</div></div>
+    <div class="sc-project-body">
+      <div class="sc-project-meta"><span class="sc-project-tag">Security</span></div>
+      <h3>Network Security & Firewall Setup</h3>
+      <p>Comprehensive security audit, firewall configuration, and monitoring system for a financial services firm handling sensitive data.</p>
+      <div class="sc-project-stats">
+        <div><div class="sc-project-stat-num">100%</div><div class="sc-project-stat-desc">threat blocked</div></div>
+        <div><div class="sc-project-stat-num">24/7</div><div class="sc-project-stat-desc">monitoring</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

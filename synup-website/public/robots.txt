@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://synupdigital.com/sitemap-index.xml
