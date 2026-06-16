@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Synup Church Connect — Church Management System | SynUp</title>
+<meta name="description" content="Synup Church Connect — a web-based church management tool for members, attendance, finances, events, and more." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.32.0/dist/tabler-icons.min.css" />
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:#0a0a0a;color:#fff}
+.sc-nav{display:flex;align-items:center;justify-content:space-between;padding:18px 48px;background:#0a0a0a;border-bottom:1px solid rgba(255,255,255,0.08);position:sticky;top:0;z-index:100}
+.sc-nav-links{display:flex;gap:32px}
+.sc-nav-links a{color:rgba(255,255,255,0.6);text-decoration:none;font-size:14px;font-weight:500;transition:color .2s;position:relative;padding:4px 0}
+.sc-nav-links a::before,.sc-nav-links a::after{content:'';position:absolute;bottom:0;height:2px;width:0;background:linear-gradient(90deg,#7c5cfc,#a78bfa);transition:width 0.35s cubic-bezier(0.22,1,0.36,1)}
+.sc-nav-links a::before{left:50%}
+.sc-nav-links a::after{right:50%}
+.sc-nav-links a:hover::before,.sc-nav-links a:hover::after{width:50%}
+.sc-nav-links a:hover{color:#fff}
+.sc-nav-right{display:flex;gap:12px;align-items:center}
+.sc-btn-primary{background:#fff;color:#0a0a0a;padding:8px 18px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;text-decoration:none;transition:opacity .2s;border:none}
+.sc-btn-primary:hover{opacity:0.88}
+.sc-section-label{font-size:12px;color:#7c5cfc;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;margin-bottom:14px}
+.sc-section-h2{font-size:42px;font-weight:800;letter-spacing:-1.5px;color:#fff;margin-bottom:16px;line-height:1.1}
+.sc-back-link{display:inline-flex;align-items:center;gap:6px;color:rgba(255,255,255,0.5);text-decoration:none;font-size:14px;margin-bottom:32px;transition:color .2s}
+.sc-back-link:hover{color:#fff}
+.solution-hero{padding:80px 48px 40px;text-align:center}
+.solution-hero p{font-size:17px;color:rgba(255,255,255,0.5);max-width:560px;margin:0 auto 48px;line-height:1.7}
+.solution-section{padding:48px 48px 64px}
+.solution-section h3{font-size:26px;font-weight:700;letter-spacing:-0.7px;margin-bottom:24px;color:#fff}
+.solution-section h4{font-size:18px;font-weight:600;margin-bottom:12px;color:#fff;margin-top:32px}
+.solution-section p,.solution-section li{font-size:15px;color:rgba(255,255,255,0.65);line-height:1.8}
+.solution-section ul{list-style:none;padding:0}
+.solution-section ul li{padding-left:20px;position:relative;margin-bottom:6px}
+.solution-section ul li::before{content:'—';position:absolute;left:0;color:#7c5cfc}
+.how-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:32px}
+.how-card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:24px}
+.how-card h4{font-size:16px;font-weight:600;margin-bottom:8px;color:#fff;margin-top:0;display:flex;align-items:center;gap:8px}
+.how-card h4 i{color:#7c5cfc;font-size:20px}
+.how-card p{font-size:14px;color:rgba(255,255,255,0.6);line-height:1.7;margin:0}
+.solution-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+.solution-actions .btn-demo{background:#7c5cfc;color:#fff;padding:13px 28px;border-radius:10px;font-size:15px;font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:opacity .2s}
+.solution-actions .btn-demo:hover{opacity:0.88}
+.solution-actions .btn-support{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);color:#fff;padding:13px 28px;border-radius:10px;font-size:15px;font-weight:500;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:background .2s}
+.solution-actions .btn-support:hover{background:rgba(255,255,255,0.08)}
+.solution-img{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:16px;overflow:hidden;aspect-ratio:16/10;display:flex;align-items:center;justify-content:center;max-width:720px;margin:32px auto 0}
+.solution-img img{width:100%;height:100%;object-fit:cover}
+@media(max-width:768px){
+  .sc-nav-links,.sc-nav-right{display:none}
+  .sc-nav{padding:12px 16px}
+  .solution-hero{padding:60px 20px 24px}
+  .solution-hero p{font-size:15px}
+  .solution-section{padding:32px 20px}
+  .how-grid{grid-template-columns:1fr}
+  .sc-section-h2{font-size:28px}
+}
+</style>
+</head>
+<body>
+
+<nav class="sc-nav">
+  <a href="/" class="sc-logo" style="display:flex;align-items:center;gap:8px"><img src="/logo.jpeg" alt="SynUp" style="height:32px;width:auto;display:block"><span style="font-size:20px;font-weight:700;letter-spacing:-0.5px;background:linear-gradient(135deg,#fff 0%,#2eb8b8 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">SynUp</span></a>
+  <div class="sc-nav-links">
+    <a href="/">Home</a>
+    <a href="/#services">Services</a>
+    <a href="/projects.html">Projects</a>
+    <a href="/#about">About</a>
+    <a href="/#contact">Contact</a>
+  </div>
+  <div class="sc-nav-right">
+    <a href="/#contact" class="sc-btn-primary">Get Started</a>
+  </div>
+</nav>
+
+<section class="solution-hero">
+  <a href="/projects.html" class="sc-back-link"><i class="ti ti-arrow-left"></i> Back to projects</a>
+  <div class="sc-section-label">Church Management</div>
+  <h1 class="sc-section-h2">Synup Church Connect</h1>
+  <p>A web-based tool that helps your church run smoothly — tracking members, attendance, finances, events, and pastoral care from one dashboard.</p>
+</section>
+
+<div class="solution-section">
+  <h3>How It Works</h3>
+  <p>Church Connect runs in any web browser — Chrome, Firefox, Safari, or Edge — on any device. No installation needed. Each church gets its own secure environment where leaders and members access only what they need based on their role.</p>
+
+  <div class="how-grid">
+    <div class="how-card">
+      <h4><i class="ti ti-login"></i> Logging In</h4>
+      <p>Enter your email, password, and select your role — Super Admin, Church Admin, Pastor, Department Lead, or Member. Optional multi-factor authentication adds an extra layer of security. Accounts lock after 5 failed attempts.</p>
+    </div>
+    <div class="how-card">
+      <h4><i class="ti ti-layout-dashboard"></i> The Dashboard</h4>
+      <p>After login, you land on a dashboard showing total members, attendance rates, new members this month, upcoming events, quick trends, and notifications about absent members or pending follow-ups.</p>
+    </div>
+    <div class="how-card">
+      <h4><i class="ti ti-users"></i> Members & Attendance</h4>
+      <p>Keep a searchable directory of every member with full profiles. Track attendance by service time — Early, Main, Second, Youth — and view trends over time. Export attendance data to CSV for your records.</p>
+    </div>
+    <div class="how-card">
+      <h4><i class="ti ti-heart-handshake"></i> Pastoral Care & Follow-ups</h4>
+      <p>Record visits, calls, and counselling sessions linked to each member's profile. Create follow-up tasks with urgency levels (low, medium, high) and mark them complete when done.</p>
+    </div>
+    <div class="how-card">
+      <h4><i class="ti ti-calendar-event"></i> Events & Room Bookings</h4>
+      <p>Create services and events with dates, service times, and notes. Book rooms for meetings or classes — see what's available and avoid double-booking.</p>
+    </div>
+    <div class="how-card">
+      <h4><i class="ti ti-layers-group"></i> Groups & Volunteers</h4>
+      <p>Organise members into groups — choir, Bible study, youth, ushers. Each group has a leader who can add or remove members. Manage volunteer rosters for services and events.</p>
+    </div>
+    <div class="how-card">
+      <h4><i class="ti ti-coin"></i> Finance & Giving</h4>
+      <p>Track income, expenses, and balances across funds (Building Fund, Missions, General, etc.). Record individual gifts, view all transactions, export to CSV, and generate giving statements for members.</p>
+    </div>
+    <div class="how-card">
+      <h4><i class="ti ti-settings"></i> Admin Console</h4>
+      <p>Super Admins can create user accounts, assign roles, reset passwords, lock/unlock accounts, and view audit logs of every important action taken in the system.</p>
+    </div>
+  </div>
+
+  <h4 style="margin-top:40px">Roles at a Glance</h4>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px">
+    <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:12px 16px"><strong style="color:#fff">Super Admin</strong><br><span style="font-size:13px;color:rgba(255,255,255,0.5)">Full access to everything</span></div>
+    <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:12px 16px"><strong style="color:#fff">Church Admin</strong><br><span style="font-size:13px;color:rgba(255,255,255,0.5)">All except admin console</span></div>
+    <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:12px 16px"><strong style="color:#fff">Pastor</strong><br><span style="font-size:13px;color:rgba(255,255,255,0.5)">Dashboard, members, attendance, care, events</span></div>
+    <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:12px 16px"><strong style="color:#fff">Department Lead</strong><br><span style="font-size:13px;color:rgba(255,255,255,0.5)">Dashboard, members, events, volunteers, groups</span></div>
+  </div>
+
+  <h4 style="margin-top:32px">Security & Session Management</h4>
+  <p>Sessions expire after 30 minutes of inactivity. Passwords must be at least 8 characters with uppercase, lowercase, a number, and a symbol. Old passwords are remembered to prevent reuse. All important actions are logged and visible to the Super Admin for full accountability.</p>
+
+  <div class="solution-actions">
+    <a href="https://cms-web-1-mwe4.onrender.com/" target="_blank" rel="noopener" class="btn-demo"><i class="ti ti-external-link"></i> Explore Demo</a>
+    <a href="mailto:Synupinfo@gmail.com?subject=Church%20Connect%20enquiry" class="btn-support"><i class="ti ti-mail"></i> Contact Support</a>
+  </div>
+
+  <div class="solution-img"><img src="/church.png" alt="Synup Church Connect"></div>
+</div>
+
+</body>
+</html>
