@@ -11,20 +11,15 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.32.0/dist/tabler-icons.min.css" />
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-:root{--bg:#0a0a0a;--bg-alt:#050505;--bg-card:rgba(255,255,255,0.03);--bg-surf:rgba(255,255,255,0.04);--bg-surf2:rgba(255,255,255,0.06);--bg-hover:#0f0f0f;--bg-elev:#0f0f14;--bg-select:#1a1a24;--text:#fff;--text2:rgba(255,255,255,0.5);--text3:rgba(255,255,255,0.35);--text4:rgba(255,255,255,0.3);--text5:rgba(255,255,255,0.2);--border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.08);--border3:rgba(255,255,255,0.1);--accent:#7c5cfc;--accent-lt:#a78bfa;--overlay:rgba(0,0,0,0.7);--overlay2:rgba(0,0,0,0.85);--bg-cta:linear-gradient(135deg,#1a1040 0%,#12102a 100%)}
-[data-theme=light]{--bg:#f5f5f7;--bg-alt:#fff;--bg-card:rgba(0,0,0,0.03);--bg-surf:rgba(0,0,0,0.04);--bg-surf2:rgba(0,0,0,0.06);--bg-hover:#f0f0f0;--bg-elev:#fff;--bg-select:#fff;--text:#1a1a2e;--text2:rgba(0,0,0,0.5);--text3:rgba(0,0,0,0.35);--text4:rgba(0,0,0,0.3);--text5:rgba(0,0,0,0.2);--border:rgba(0,0,0,0.07);--border2:rgba(0,0,0,0.08);--border3:rgba(0,0,0,0.1);--accent:#7c5cfc;--accent-lt:#a78bfa;--overlay:rgba(0,0,0,0.35);--overlay2:rgba(0,0,0,0.5);--bg-cta:linear-gradient(135deg,#e8e0ff 0%,#f5f0ff 100%)}
+:root{--bg:#0A0F1E;--bg-alt:#111827;--bg-card:#111827;--bg-surf:#111827;--bg-surf2:#1A2E6B;--bg-hover:#162040;--bg-elev:#111827;--bg-select:#1A2E6B;--text:#E0EAFF;--text2:rgba(224,234,255,0.6);--text3:rgba(224,234,255,0.4);--text4:rgba(224,234,255,0.3);--text5:rgba(224,234,255,0.2);--border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.09);--border3:rgba(255,255,255,0.12);--accent:#00AEEF;--accent-lt:#33C4F5;--overlay:rgba(0,0,0,0.7);--overlay2:rgba(0,0,0,0.85);--bg-cta:linear-gradient(135deg,#111827 0%,#1A2E6B 100%)}
+[data-theme=light]{--bg:#F0F6FF;--bg-alt:#fff;--bg-card:#fff;--bg-surf:#F0F6FF;--bg-surf2:#E6F7FD;--bg-hover:#E6F7FD;--bg-elev:#fff;--bg-select:#E6F7FD;--text:#0D1B5E;--text2:rgba(13,27,94,0.6);--text3:rgba(13,27,94,0.4);--text4:rgba(13,27,94,0.3);--text5:rgba(13,27,94,0.2);--border:rgba(13,27,94,0.08);--border2:rgba(13,27,94,0.1);--border3:rgba(13,27,94,0.14);--accent:#00AEEF;--accent-lt:#0096D4;--overlay:rgba(0,0,0,0.35);--overlay2:rgba(0,0,0,0.5);--bg-cta:linear-gradient(135deg,#E6F7FD 0%,#F0F6FF 100%)}
 body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text)}
 .sc-nav{display:flex;align-items:center;justify-content:space-between;padding:18px 48px;background:var(--bg);border-bottom:1px solid var(--border2);position:sticky;top:0;z-index:100}
 .sc-logo{font-size:20px;font-weight:700;color:var(--text);text-decoration:none;letter-spacing:-0.5px}
 .sc-nav-links{display:flex;gap:32px}
-.sc-nav-links a{color:var(--text2);text-decoration:none;font-size:14px;font-weight:500;transition:color .2s;position:relative;padding:4px 0}
-.sc-nav-links a::before,.sc-nav-links a::after{content:'';position:absolute;bottom:0;height:2px;width:0;background:linear-gradient(90deg,var(--accent),var(--accent-lt));transition:width 0.35s cubic-bezier(0.22,1,0.36,1)}
-.sc-nav-links a::before{left:50%}
-.sc-nav-links a::after{right:50%}
-.sc-nav-links a.active{color:var(--text)}
-.sc-nav-links a.active::before,.sc-nav-links a.active::after{width:50%}
-.sc-nav-links a:hover::before,.sc-nav-links a:hover::after{width:50%}
-.sc-nav-links a:hover{color:var(--text)}
+.sc-nav-links a{color:var(--text2);text-decoration:none;font-size:14px;font-weight:500;transition:color .2s,background .2s;position:relative;padding:6px 12px;border-radius:6px}
+.sc-nav-links a.active{color:var(--text);background:var(--bg-surf2)}
+.sc-nav-links a:hover{color:var(--text);background:var(--bg-surf)}
 .sc-nav-right{display:flex;gap:12px;align-items:center}
 .sc-btn-ghost{background:transparent;border:1px solid var(--text2);color:var(--text);padding:8px 18px;border-radius:8px;font-size:13px;font-weight:500;cursor:pointer;text-decoration:none;transition:border-color .2s}
 .sc-btn-ghost:hover{border-color:var(--text)}
@@ -44,46 +39,48 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text)}
 .sc-mobile-menu a{color:var(--text2);text-decoration:none;font-size:16px;font-weight:500;padding:12px 8px;border-radius:8px;transition:background .2s,color .2s}
 .sc-mobile-menu a:hover{background:var(--bg-card);color:var(--text)}
 .sc-mobile-menu .sc-mobile-ghost{background:transparent;border:1px solid var(--border);color:var(--text);padding:12px;border-radius:8px;font-size:14px;font-weight:500;cursor:pointer;text-decoration:none;text-align:center;margin-top:auto}
-.sc-mobile-menu .sc-mobile-primary{background:var(--accent);color:var(--text);padding:12px;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;text-decoration:none;text-align:center;border:none}
+.sc-mobile-menu .sc-mobile-primary{background:var(--accent);color:#0D1B5E;padding:12px;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;text-decoration:none;text-align:center;border:none}
 
 /* HERO */
-.sc-hero{padding:100px 48px 80px;text-align:center;position:relative;overflow:hidden;background:linear-gradient(180deg,var(--bg) 0%,var(--bg-elev) 100%)}
-.sc-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 50% at 50% 0%,rgba(120,80,255,0.12) 0%,transparent 70%);pointer-events:none}
+.sc-hero{padding:120px 48px 80px;text-align:center;position:relative;overflow:hidden;background:var(--bg)}
+.sc-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 50% 0%,rgba(0,174,239,0.08) 0%,transparent 70%);pointer-events:none}
 .sc-eyebrow{display:inline-flex;align-items:center;gap:8px;background:var(--bg-surf2);border:1px solid var(--border3);border-radius:100px;padding:6px 14px;font-size:12px;color:var(--text2);margin-bottom:32px;font-weight:500}
 .sc-eyebrow span{width:6px;height:6px;background:var(--accent);border-radius:50%;display:inline-block}
-.sc-hero-h1{font-size:72px;font-weight:800;line-height:1.05;letter-spacing:-2.5px;margin-bottom:0}
-.sc-hero-h1 .static{color:var(--text)}
-.sc-hero-h1 .rotating-wrap{display:inline-block;overflow:hidden;height:1.2em;vertical-align:baseline;position:relative;color:var(--accent)}
-.sc-hero-h1 .word{display:block;color:var(--accent);transition:transform 0.4s ease,opacity 0.4s ease}
-.sc-hero-sub{font-size:17px;color:var(--text2);max-width:520px;margin:24px auto 40px;line-height:1.7;font-weight:400}
+.sc-hero-h1{font-size:72px;font-weight:800;line-height:1.05;letter-spacing:-2.5px;margin-bottom:0;color:var(--text)}
+.sc-hero-sub{font-size:17px;color:var(--text2);max-width:540px;margin:28px auto 40px;line-height:1.7;font-weight:400}
 .sc-hero-ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-.sc-hero-cta-main{background:var(--accent);color:var(--text);padding:13px 28px;border-radius:10px;font-size:15px;font-weight:600;text-decoration:none;transition:opacity .2s;display:inline-flex;align-items:center;gap:8px}
+.sc-hero-cta-main{background:var(--accent);color:#0D1B5E;padding:13px 28px;border-radius:10px;font-size:15px;font-weight:600;text-decoration:none;transition:opacity .2s;display:inline-flex;align-items:center;gap:8px}
 .sc-hero-cta-main:hover{opacity:0.88}
 .sc-hero-cta-sec{background:var(--bg-surf2);border:1px solid var(--border3);color:var(--text);padding:13px 28px;border-radius:10px;font-size:15px;font-weight:500;text-decoration:none;transition:background .2s}
 .sc-hero-cta-sec:hover{background:var(--bg-surf)}
 
-/* LOGO TICKER */
-.sc-ticker-wrap{padding:32px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);overflow:hidden;background:var(--bg)}
-.sc-ticker-label{text-align:center;font-size:12px;color:var(--text4);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:20px;font-weight:500}
-.sc-ticker{display:flex;gap:64px;animation:ticker 18s linear infinite;white-space:nowrap}
-.sc-ticker-item{font-size:15px;font-weight:600;color:var(--text5);letter-spacing:-0.3px;flex-shrink:0}
-@keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+/* DIFFERENTIATOR */
+.sc-diff{padding:48px 48px;border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--bg);text-align:center}
+.sc-diff-text{font-size:18px;font-weight:500;color:var(--text2);max-width:640px;margin:0 auto;line-height:1.7;letter-spacing:-0.2px}
+.sc-diff-text strong{color:var(--accent);font-weight:600}
 
-/* STATS */
-.sc-stats{padding:80px 48px;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border)}
-.sc-stat{background:var(--bg);padding:40px 32px}
-.sc-stat-label{font-size:12px;color:var(--text3);letter-spacing:1.2px;text-transform:uppercase;margin-bottom:12px;font-weight:500}
-.sc-stat-num{font-size:48px;font-weight:800;letter-spacing:-2px;color:var(--text);line-height:1}
-.sc-stat-num span{color:var(--accent)}
-.sc-stat-desc{font-size:13px;color:var(--text3);margin-top:8px;line-height:1.5}
+/* MILESTONES */
+.sc-milestones{padding:80px 48px;background:var(--bg)}
+.sc-milestones .sc-section-label{margin-bottom:10px}
+.sc-milestones .sc-section-h2{font-size:36px;letter-spacing:-1.2px;margin-bottom:56px}
+.sc-timeline{max-width:640px;margin:0 auto;position:relative}
+.sc-timeline::before{content:'';position:absolute;left:0;top:0;bottom:0;width:1px;background:var(--border3)}
+.sc-tl-item{display:flex;gap:32px;padding:0 0 40px;position:relative}
+.sc-tl-item:last-child{padding-bottom:0}
+.sc-tl-dot{width:9px;height:9px;border-radius:50%;background:var(--accent);flex-shrink:0;position:relative;left:-4px;top:6px}
+.sc-tl-content{}
+.sc-tl-year{font-size:12px;font-weight:600;color:var(--accent);letter-spacing:0.5px;margin-bottom:4px}
+.sc-tl-text{font-size:15px;color:var(--text2);line-height:1.6}
 
 /* PRODUCTS TAB */
 .sc-products{padding:80px 48px;background:var(--bg)}
 .sc-section-label{font-size:12px;color:var(--accent);letter-spacing:1.5px;text-transform:uppercase;font-weight:600;margin-bottom:14px}
 .sc-section-h2{font-size:42px;font-weight:800;letter-spacing:-1.5px;color:var(--text);margin-bottom:48px;line-height:1.1}
-.sc-tabs{display:flex;gap:4px;margin-bottom:32px;background:var(--bg-surf);border:1px solid var(--border2);border-radius:10px;padding:4px;width:fit-content}
-.sc-tab{padding:9px 20px;border-radius:7px;font-size:13px;font-weight:500;color:var(--text4);cursor:pointer;transition:all .2s;border:none;background:transparent}
-.sc-tab.active{background:var(--text);color:var(--bg);font-weight:600}
+.sc-section-h2.sm{font-size:32px;letter-spacing:-1px;margin-bottom:36px}
+.sc-tabs{display:flex;gap:0;margin-bottom:40px;border-bottom:1px solid var(--border);width:fit-content}
+.sc-tab{padding:10px 20px;font-size:14px;font-weight:500;color:var(--text4);cursor:pointer;transition:color .2s;border:none;background:transparent;border-bottom:2px solid transparent;font-family:'Inter',sans-serif;position:relative;bottom:-1px}
+.sc-tab.active{color:var(--accent);border-bottom-color:var(--accent);font-weight:600}
+.sc-tab:hover{color:var(--text2)}
 .sc-tab-panel{display:none}
 .sc-tab-panel.active{display:grid;grid-template-columns:1fr 1.4fr;gap:48px;align-items:start}
 .sc-tab-content h3{font-size:26px;font-weight:700;letter-spacing:-0.7px;margin-bottom:12px;color:var(--text)}
@@ -110,44 +107,40 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text)}
 
 /* CASE STUDIES */
 .sc-cases{padding:80px 48px;background:var(--bg-alt)}
+.sc-cases .sc-section-h2{font-size:36px;letter-spacing:-1.2px;margin-bottom:40px}
 .sc-case-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--border);border-radius:16px;overflow:hidden}
 .sc-case-card{background:var(--bg-alt);padding:40px;transition:background .2s}
 .sc-case-card:hover{background:var(--bg-hover)}
 .sc-case-img{width:100%;aspect-ratio:3/2;background:var(--bg-surf);border-radius:10px;margin-bottom:24px;overflow:hidden;display:flex;align-items:center;justify-content:center}
-.sc-case-img-inner{width:60%;height:60%;border-radius:8px;background:rgba(124,92,252,0.15);display:flex;align-items:center;justify-content:center;font-size:32px}
+.sc-case-img-inner{width:60%;height:60%;border-radius:8px;background:rgba(0,174,239,0.15);display:flex;align-items:center;justify-content:center;font-size:32px}
 .sc-case-meta{display:flex;gap:12px;align-items:center;margin-bottom:14px}
-.sc-case-tag{font-size:11px;font-weight:600;color:var(--accent);background:rgba(124,92,252,0.12);padding:4px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:0.8px}
+.sc-case-tag{font-size:11px;font-weight:600;color:var(--accent);background:rgba(0,174,239,0.12);padding:4px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:0.8px}
 .sc-case-card h3{font-size:20px;font-weight:700;letter-spacing:-0.4px;color:var(--text);margin-bottom:16px;line-height:1.35}
 .sc-case-stats{display:flex;gap:24px}
 .sc-case-stat-num{font-size:22px;font-weight:800;color:var(--accent)}
 .sc-case-stat-desc{font-size:12px;color:var(--text3);margin-top:2px}
 
 /* TESTIMONIALS */
-.sc-testimonials{padding:80px 48px;background:var(--bg)}
-.sc-test-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:48px}
-.sc-test-card{background:var(--bg-card);border:1px solid var(--border2);border-radius:14px;padding:28px;transition:border-color .2s}
-.sc-test-card:hover{border-color:rgba(255,255,255,0.16)}
-.sc-test-company{display:flex;align-items:center;gap:10px;margin-bottom:20px}
-.sc-test-company-icon{width:36px;height:36px;border-radius:8px;background:rgba(124,92,252,0.2);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:12px;color:var(--accent)}
-.sc-test-company-name{font-size:12px;font-weight:600;color:var(--text3);text-transform:uppercase;letter-spacing:0.8px}
-.sc-test-quote{font-size:16px;font-weight:500;color:var(--text);line-height:1.65;margin-bottom:24px;letter-spacing:-0.2px}
-.sc-test-metrics{display:flex;gap:24px;padding-top:20px;border-top:1px solid var(--border)}
-.sc-test-met-num{font-size:20px;font-weight:800;color:var(--accent)}
-.sc-test-met-desc{font-size:12px;color:var(--text3);margin-top:2px}
-.sc-test-author{display:flex;align-items:center;gap:10px;margin-bottom:20px}
-.sc-test-avatar{width:36px;height:36px;border-radius:50%;background:var(--text4);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;color:var(--text2)}
-.sc-test-name{font-size:13px;font-weight:600;color:var(--text)}
-.sc-test-title{font-size:12px;color:var(--text3)}
+.sc-testimonials{padding:80px 48px;background:var(--bg-alt)}
+.sc-testimonials .sc-section-h2{font-size:32px;letter-spacing:-1px;margin-bottom:40px}
+.sc-test-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.sc-test-card{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:32px;transition:border-color .2s}
+.sc-test-card:hover{border-color:var(--border3)}
+.sc-test-quote{font-size:16px;font-weight:400;color:var(--text);line-height:1.7;margin-bottom:24px;font-style:italic}
+.sc-test-author{display:flex;flex-direction:column;gap:2px}
+.sc-test-name{font-size:14px;font-weight:600;color:var(--text)}
+.sc-test-title{font-size:13px;color:var(--text3)}
 
 /* BLOG */
 .sc-blog{padding:80px 48px;background:var(--bg-alt)}
+.sc-blog .sc-section-h2{font-size:32px;letter-spacing:-1px;margin-bottom:40px}
 .sc-blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px}
 .sc-blog-card{background:var(--bg-card);border:1px solid var(--border);border-radius:12px;overflow:hidden;cursor:pointer;transition:border-color .2s}
 .sc-blog-card:hover{border-color:var(--text4)}
 .sc-blog-img{aspect-ratio:16/10;background:var(--bg-surf);display:flex;align-items:center;justify-content:center;font-size:28px}
 .sc-blog-body{padding:20px}
 .sc-blog-meta{display:flex;gap:8px;align-items:center;margin-bottom:10px}
-.sc-blog-tag{font-size:11px;font-weight:600;color:var(--accent);background:rgba(124,92,252,0.1);padding:3px 8px;border-radius:100px}
+.sc-blog-tag{font-size:11px;font-weight:600;color:var(--accent);background:rgba(0,174,239,0.1);padding:3px 8px;border-radius:100px}
 .sc-blog-date{font-size:11px;color:var(--text4)}
 .sc-blog-card h4{font-size:15px;font-weight:600;color:var(--text);line-height:1.45;letter-spacing:-0.2px}
 
@@ -157,17 +150,18 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text)}
 .sc-insight-modal{background:var(--bg-elev);border:1px solid var(--border3);border-radius:20px;padding:40px;width:100%;max-width:560px;position:relative;max-height:90vh;overflow-y:auto}
 .sc-insight-modal .sc-insight-close{position:absolute;top:16px;right:16px;background:none;border:none;color:var(--text4);font-size:22px;cursor:pointer;width:32px;height:32px;display:flex;align-items:center;justify-content:center;border-radius:8px;transition:background .2s}
 .sc-insight-modal .sc-insight-close:hover{background:var(--bg-surf);color:var(--text)}
-.sc-insight-modal .sc-insight-tag{font-size:11px;font-weight:600;color:var(--accent);background:rgba(124,92,252,0.1);padding:3px 8px;border-radius:100px;display:inline-block;margin-bottom:12px}
+.sc-insight-modal .sc-insight-tag{font-size:11px;font-weight:600;color:var(--accent);background:rgba(0,174,239,0.1);padding:3px 8px;border-radius:100px;display:inline-block;margin-bottom:12px}
 .sc-insight-modal h3{font-size:22px;font-weight:700;letter-spacing:-0.5px;margin-bottom:16px;color:var(--text);line-height:1.35}
 .sc-insight-modal .sc-insight-section-label{font-size:12px;font-weight:600;color:var(--text3);text-transform:uppercase;letter-spacing:0.8px;margin-bottom:8px}
 .sc-insight-modal .sc-insight-desc{font-size:14px;color:var(--text2);line-height:1.7;margin-bottom:24px}
-.sc-insight-modal .sc-insight-solution{background:rgba(124,92,252,0.08);border:1px solid rgba(124,92,252,0.15);border-radius:12px;padding:20px}
+.sc-insight-modal .sc-insight-solution{background:rgba(0,174,239,0.08);border:1px solid rgba(0,174,239,0.15);border-radius:12px;padding:20px}
 .sc-insight-modal .sc-insight-solution .sc-insight-section-label{color:var(--accent)}
 .sc-insight-modal .sc-insight-solution p{font-size:14px;color:var(--text2);line-height:1.7;margin:0}
 @media(max-width:640px){.sc-insight-modal{padding:24px 20px}}
 
 /* FAQ */
 .sc-faq{padding:80px 48px;background:var(--bg-alt)}
+.sc-faq .sc-section-h2{font-size:32px;letter-spacing:-1px;margin-bottom:40px}
 .sc-faq-grid{max-width:720px;margin:48px auto 0}
 .sc-faq-item{border:1px solid var(--border);border-radius:12px;margin-bottom:10px;overflow:hidden}
 .sc-faq-q{width:100%;padding:18px 20px;background:var(--bg-card);border:none;color:var(--text);font-size:15px;font-weight:500;text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;font-family:'Inter',sans-serif;transition:background .2s}
@@ -180,6 +174,7 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text)}
 
 /* ABOUT */
 .sc-about{padding:80px 48px;background:var(--bg)}
+.sc-about .sc-section-h2{font-size:36px;letter-spacing:-1.2px}
 .sc-about-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;max-width:960px;margin:0 auto}
 .sc-about-text p{font-size:15px;color:var(--text2);line-height:1.8;margin-bottom:16px}
 .sc-about-text p:last-child{margin-bottom:0}
@@ -190,11 +185,11 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text)}
 .sc-about-card p{font-size:12px;color:var(--text3);margin:2px 0 0}
 
 /* CTA BANNER */
-.sc-cta-banner{margin:0 48px 80px;border-radius:20px;background:var(--bg-cta);border:1px solid rgba(124,92,252,0.25);padding:80px 64px;text-align:center;position:relative;overflow:hidden}
-.sc-cta-banner::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 70% at 50% 50%,rgba(124,92,252,0.15) 0%,transparent 70%);pointer-events:none}
+.sc-cta-banner{margin:0 48px 80px;border-radius:20px;background:var(--bg-cta);border:1px solid rgba(0,174,239,0.25);padding:80px 64px;text-align:center;position:relative;overflow:hidden}
+.sc-cta-banner::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 70% at 50% 50%,rgba(0,174,239,0.15) 0%,transparent 70%);pointer-events:none}
 .sc-cta-banner h2{font-size:48px;font-weight:800;letter-spacing:-1.5px;color:var(--text);margin-bottom:16px;position:relative;line-height:1.1}
 .sc-cta-banner p{font-size:16px;color:var(--text2);margin-bottom:32px;position:relative}
-.sc-cta-banner-btn{background:var(--accent);color:var(--text);padding:14px 32px;border-radius:10px;font-size:15px;font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:8px;position:relative;transition:opacity .2s}
+.sc-cta-banner-btn{background:var(--accent);color:#0D1B5E;padding:14px 32px;border-radius:10px;font-size:15px;font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:8px;position:relative;transition:opacity .2s}
 .sc-cta-banner-btn:hover{opacity:0.88}
 
 /* FOOTER */
@@ -221,11 +216,11 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text)}
 .sc-modal .sc-form-group{margin-bottom:16px}
 .sc-modal .sc-form-row{display:flex;gap:12px}
 .sc-modal .sc-form-row > div{flex:1}
-.sc-modal .sc-btn-submit{background:var(--accent);color:var(--text);padding:12px 24px;border-radius:10px;font-size:15px;font-weight:600;border:none;cursor:pointer;width:100%;transition:opacity .2s;font-family:'Inter',sans-serif}
+.sc-modal .sc-btn-submit{background:var(--accent);color:#0D1B5E;padding:12px 24px;border-radius:10px;font-size:15px;font-weight:600;border:none;cursor:pointer;width:100%;transition:opacity .2s;font-family:'Inter',sans-serif}
 .sc-modal .sc-btn-submit:hover{opacity:0.88}
 .sc-modal .sc-btn-submit:disabled{opacity:0.5;cursor:not-allowed}
 .sc-form-result{font-size:14px;display:none;padding:12px;border-radius:8px;margin-bottom:16px}
-.sc-form-result.success{display:block;background:rgba(124,92,252,0.1);color:var(--accent);border:1px solid rgba(124,92,252,0.2)}
+.sc-form-result.success{display:block;background:rgba(0,174,239,0.1);color:var(--accent);border:1px solid rgba(0,174,239,0.2)}
 .sc-form-result.error{display:block;background:rgba(255,80,80,0.1);color:#ff5050;border:1px solid rgba(255,80,80,0.2)}
 @media(max-width:480px){
   .sc-modal{padding:28px 20px}
@@ -261,7 +256,7 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text)}
 .sc-report-modal .sc-form-group{margin-bottom:16px}
 .sc-report-modal .sc-form-row{display:flex;gap:12px}
 .sc-report-modal .sc-form-row > div{flex:1}
-.sc-report-modal .sc-btn-submit{background:var(--accent);color:var(--text);padding:12px 24px;border-radius:10px;font-size:15px;font-weight:600;border:none;cursor:pointer;width:100%;transition:opacity .2s;font-family:'Inter',sans-serif}
+.sc-report-modal .sc-btn-submit{background:var(--accent);color:#0D1B5E;padding:12px 24px;border-radius:10px;font-size:15px;font-weight:600;border:none;cursor:pointer;width:100%;transition:opacity .2s;font-family:'Inter',sans-serif}
 .sc-report-modal .sc-btn-submit:hover{opacity:0.88}
 .sc-report-modal .sc-btn-submit:disabled{opacity:0.5;cursor:not-allowed}
 @media(max-width:480px){.sc-report-modal{padding:28px 20px}.sc-report-modal .sc-form-row{flex-direction:column;gap:0}}
@@ -277,12 +272,11 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text)}
   .sc-hamburger{display:flex}
   .sc-hero{padding:60px 20px 48px}
   .sc-hero-h1{font-size:34px;letter-spacing:-1px}
-  .sc-hero-h1 .rotating-wrap{height:1.2em}
   .sc-hero-sub{font-size:15px}
-  .sc-stats{grid-template-columns:repeat(2,1fr);padding:40px 20px}
-  .sc-stat{padding:20px 16px}
-  .sc-stat-num{font-size:30px}
-  .sc-stat-desc{font-size:12px}
+  .sc-diff{padding:32px 20px}
+  .sc-diff-text{font-size:16px}
+  .sc-milestones{padding:48px 20px}
+  .sc-milestones .sc-section-h2{font-size:26px;margin-bottom:32px}
   .sc-products{padding:48px 20px}
   .sc-section-h2{font-size:26px;margin-bottom:32px}
   .sc-tabs{overflow-x:auto;width:100%}
@@ -295,8 +289,8 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text)}
   .sc-case-card h3{font-size:17px}
   .sc-testimonials{padding:48px 20px}
   .sc-test-grid{grid-template-columns:1fr}
-  .sc-test-card{padding:20px}
-  .sc-test-quote{font-size:14px}
+  .sc-test-card{padding:24px}
+  .sc-test-quote{font-size:15px}
   .sc-faq{padding:48px 20px}
   .sc-about{padding:48px 20px}
   .sc-about-grid{grid-template-columns:1fr;gap:24px}
@@ -312,9 +306,7 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text)}
   .sc-section-label{font-size:11px}
 }
 @media(max-width:480px){
-  .sc-stats{grid-template-columns:1fr}
   .sc-hero-h1{font-size:26px}
-  .sc-hero-h1 .rotating-wrap{height:1.2em}
   .sc-hero-sub{font-size:14px}
   .sc-eyebrow{font-size:11px;padding:4px 12px}
   .sc-cta-banner{padding:32px 16px}
@@ -332,7 +324,7 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text)}
 
 <!-- NAV -->
 <nav class="sc-nav">
-  <a href="#" class="sc-logo" style="display:flex;align-items:center;gap:8px"><img src="/logo.jpeg" alt="SynUp" style="height:32px;width:auto;display:block"><span style="font-size:20px;font-weight:700;letter-spacing:-0.5px;background:linear-gradient(135deg,#fff 0%,#2eb8b8 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">SynUp</span></a>
+  <a href="#" class="sc-logo" style="display:flex;align-items:center;gap:8px"><img src="/logo.png" alt="SynUp" style="height:32px;width:auto;display:block"><span style="font-size:20px;font-weight:700;letter-spacing:-0.5px;background:linear-gradient(135deg,#E0EAFF 0%,#00AEEF 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">SynUp</span></a>
   <div class="sc-nav-links">
     <a href="#">Home</a>
     <a href="#services">Services</a>
@@ -362,64 +354,55 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text)}
 
 <!-- HERO -->
 <section class="sc-hero" id="home">
-  <div class="sc-eyebrow"><span></span> All-in-one digital solutions partner</div>
-  <h1 class="sc-hero-h1">
-    <span class="static">The partner that<br>helps you </span>
-    <span class="rotating-wrap" id="rotator">
-      <span class="word">Build</span>
-    </span>
-  </h1>
-  <p class="sc-hero-sub">SynUp is a digital solutions partner designed to help businesses manage systems, websites, networks, and design from one dependable team.</p>
+  <div class="sc-eyebrow"><span></span> Ghana's IT team for schools, shops, and growing businesses</div>
+  <h1 class="sc-hero-h1">Stop juggling vendors.<br>One team that does it all.</h1>
+  <p class="sc-hero-sub">Most Ghanaian businesses manage 3+ vendors for IT. SynUp handles your systems, website, network, and design — from one number in Kumasi.</p>
   <div class="sc-hero-ctas">
     <a href="#" class="sc-hero-cta-main" onclick="openModal('get-started')"><i class="ti ti-arrow-right"></i> Get started free</a>
     <a href="mailto:Synupinfo@gmail.com?subject=Book%20a%20call" class="sc-hero-cta-sec">Book a call</a>
   </div>
 </section>
 
-<!-- TICKER -->
-<div class="sc-ticker-wrap">
-  <div class="sc-ticker-label">Trusted by businesses across industries</div>
-  <div style="overflow:hidden">
-    <div class="sc-ticker" id="ticker">
-      <span class="sc-ticker-item">Systems Management</span>
-      <span class="sc-ticker-item">Website Development</span>
-      <span class="sc-ticker-item">Networking</span>
-      <span class="sc-ticker-item">Graphics Design</span>
-      <span class="sc-ticker-item">IT Support</span>
-      <span class="sc-ticker-item">Brand Identity</span>
-      <span class="sc-ticker-item">Systems Management</span>
-      <span class="sc-ticker-item">Website Development</span>
-      <span class="sc-ticker-item">Networking</span>
-      <span class="sc-ticker-item">Graphics Design</span>
-      <span class="sc-ticker-item">IT Support</span>
-      <span class="sc-ticker-item">Brand Identity</span>
-    </div>
-  </div>
+<!-- DIFFERENTIATOR -->
+<div class="sc-diff">
+  <p class="sc-diff-text"><strong>We don't just build what you ask for — we build what you actually need.</strong> Most agencies take a brief and disappear. SynUp stays embedded in your business, so your systems, website, and network evolve as you grow.</p>
 </div>
 
-<!-- STATS -->
-<div class="sc-stats">
-  <div class="sc-stat">
-    <div class="sc-stat-label">Projects Delivered</div>
-    <div class="sc-stat-num">50<span>+</span></div>
-    <div class="sc-stat-desc">Completed across systems, websites, networks, and design</div>
+<!-- MILESTONES -->
+<section class="sc-milestones">
+  <div class="sc-section-label">How we got here</div>
+  <h2 class="sc-section-h2">Five years of building real infrastructure</h2>
+  <div class="sc-timeline">
+    <div class="sc-tl-item">
+      <div class="sc-tl-dot"></div>
+      <div class="sc-tl-content">
+        <div class="sc-tl-year">2019</div>
+        <div class="sc-tl-text">SynUp founded in Kumasi. First project: a school management system for Atasemanso M/A J.H.S — built to replace paper attendance and manual report cards.</div>
+      </div>
+    </div>
+    <div class="sc-tl-item">
+      <div class="sc-tl-dot"></div>
+      <div class="sc-tl-content">
+        <div class="sc-tl-year">2021</div>
+        <div class="sc-tl-text">Expanded into website development and brand design. First catering and beauty clients onboarded — Dockys Catering, Nailed by Kay.</div>
+      </div>
+    </div>
+    <div class="sc-tl-item">
+      <div class="sc-tl-dot"></div>
+      <div class="sc-tl-content">
+        <div class="sc-tl-year">2023</div>
+        <div class="sc-tl-text">Added networking and IT infrastructure. Office network deployments for growing businesses across Kumasi. Team grows to 5.</div>
+      </div>
+    </div>
+    <div class="sc-tl-item">
+      <div class="sc-tl-dot"></div>
+      <div class="sc-tl-content">
+        <div class="sc-tl-year">2025</div>
+        <div class="sc-tl-text">600+ clients served across education, retail, catering, beauty, and professional services. School Pro system managing 800+ students across 4 schools.</div>
+      </div>
+    </div>
   </div>
-  <div class="sc-stat">
-    <div class="sc-stat-label">Client Satisfaction</div>
-    <div class="sc-stat-num">80<span>%</span></div>
-    <div class="sc-stat-desc">Average satisfaction rate across all projects delivered</div>
-  </div>
-  <div class="sc-stat">
-    <div class="sc-stat-label">Years Experience</div>
-    <div class="sc-stat-num">5<span>+</span></div>
-    <div class="sc-stat-desc">Building and supporting digital infrastructure since 2019</div>
-  </div>
-  <div class="sc-stat">
-    <div class="sc-stat-label">Active Clients</div>
-    <div class="sc-stat-num">600<span>+</span></div>
-    <div class="sc-stat-desc">Growing their business on SynUp's integrated services</div>
-  </div>
-</div>
+</section>
 
 <!-- ABOUT -->
 <section class="sc-about" id="about">
@@ -427,14 +410,14 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text)}
   <h2 class="sc-section-h2">Built for businesses that want more than a vendor</h2>
   <div class="sc-about-grid">
     <div class="sc-about-text">
-      <p>SynUp Digital Solutions is a Ghana-based technology partner that helps businesses manage their digital infrastructure — systems, websites, networks, and design — from one dependable team. We started in 2019 with a simple belief: businesses should not have to juggle multiple vendors to get reliable IT support.</p>
-      <p>Today we serve over 600 active clients across education, catering, beauty, retail, and professional services. Our school management system alone supports 4+ schools with 800+ students and 40+ staff. Every project we take on is backed by the same commitment: build it right, support it long-term, and make it simple for the people using it every day.</p>
+      <p>SynUp Digital Solutions is a Ghana-based technology partner that helps businesses manage their digital infrastructure — systems, websites, networks, and design — from one dependable team. We started in 2019 in Kumasi with a simple belief: businesses should not have to juggle multiple vendors to get reliable IT support.</p>
+      <p>Over 5 years we've served 600+ clients across education, catering, beauty, retail, and professional services. Our school management system alone supports 4+ schools with 800+ students and 40+ staff. Every project we take on is backed by the same commitment: build it right, support it long-term, and make it simple for the people using it every day.</p>
     </div>
     <div class="sc-about-cards">
       <div class="sc-about-card"><i class="ti ti-users"></i><h4>5+</h4><p>team members</p></div>
-      <div class="sc-about-card"><i class="ti ti-calendar"></i><h4>2019</h4><p>founded</p></div>
-      <div class="sc-about-card"><i class="ti ti-building"></i><h4>600+</h4><p>active clients</p></div>
-      <div class="sc-about-card"><i class="ti ti-heart-handshake"></i><h4>80%</h4><p>satisfaction</p></div>
+      <div class="sc-about-card"><i class="ti ti-calendar"></i><h4>2019</h4><p>founded in Kumasi</p></div>
+      <div class="sc-about-card"><i class="ti ti-building"></i><h4>600+</h4><p>clients since 2019</p></div>
+      <div class="sc-about-card"><i class="ti ti-clock"></i><h4>48hr</h4><p>support response</p></div>
     </div>
   </div>
   <div style="text-align:center;margin-top:40px">
@@ -528,81 +511,41 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text)}
 <!-- TESTIMONIALS -->
 <section class="sc-testimonials">
   <div class="sc-section-label">Testimonials</div>
-  <h2 class="sc-section-h2">Trusted by teams that depend on reliability</h2>
+  <h2 class="sc-section-h2">What our clients actually say</h2>
   <div class="sc-test-grid">
     <div class="sc-test-card">
-      <div class="sc-test-company">
-        <div class="sc-test-company-icon">GB</div>
-        <div class="sc-test-company-name">Education</div>
-      </div>
+      <p class="sc-test-quote">"Before SynUp we tracked 800+ students across 4 schools on paper and scattered spreadsheets. Attendance alone took teachers 40 minutes every morning. Now the whole system runs in the browser — attendance, grades, reports — and our staff actually use it."</p>
       <div class="sc-test-author">
-        <div class="sc-test-avatar">GB</div>
-        <div><div class="sc-test-name">Godfred Bonsu</div><div class="sc-test-title">Headmaster, Atasemanso M/A J.H.S</div></div>
-      </div>
-      <p class="sc-test-quote">"SynUp's school management system has transformed how we handle student records, attendance, and reporting. Managing over 800 kids across multiple schools is now seamless."</p>
-      <div class="sc-test-metrics">
-        <div><div class="sc-test-met-num">800+</div><div class="sc-test-met-desc">students managed</div></div>
-        <div><div class="sc-test-met-num">40+</div><div class="sc-test-met-desc">staff on the system</div></div>
+        <div class="sc-test-name">Godfred Bonsu</div>
+        <div class="sc-test-title">Headmaster, Atasemanso M/A J.H.S</div>
       </div>
     </div>
     <div class="sc-test-card">
-      <div class="sc-test-company">
-        <div class="sc-test-company-icon">DC</div>
-        <div class="sc-test-company-name">Catering</div>
-      </div>
+      <p class="sc-test-quote">"We had no website and relied entirely on WhatsApp orders. SynUp built us a professional site in under a week and suddenly we were getting enquiries from people who didn't even know we existed. The first month we booked 3 new corporate events through the site alone."</p>
       <div class="sc-test-author">
-        <div class="sc-test-avatar">D</div>
-        <div><div class="sc-test-name">Dorcas</div><div class="sc-test-title">CEO, Dockys Catering</div></div>
-      </div>
-      <p class="sc-test-quote">"SynUp built us a website that actually brings in orders. Our online presence went from nothing to professional in days. Highly recommended."</p>
-      <div class="sc-test-metrics">
-        <div><div class="sc-test-met-num">5★</div><div class="sc-test-met-desc">client rating</div></div>
-        <div><div class="sc-test-met-num">100%</div><div class="sc-test-met-desc">satisfaction</div></div>
+        <div class="sc-test-name">Dorcas Owusu</div>
+        <div class="sc-test-title">CEO, Dockys Catering</div>
       </div>
     </div>
     <div class="sc-test-card">
-      <div class="sc-test-company">
-        <div class="sc-test-company-icon">AK</div>
-        <div class="sc-test-company-name">Beauty & Nails</div>
-      </div>
+      <p class="sc-test-quote">"Our bookings used to go through DMs and phone calls — easy to miss, easy to forget. SynUp set up an online booking system and our customers love it. We went from maybe 15 bookings a week to consistently hitting 40+."</p>
       <div class="sc-test-author">
-        <div class="sc-test-avatar">A</div>
-        <div><div class="sc-test-name">Afia</div><div class="sc-test-title">CEO, Nailed by Kay</div></div>
-      </div>
-      <p class="sc-test-quote">"SynUp helped us get online and manage our bookings digitally. Our customers love the ease of reaching us, and the brand design perfectly captures our vibe."</p>
-      <div class="sc-test-metrics">
-        <div><div class="sc-test-met-num">3x</div><div class="sc-test-met-desc">more bookings</div></div>
-        <div><div class="sc-test-met-num">100%</div><div class="sc-test-met-desc">brand consistency</div></div>
+        <div class="sc-test-name">Afia</div>
+        <div class="sc-test-title">CEO, Nailed by Kay</div>
       </div>
     </div>
     <div class="sc-test-card">
-      <div class="sc-test-company">
-        <div class="sc-test-company-icon">DK</div>
-        <div class="sc-test-company-name">Education</div>
-      </div>
+      <p class="sc-test-quote">"We needed designs for our 20th anniversary reunion — posters, social media graphics, event programme. SynUp nailed the brief on the first round. What usually takes us days of back-and-forth with other designers was done in 48 hours."</p>
       <div class="sc-test-author">
-        <div class="sc-test-avatar">DK</div>
-        <div><div class="sc-test-name">Dionne Kusi-Poku</div><div class="sc-test-title">President, Yaa Asantewaa SHS 2006 Year Group</div></div>
-      </div>
-      <p class="sc-test-quote">"SynUp did a design for us — professional, on-brand, and delivered exactly what we needed. Great work."</p>
-      <div class="sc-test-metrics">
-        <div><div class="sc-test-met-num">100%</div><div class="sc-test-met-desc">satisfaction</div></div>
-        <div><div class="sc-test-met-num">5★</div><div class="sc-test-met-desc">design quality</div></div>
+        <div class="sc-test-name">Dionne Kusi-Poku</div>
+        <div class="sc-test-title">President, Yaa Asantewaa SHS 2006 Year Group</div>
       </div>
     </div>
     <div class="sc-test-card">
-      <div class="sc-test-company">
-        <div class="sc-test-company-icon">NM</div>
-        <div class="sc-test-company-name">Education</div>
-      </div>
+      <p class="sc-test-quote">"We came to SynUp with three separate problems: no school management system, an outdated logo, and a website that hadn't been touched in years. They handled all three as one project. One team, one invoice, one point of contact — that's what sold us."</p>
       <div class="sc-test-author">
-        <div class="sc-test-avatar">RA</div>
-        <div><div class="sc-test-name">Richard Arthur</div><div class="sc-test-title">Proprietor, N and A Mustard Seed School</div></div>
-      </div>
-      <p class="sc-test-quote">"SynUp gave us a complete digital backbone — from our school management system to brand identity and online presence. Professional team with real results."</p>
-      <div class="sc-test-metrics">
-        <div><div class="sc-test-met-num">100%</div><div class="sc-test-met-desc">brand consistency</div></div>
-        <div><div class="sc-test-met-num">5★</div><div class="sc-test-met-desc">client rating</div></div>
+        <div class="sc-test-name">Richard Arthur</div>
+        <div class="sc-test-title">Proprietor, N and A Mustard Seed School</div>
       </div>
     </div>
   </div>
@@ -644,28 +587,8 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text)}
 <section class="sc-blog">
   <div class="sc-section-label">Insights</div>
   <h2 class="sc-section-h2">Resources that help your business grow</h2>
-  <div class="sc-blog-grid">
-    <div class="sc-blog-card" onclick="openInsight(0)">
-      <div class="sc-blog-img" style="background:url('/web.png') center/cover no-repeat"></div>
-      <div class="sc-blog-body">
-        <div class="sc-blog-meta"><span class="sc-blog-tag">Website</span><span class="sc-blog-date">Jan 4, 2026</span></div>
-        <h4>Why your website speed directly affects how many leads you get</h4>
-      </div>
-    </div>
-    <div class="sc-blog-card" onclick="openInsight(1)">
-      <div class="sc-blog-img" style="background:url('/cloud2.png') center/cover no-repeat"></div>
-      <div class="sc-blog-body">
-        <div class="sc-blog-meta"><span class="sc-blog-tag">Networking</span><span class="sc-blog-date">Feb 9, 2026</span></div>
-        <h4>The hidden cost of weak network infrastructure in growing companies</h4>
-      </div>
-    </div>
-    <div class="sc-blog-card" onclick="openInsight(2)">
-      <div class="sc-blog-img" style="background:url('/gd2.jpeg') center/cover no-repeat"></div>
-      <div class="sc-blog-body">
-        <div class="sc-blog-meta"><span class="sc-blog-tag">Design</span><span class="sc-blog-date">Mar 3, 2026</span></div>
-        <h4>How brand consistency across every channel builds faster trust</h4>
-      </div>
-    </div>
+  <div class="sc-blog-grid" style="display:flex;align-items:center;justify-content:center;min-height:200px">
+    <p style="color:var(--muted);font-size:15px;text-align:center;max-width:400px">Real articles coming soon. In the meantime, <a href="#contact" style="color:var(--accent)">contact us</a> with any IT question — we'll answer it directly.</p>
   </div>
 </section>
 
@@ -674,15 +597,15 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text)}
   <h2>Let's Build Something Great Together</h2>
   <p style="margin-bottom:8px">Reach out and we'll tell you exactly how SynUp can help.</p>
   <div style="display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin-bottom:28px;position:relative">
-    <div style="background:rgba(124,92,252,0.12);border:1px solid rgba(124,92,252,0.2);border-radius:12px;padding:16px 24px;min-width:180px;text-align:center">
+    <div style="background:rgba(0,174,239,0.12);border:1px solid rgba(0,174,239,0.2);border-radius:12px;padding:16px 24px;min-width:180px;text-align:center">
       <div style="font-size:11px;color:#7c5cfc;letter-spacing:0.1em;margin-bottom:6px;text-transform:uppercase;font-weight:600"><i class="ti ti-mail" style="font-size:14px;margin-right:4px;vertical-align:-1px"></i>EMAIL</div>
       <a href="mailto:Synupinfo@gmail.com" style="color:var(--text);text-decoration:none;font-size:14px;font-weight:500;word-break:break-all">Synupinfo@gmail.com</a>
     </div>
-    <div style="background:rgba(124,92,252,0.12);border:1px solid rgba(124,92,252,0.2);border-radius:12px;padding:16px 24px;min-width:180px;text-align:center">
+    <div style="background:rgba(0,174,239,0.12);border:1px solid rgba(0,174,239,0.2);border-radius:12px;padding:16px 24px;min-width:180px;text-align:center">
       <div style="font-size:11px;color:#7c5cfc;letter-spacing:0.1em;margin-bottom:6px;text-transform:uppercase;font-weight:600"><i class="ti ti-phone" style="font-size:14px;margin-right:4px;vertical-align:-1px"></i>PHONE</div>
       <a href="tel:+233549984981" style="color:var(--text);text-decoration:none;font-size:14px;font-weight:500">+233 (0) 54 998 4981</a>
     </div>
-    <div style="background:rgba(124,92,252,0.12);border:1px solid rgba(124,92,252,0.2);border-radius:12px;padding:16px 24px;min-width:180px;text-align:center">
+    <div style="background:rgba(0,174,239,0.12);border:1px solid rgba(0,174,239,0.2);border-radius:12px;padding:16px 24px;min-width:180px;text-align:center">
       <div style="font-size:11px;color:#7c5cfc;letter-spacing:0.1em;margin-bottom:6px;text-transform:uppercase;font-weight:600"><i class="ti ti-map-pin" style="font-size:14px;margin-right:4px;vertical-align:-1px"></i>LOCATION</div>
       <span style="color:var(--text);font-size:14px;font-weight:500">EF 17 JDK Docia Owusu Avenue<br>Ak-290-6686</span>
     </div>
@@ -698,7 +621,6 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text)}
     <a href="#">Projects</a>
     <a href="#">About</a>
     <a href="#">Contact</a>
-    <a href="#" onclick="openReport();return false">Report</a>
   </div>
   <div class="sc-footer-copy">&copy; 2026 SynUp. All rights reserved.</div>
 </footer>
@@ -815,35 +737,6 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text)}
 </div>
 
 <script>
-const words = ['Build', 'Connect', 'Scale', 'Grow'];
-let cur = 0;
-const rot = document.getElementById('rotator');
-const wordSpan = rot.querySelector('.word');
-if (!wordSpan) {
-  const s = document.createElement('span');
-  s.className = 'word';
-  s.textContent = 'Build';
-  rot.innerHTML = '';
-  rot.appendChild(s);
-}
-const span = rot.querySelector('.word');
-setInterval(() => {
-  cur = (cur + 1) % words.length;
-  span.style.opacity = '0';
-  span.style.transform = 'translateY(-10px)';
-  setTimeout(() => {
-    span.textContent = words[cur];
-    span.style.transition = 'none';
-    span.style.opacity = '0';
-    span.style.transform = 'translateY(10px)';
-    setTimeout(() => {
-      span.style.transition = 'all 0.4s ease';
-      span.style.opacity = '1';
-      span.style.transform = 'translateY(0)';
-    }, 20);
-  }, 350);
-}, 2000);
-
 // Scroll spy
 const sections = ['home','services','projects','about','contact'];
 const navLinks = document.querySelectorAll('.sc-nav-links a');
