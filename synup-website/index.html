@@ -3,973 +3,407 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>SynUp Digital Solutions</title>
-<meta name="description" content="Systems management, website development, networking, and graphics design — SynUp Digital Solutions powers your business end to end." />
+<title>SynUp | IT for businesses in Kumasi and beyond</title>
+<meta name="description" content="We run IT for small and large businesses in Kumasi and beyond. Systems, websites, networks, design. One phone number." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.32.0/dist/tabler-icons.min.css" />
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-:root{--bg:#0A0F1E;--bg-alt:#111827;--bg-card:#111827;--bg-surf:#111827;--bg-surf2:#1A2E6B;--bg-hover:#162040;--bg-elev:#111827;--bg-select:#1A2E6B;--text:#E0EAFF;--text2:rgba(224,234,255,0.6);--text3:rgba(224,234,255,0.4);--text4:rgba(224,234,255,0.3);--text5:rgba(224,234,255,0.2);--border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.09);--border3:rgba(255,255,255,0.12);--accent:#00AEEF;--accent-lt:#33C4F5;--overlay:rgba(0,0,0,0.7);--overlay2:rgba(0,0,0,0.85);--bg-cta:linear-gradient(135deg,#111827 0%,#1A2E6B 100%)}
-[data-theme=light]{--bg:#F0F6FF;--bg-alt:#fff;--bg-card:#fff;--bg-surf:#F0F6FF;--bg-surf2:#E6F7FD;--bg-hover:#E6F7FD;--bg-elev:#fff;--bg-select:#E6F7FD;--text:#0D1B5E;--text2:rgba(13,27,94,0.6);--text3:rgba(13,27,94,0.4);--text4:rgba(13,27,94,0.3);--text5:rgba(13,27,94,0.2);--border:rgba(13,27,94,0.08);--border2:rgba(13,27,94,0.1);--border3:rgba(13,27,94,0.14);--accent:#00AEEF;--accent-lt:#0096D4;--overlay:rgba(0,0,0,0.35);--overlay2:rgba(0,0,0,0.5);--bg-cta:linear-gradient(135deg,#E6F7FD 0%,#F0F6FF 100%)}
-body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text)}
-.sc-nav{display:flex;align-items:center;justify-content:space-between;padding:18px 48px;background:var(--bg);border-bottom:1px solid var(--border2);position:sticky;top:0;z-index:100}
-.sc-logo{font-size:20px;font-weight:700;color:var(--text);text-decoration:none;letter-spacing:-0.5px}
-.sc-nav-links{display:flex;gap:32px}
-.sc-nav-links a{color:var(--text2);text-decoration:none;font-size:14px;font-weight:500;transition:color .2s,background .2s;position:relative;padding:6px 12px;border-radius:6px}
-.sc-nav-links a.active{color:var(--text);background:var(--bg-surf2)}
-.sc-nav-links a:hover{color:var(--text);background:var(--bg-surf)}
-.sc-nav-right{display:flex;gap:12px;align-items:center}
-.sc-btn-ghost{background:transparent;border:1px solid var(--text2);color:var(--text);padding:8px 18px;border-radius:8px;font-size:13px;font-weight:500;cursor:pointer;text-decoration:none;transition:border-color .2s}
-.sc-btn-ghost:hover{border-color:var(--text)}
-.sc-btn-primary{background:var(--text);color:var(--bg);padding:8px 18px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;text-decoration:none;transition:opacity .2s;border:none}
-.sc-btn-primary:hover{opacity:0.88}
-.sc-theme-btn{background:var(--bg-surf2);border:1px solid var(--border);color:var(--text);width:36px;height:36px;border-radius:8px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:16px;transition:background .2s;flex-shrink:0}
-.sc-theme-btn:hover{background:var(--bg-surf)}
-
-/* MOBILE MENU */
-.sc-hamburger{display:none;background:none;border:none;color:var(--text);font-size:24px;cursor:pointer;width:36px;height:36px;align-items:center;justify-content:center;padding:0}
-.sc-mobile-overlay{position:fixed;inset:0;z-index:200;background:rgba(0,0,0,0.6);backdrop-filter:blur(4px);display:none}
-.sc-mobile-overlay.open{display:block}
-.sc-mobile-menu{position:fixed;top:0;right:0;bottom:0;width:280px;z-index:201;background:var(--bg-elev);border-left:1px solid var(--border);padding:24px;display:flex;flex-direction:column;gap:8px;transform:translateX(100%);transition:transform .3s ease}
-.sc-mobile-menu.open{transform:translateX(0)}
-.sc-mobile-menu .sc-mobile-close{background:none;border:none;color:var(--text);font-size:22px;cursor:pointer;align-self:flex-end;padding:4px;width:32px;height:32px;display:flex;align-items:center;justify-content:center;border-radius:8px}
-.sc-mobile-menu .sc-mobile-close:hover{background:var(--bg-surf)}
-.sc-mobile-menu a{color:var(--text2);text-decoration:none;font-size:16px;font-weight:500;padding:12px 8px;border-radius:8px;transition:background .2s,color .2s}
-.sc-mobile-menu a:hover{background:var(--bg-card);color:var(--text)}
-.sc-mobile-menu .sc-mobile-ghost{background:transparent;border:1px solid var(--border);color:var(--text);padding:12px;border-radius:8px;font-size:14px;font-weight:500;cursor:pointer;text-decoration:none;text-align:center;margin-top:auto}
-.sc-mobile-menu .sc-mobile-primary{background:var(--accent);color:#0D1B5E;padding:12px;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;text-decoration:none;text-align:center;border:none}
-
-/* HERO */
-.sc-hero{padding:120px 48px 80px;text-align:center;position:relative;overflow:hidden;background:var(--bg)}
-.sc-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 50% 0%,rgba(0,174,239,0.08) 0%,transparent 70%);pointer-events:none}
-.sc-eyebrow{display:inline-flex;align-items:center;gap:8px;background:var(--bg-surf2);border:1px solid var(--border3);border-radius:100px;padding:6px 14px;font-size:12px;color:var(--text2);margin-bottom:32px;font-weight:500}
-.sc-eyebrow span{width:6px;height:6px;background:var(--accent);border-radius:50%;display:inline-block}
-.sc-hero-h1{font-size:72px;font-weight:800;line-height:1.05;letter-spacing:-2.5px;margin-bottom:0;color:var(--text)}
-.sc-hero-sub{font-size:17px;color:var(--text2);max-width:540px;margin:28px auto 40px;line-height:1.7;font-weight:400}
-.sc-hero-ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-.sc-hero-cta-main{background:var(--accent);color:#0D1B5E;padding:13px 28px;border-radius:10px;font-size:15px;font-weight:600;text-decoration:none;transition:opacity .2s;display:inline-flex;align-items:center;gap:8px}
-.sc-hero-cta-main:hover{opacity:0.88}
-.sc-hero-cta-sec{background:var(--bg-surf2);border:1px solid var(--border3);color:var(--text);padding:13px 28px;border-radius:10px;font-size:15px;font-weight:500;text-decoration:none;transition:background .2s}
-.sc-hero-cta-sec:hover{background:var(--bg-surf)}
-
-/* DIFFERENTIATOR */
-.sc-diff{padding:48px 48px;border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--bg);text-align:center}
-.sc-diff-text{font-size:18px;font-weight:500;color:var(--text2);max-width:640px;margin:0 auto;line-height:1.7;letter-spacing:-0.2px}
-.sc-diff-text strong{color:var(--accent);font-weight:600}
-
-/* MILESTONES */
-.sc-milestones{padding:80px 48px;background:var(--bg)}
-.sc-milestones .sc-section-label{margin-bottom:10px}
-.sc-milestones .sc-section-h2{font-size:36px;letter-spacing:-1.2px;margin-bottom:56px}
-.sc-timeline{max-width:640px;margin:0 auto;position:relative}
-.sc-timeline::before{content:'';position:absolute;left:0;top:0;bottom:0;width:1px;background:var(--border3)}
-.sc-tl-item{display:flex;gap:32px;padding:0 0 40px;position:relative}
-.sc-tl-item:last-child{padding-bottom:0}
-.sc-tl-dot{width:9px;height:9px;border-radius:50%;background:var(--accent);flex-shrink:0;position:relative;left:-4px;top:6px}
-.sc-tl-content{}
-.sc-tl-year{font-size:12px;font-weight:600;color:var(--accent);letter-spacing:0.5px;margin-bottom:4px}
-.sc-tl-text{font-size:15px;color:var(--text2);line-height:1.6}
-
-/* PRODUCTS TAB */
-.sc-products{padding:80px 48px;background:var(--bg)}
-.sc-section-label{font-size:12px;color:var(--accent);letter-spacing:1.5px;text-transform:uppercase;font-weight:600;margin-bottom:14px}
-.sc-section-h2{font-size:42px;font-weight:800;letter-spacing:-1.5px;color:var(--text);margin-bottom:48px;line-height:1.1}
-.sc-section-h2.sm{font-size:32px;letter-spacing:-1px;margin-bottom:36px}
-.sc-tabs{display:flex;gap:0;margin-bottom:40px;border-bottom:1px solid var(--border);width:fit-content}
-.sc-tab{padding:10px 20px;font-size:14px;font-weight:500;color:var(--text4);cursor:pointer;transition:color .2s;border:none;background:transparent;border-bottom:2px solid transparent;font-family:'Inter',sans-serif;position:relative;bottom:-1px}
-.sc-tab.active{color:var(--accent);border-bottom-color:var(--accent);font-weight:600}
-.sc-tab:hover{color:var(--text2)}
-.sc-tab-panel{display:none}
-.sc-tab-panel.active{display:grid;grid-template-columns:1fr 1.4fr;gap:48px;align-items:start}
-.sc-tab-content h3{font-size:26px;font-weight:700;letter-spacing:-0.7px;margin-bottom:12px;color:var(--text)}
-.sc-tab-content p{font-size:15px;color:var(--text2);line-height:1.7;margin-bottom:24px}
-.sc-tab-link{color:var(--accent);font-size:14px;font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:6px}
-.sc-tab-link:hover{text-decoration:underline}
-.sc-tab-screen{background:var(--bg-surf);border:1px solid var(--border2);border-radius:14px;overflow:hidden;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center}
-.sc-mock-dash{width:100%;height:100%;padding:20px;display:flex;flex-direction:column;gap:10px}
-.sc-mock-top{display:flex;gap:8px}
-.sc-mock-card{flex:1;background:var(--bg-surf2);border-radius:8px;padding:12px}
-.sc-mock-card-label{font-size:10px;color:var(--text4);margin-bottom:4px}
-.sc-mock-card-val{font-size:20px;font-weight:700;color:var(--text)}
-.sc-mock-card-val.purple{color:var(--accent)}
-.sc-mock-bar-wrap{flex:1;background:var(--bg-surf);border-radius:8px;padding:12px;display:flex;flex-direction:column;gap:6px;justify-content:flex-end}
-.sc-mock-bar{height:4px;border-radius:2px;background:var(--text5)}
-.sc-mock-bar.filled{background:var(--accent)}
-.sc-mock-row{display:flex;gap:8px}
-.sc-mock-table{flex:1;background:var(--bg-surf);border-radius:8px;padding:10px;display:flex;flex-direction:column;gap:5px}
-.sc-mock-tr{display:flex;gap:6px;align-items:center}
-.sc-mock-dot{width:8px;height:8px;border-radius:50%;background:var(--accent);flex-shrink:0}
-.sc-mock-dot.gray{background:var(--text5)}
-.sc-mock-line{height:8px;border-radius:4px;background:var(--text4);flex:1}
-.sc-mock-line.short{max-width:60%}
-
-/* CASE STUDIES */
-.sc-cases{padding:80px 48px;background:var(--bg-alt)}
-.sc-cases .sc-section-h2{font-size:36px;letter-spacing:-1.2px;margin-bottom:40px}
-.sc-case-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--border);border-radius:16px;overflow:hidden}
-.sc-case-card{background:var(--bg-alt);padding:40px;transition:background .2s}
-.sc-case-card:hover{background:var(--bg-hover)}
-.sc-case-img{width:100%;aspect-ratio:3/2;background:var(--bg-surf);border-radius:10px;margin-bottom:24px;overflow:hidden;display:flex;align-items:center;justify-content:center}
-.sc-case-img-inner{width:60%;height:60%;border-radius:8px;background:rgba(0,174,239,0.15);display:flex;align-items:center;justify-content:center;font-size:32px}
-.sc-case-meta{display:flex;gap:12px;align-items:center;margin-bottom:14px}
-.sc-case-tag{font-size:11px;font-weight:600;color:var(--accent);background:rgba(0,174,239,0.12);padding:4px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:0.8px}
-.sc-case-card h3{font-size:20px;font-weight:700;letter-spacing:-0.4px;color:var(--text);margin-bottom:16px;line-height:1.35}
-.sc-case-stats{display:flex;gap:24px}
-.sc-case-stat-num{font-size:22px;font-weight:800;color:var(--accent)}
-.sc-case-stat-desc{font-size:12px;color:var(--text3);margin-top:2px}
-
-/* TESTIMONIALS */
-.sc-testimonials{padding:80px 48px;background:var(--bg-alt)}
-.sc-testimonials .sc-section-h2{font-size:32px;letter-spacing:-1px;margin-bottom:40px}
-.sc-test-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
-.sc-test-card{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:32px;transition:border-color .2s}
-.sc-test-card:hover{border-color:var(--border3)}
-.sc-test-quote{font-size:16px;font-weight:400;color:var(--text);line-height:1.7;margin-bottom:24px;font-style:italic}
-.sc-test-author{display:flex;flex-direction:column;gap:2px}
-.sc-test-name{font-size:14px;font-weight:600;color:var(--text)}
-.sc-test-title{font-size:13px;color:var(--text3)}
-
-/* BLOG */
-.sc-blog{padding:80px 48px;background:var(--bg-alt)}
-.sc-blog .sc-section-h2{font-size:32px;letter-spacing:-1px;margin-bottom:40px}
-.sc-blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px}
-.sc-blog-card{background:var(--bg-card);border:1px solid var(--border);border-radius:12px;overflow:hidden;cursor:pointer;transition:border-color .2s}
-.sc-blog-card:hover{border-color:var(--text4)}
-.sc-blog-img{aspect-ratio:16/10;background:var(--bg-surf);display:flex;align-items:center;justify-content:center;font-size:28px}
-.sc-blog-body{padding:20px}
-.sc-blog-meta{display:flex;gap:8px;align-items:center;margin-bottom:10px}
-.sc-blog-tag{font-size:11px;font-weight:600;color:var(--accent);background:rgba(0,174,239,0.1);padding:3px 8px;border-radius:100px}
-.sc-blog-date{font-size:11px;color:var(--text4)}
-.sc-blog-card h4{font-size:15px;font-weight:600;color:var(--text);line-height:1.45;letter-spacing:-0.2px}
-
-/* INSIGHT MODAL */
-.sc-insight-overlay{position:fixed;inset:0;z-index:999;background:var(--overlay);backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;padding:20px}
-.sc-insight-overlay.open{display:flex}
-.sc-insight-modal{background:var(--bg-elev);border:1px solid var(--border3);border-radius:20px;padding:40px;width:100%;max-width:560px;position:relative;max-height:90vh;overflow-y:auto}
-.sc-insight-modal .sc-insight-close{position:absolute;top:16px;right:16px;background:none;border:none;color:var(--text4);font-size:22px;cursor:pointer;width:32px;height:32px;display:flex;align-items:center;justify-content:center;border-radius:8px;transition:background .2s}
-.sc-insight-modal .sc-insight-close:hover{background:var(--bg-surf);color:var(--text)}
-.sc-insight-modal .sc-insight-tag{font-size:11px;font-weight:600;color:var(--accent);background:rgba(0,174,239,0.1);padding:3px 8px;border-radius:100px;display:inline-block;margin-bottom:12px}
-.sc-insight-modal h3{font-size:22px;font-weight:700;letter-spacing:-0.5px;margin-bottom:16px;color:var(--text);line-height:1.35}
-.sc-insight-modal .sc-insight-section-label{font-size:12px;font-weight:600;color:var(--text3);text-transform:uppercase;letter-spacing:0.8px;margin-bottom:8px}
-.sc-insight-modal .sc-insight-desc{font-size:14px;color:var(--text2);line-height:1.7;margin-bottom:24px}
-.sc-insight-modal .sc-insight-solution{background:rgba(0,174,239,0.08);border:1px solid rgba(0,174,239,0.15);border-radius:12px;padding:20px}
-.sc-insight-modal .sc-insight-solution .sc-insight-section-label{color:var(--accent)}
-.sc-insight-modal .sc-insight-solution p{font-size:14px;color:var(--text2);line-height:1.7;margin:0}
-@media(max-width:640px){.sc-insight-modal{padding:24px 20px}}
-
-/* FAQ */
-.sc-faq{padding:80px 48px;background:var(--bg-alt)}
-.sc-faq .sc-section-h2{font-size:32px;letter-spacing:-1px;margin-bottom:40px}
-.sc-faq-grid{max-width:720px;margin:48px auto 0}
-.sc-faq-item{border:1px solid var(--border);border-radius:12px;margin-bottom:10px;overflow:hidden}
-.sc-faq-q{width:100%;padding:18px 20px;background:var(--bg-card);border:none;color:var(--text);font-size:15px;font-weight:500;text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;font-family:'Inter',sans-serif;transition:background .2s}
-.sc-faq-q:hover{background:var(--bg-surf)}
-.sc-faq-q i{font-size:18px;color:var(--text4);transition:transform .3s}
-.sc-faq-q.open i{transform:rotate(180deg);color:var(--accent)}
-.sc-faq-a{padding:0 20px;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease}
-.sc-faq-a.open{max-height:300px;padding:0 20px 18px}
-.sc-faq-a p{font-size:14px;color:var(--text2);line-height:1.7;margin:0}
-
-/* ABOUT */
-.sc-about{padding:80px 48px;background:var(--bg)}
-.sc-about .sc-section-h2{font-size:36px;letter-spacing:-1.2px}
-.sc-about-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;max-width:960px;margin:0 auto}
-.sc-about-text p{font-size:15px;color:var(--text2);line-height:1.8;margin-bottom:16px}
-.sc-about-text p:last-child{margin-bottom:0}
-.sc-about-cards{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.sc-about-card{background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:24px 20px;text-align:center}
-.sc-about-card i{font-size:28px;color:var(--accent);margin-bottom:8px;display:block}
-.sc-about-card h4{font-size:24px;font-weight:800;color:var(--text);letter-spacing:-0.5px}
-.sc-about-card p{font-size:12px;color:var(--text3);margin:2px 0 0}
-
-/* CTA BANNER */
-.sc-cta-banner{margin:0 48px 80px;border-radius:20px;background:var(--bg-cta);border:1px solid rgba(0,174,239,0.25);padding:80px 64px;text-align:center;position:relative;overflow:hidden}
-.sc-cta-banner::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 70% at 50% 50%,rgba(0,174,239,0.15) 0%,transparent 70%);pointer-events:none}
-.sc-cta-banner h2{font-size:48px;font-weight:800;letter-spacing:-1.5px;color:var(--text);margin-bottom:16px;position:relative;line-height:1.1}
-.sc-cta-banner p{font-size:16px;color:var(--text2);margin-bottom:32px;position:relative}
-.sc-cta-banner-btn{background:var(--accent);color:#0D1B5E;padding:14px 32px;border-radius:10px;font-size:15px;font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:8px;position:relative;transition:opacity .2s}
-.sc-cta-banner-btn:hover{opacity:0.88}
-
-/* FOOTER */
-.sc-footer{padding:40px 48px;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
-.sc-footer-logo{font-size:16px;font-weight:700;color:var(--text)}
-.sc-footer-links{display:flex;gap:24px}
-.sc-footer-links a{font-size:13px;color:var(--text4);text-decoration:none;transition:color .2s}
-.sc-footer-links a:hover{color:var(--text2)}
-.sc-footer-copy{font-size:12px;color:var(--text5)}
-
-/* MODAL */
-.sc-modal-overlay{position:fixed;inset:0;z-index:999;background:var(--overlay);backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;padding:20px}
-.sc-modal-overlay.open{display:flex}
-.sc-modal{background:var(--bg-elev);border:1px solid var(--border3);border-radius:20px;padding:40px;width:100%;max-width:480px;position:relative;max-height:90vh;overflow-y:auto}
-.sc-modal-close{position:absolute;top:16px;right:16px;background:none;border:none;color:var(--text4);font-size:22px;cursor:pointer;width:32px;height:32px;display:flex;align-items:center;justify-content:center;border-radius:8px;transition:background .2s}
-.sc-modal-close:hover{background:var(--bg-surf);color:var(--text)}
-.sc-modal h3{font-size:22px;font-weight:700;letter-spacing:-0.5px;margin-bottom:6px;color:var(--text)}
-.sc-modal p{font-size:14px;color:var(--text2);margin-bottom:28px;line-height:1.5}
-.sc-modal label{font-size:13px;color:var(--text3);display:block;margin-bottom:6px;font-weight:500}
-.sc-modal input,.sc-modal textarea,.sc-modal select{width:100%;padding:11px 14px;border-radius:10px;border:1px solid var(--border3);background:var(--bg-surf);color:var(--text);font-size:14px;font-family:'Inter',sans-serif;outline:none;transition:border-color .2s}
-.sc-modal select option{background:var(--bg-select);color:var(--text);padding:8px}
-.sc-modal input:focus,.sc-modal textarea:focus,.sc-modal select:focus{border-color:var(--accent)}
-.sc-modal textarea{resize:vertical;min-height:100px}
-.sc-modal .sc-form-group{margin-bottom:16px}
-.sc-modal .sc-form-row{display:flex;gap:12px}
-.sc-modal .sc-form-row > div{flex:1}
-.sc-modal .sc-btn-submit{background:var(--accent);color:#0D1B5E;padding:12px 24px;border-radius:10px;font-size:15px;font-weight:600;border:none;cursor:pointer;width:100%;transition:opacity .2s;font-family:'Inter',sans-serif}
-.sc-modal .sc-btn-submit:hover{opacity:0.88}
-.sc-modal .sc-btn-submit:disabled{opacity:0.5;cursor:not-allowed}
-.sc-form-result{font-size:14px;display:none;padding:12px;border-radius:8px;margin-bottom:16px}
-.sc-form-result.success{display:block;background:rgba(0,174,239,0.1);color:var(--accent);border:1px solid rgba(0,174,239,0.2)}
-.sc-form-result.error{display:block;background:rgba(255,80,80,0.1);color:#ff5050;border:1px solid rgba(255,80,80,0.2)}
-@media(max-width:480px){
-  .sc-modal{padding:28px 20px}
-  .sc-modal .sc-form-row{flex-direction:column;gap:0}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{color-scheme:light dark;--paper:#f4efe6;--ink:#161412;--ink-soft:rgba(22,20,18,.72);--ink-faint:rgba(22,20,18,.5);--accent:#00b0f0;--accent-dark:#0086c9;--line:rgba(22,20,18,.12);--card:#fbf8f2;--header-bg:rgba(244,239,230,.92);--hero-fg:#f7fbff}
+@media(prefers-color-scheme:dark){
+  :root{--paper:#0f1418;--ink:#eaf2f7;--ink-soft:rgba(234,242,247,.72);--ink-faint:rgba(234,242,247,.5);--accent:#00b0f0;--accent-dark:#4fd2ff;--line:rgba(234,242,247,.14);--card:#151c22;--header-bg:rgba(15,20,24,.88);--hero-fg:#f7fbff}
 }
+html{scroll-behavior:smooth}
+body{font-family:"Sora",system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6}
+img,video{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3,h4{font-family:"Sora",system-ui,sans-serif;font-weight:400;line-height:1.1;letter-spacing:-0.04em}
+.container{width:min(1200px,100% - 48px);margin:0 auto}
 
-/* GALLERY */
-.sc-gallery-overlay{position:fixed;inset:0;z-index:999;background:var(--overlay2);backdrop-filter:blur(10px);display:none;align-items:center;justify-content:center;padding:20px}
-.sc-gallery-overlay.open{display:flex}
-.sc-gallery-close{position:absolute;top:16px;right:16px;background:none;border:none;color:var(--text2);font-size:28px;cursor:pointer;width:40px;height:40px;display:flex;align-items:center;justify-content:center;border-radius:10px;transition:background .2s;z-index:2}
-.sc-gallery-close:hover{background:var(--text5);color:var(--text)}
-.sc-gallery-img{max-width:90vw;max-height:85vh;border-radius:12px;object-fit:contain;box-shadow:0 20px 60px rgba(0,0,0,0.5)}
-.sc-gallery-nav{position:absolute;top:50%;transform:translateY(-50%);background:var(--text5);border:none;color:var(--text);font-size:24px;cursor:pointer;width:44px;height:44px;display:flex;align-items:center;justify-content:center;border-radius:50%;transition:background .2s}
-.sc-gallery-nav:hover{background:var(--text4)}
-.sc-gallery-nav.prev{left:20px}
-.sc-gallery-nav.next{right:20px}
-.sc-gallery-counter{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);font-size:13px;color:var(--text4);background:rgba(0,0,0,0.5);padding:6px 14px;border-radius:100px}
-@media(max-width:640px){.sc-gallery-img{max-width:95vw;max-height:70vh}.sc-gallery-nav{width:36px;height:36px;font-size:18px}.sc-gallery-nav.prev{left:8px}.sc-gallery-nav.next{right:8px}}
+.topbar{position:sticky;top:0;z-index:50;background:var(--header-bg);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.topbar-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:72px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:700}
+.brand img{height:34px;width:auto}
+.brand span{font-family:"Sora",sans-serif;font-size:22px;font-weight:700;letter-spacing:-.03em}
+.nav-center{display:flex;align-items:center;gap:18px;flex:1;justify-content:space-between;max-width:760px}
+.seg{display:inline-flex;align-items:center;background:var(--ink);border-radius:999px;padding:4px;position:relative}
+.seg button{appearance:none;border:0;background:transparent;color:var(--paper);font:700 14px/1 "Sora",sans-serif;letter-spacing:-.03em;padding:10px 14px;border-radius:999px;cursor:pointer;white-space:nowrap;transition:color .2s,background .2s}
+.seg button[aria-selected="true"]{background:var(--paper);color:var(--ink)}
+.product-links{display:flex;align-items:center;gap:4px;height:72px}
+.product-links a{display:flex;align-items:center;height:100%;padding:0 14px;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:-.02em;color:var(--ink-soft);border-bottom:3px solid transparent;transition:color .2s,border-color .2s,background .2s}
+.product-links a:hover,.product-links a.active{color:var(--ink);border-bottom-color:var(--accent);background:rgba(0,176,240,.08)}
+.nav-actions{display:flex;align-items:center;gap:10px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 18px;border-radius:999px;text-decoration:none;font-weight:700;font-size:14px;letter-spacing:-.03em;border:1.5px solid var(--ink);transition:transform .15s,background .2s,color .2s}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary{background:var(--accent);border-color:var(--accent);color:#041018}
+.btn-primary:hover{background:var(--accent-dark);border-color:var(--accent-dark)}
+.btn-outline{background:transparent;color:var(--ink)}
+.menu-btn{display:none;background:transparent;border:1px solid var(--line);width:40px;height:40px;border-radius:10px;font-size:20px;cursor:pointer;color:var(--ink)}
+.mobile-drawer{display:none;position:fixed;inset:72px 0 auto 0;background:var(--paper);border-bottom:1px solid var(--line);padding:16px 24px 24px;z-index:49}
+.mobile-drawer.open{display:block}
+.mobile-drawer a{display:block;padding:12px 0;text-decoration:none;font-weight:600;border-bottom:1px solid var(--line)}
+.mobile-drawer .drawer-actions{display:grid;gap:10px;margin-top:16px}
 
-/* REPORT MODAL */
-.sc-report-overlay{position:fixed;inset:0;z-index:999;background:var(--overlay);backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;padding:20px}
-.sc-report-overlay.open{display:flex}
-.sc-report-modal{background:var(--bg-elev);border:1px solid var(--border3);border-radius:20px;padding:40px;width:100%;max-width:480px;position:relative;max-height:90vh;overflow-y:auto}
-.sc-report-modal .sc-report-close{position:absolute;top:16px;right:16px;background:none;border:none;color:var(--text4);font-size:22px;cursor:pointer;width:32px;height:32px;display:flex;align-items:center;justify-content:center;border-radius:8px;transition:background .2s}
-.sc-report-modal .sc-report-close:hover{background:var(--bg-surf);color:var(--text)}
-.sc-report-modal h3{font-size:22px;font-weight:700;letter-spacing:-0.5px;margin-bottom:6px;color:var(--text)}
-.sc-report-modal p{font-size:14px;color:var(--text2);margin-bottom:28px;line-height:1.5}
-.sc-report-modal label{font-size:13px;color:var(--text3);display:block;margin-bottom:6px;font-weight:500}
-.sc-report-modal input,.sc-report-modal textarea,.sc-report-modal select{width:100%;padding:11px 14px;border-radius:10px;border:1px solid var(--border3);background:var(--bg-surf);color:var(--text);font-size:14px;font-family:'Inter',sans-serif;outline:none;transition:border-color .2s}
-.sc-report-modal select option{background:var(--bg-select);color:var(--text);padding:8px}
-.sc-report-modal input:focus,.sc-report-modal textarea:focus,.sc-report-modal select:focus{border-color:var(--accent)}
-.sc-report-modal textarea{resize:vertical;min-height:100px}
-.sc-report-modal .sc-form-group{margin-bottom:16px}
-.sc-report-modal .sc-form-row{display:flex;gap:12px}
-.sc-report-modal .sc-form-row > div{flex:1}
-.sc-report-modal .sc-btn-submit{background:var(--accent);color:#0D1B5E;padding:12px 24px;border-radius:10px;font-size:15px;font-weight:600;border:none;cursor:pointer;width:100%;transition:opacity .2s;font-family:'Inter',sans-serif}
-.sc-report-modal .sc-btn-submit:hover{opacity:0.88}
-.sc-report-modal .sc-btn-submit:disabled{opacity:0.5;cursor:not-allowed}
-@media(max-width:480px){.sc-report-modal{padding:28px 20px}.sc-report-modal .sc-form-row{flex-direction:column;gap:0}}
+.hero{position:relative;min-height:100vh;display:flex;align-items:flex-end;color:var(--hero-fg);overflow:hidden;background:#05090c}
+.hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:right center;transform:scale(1.08);filter:saturate(.9) brightness(.9)}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,9,12,.94) 0%,rgba(5,9,12,.88) 38%,rgba(5,9,12,.62) 62%,rgba(5,9,12,.18) 82%,rgba(5,9,12,.08) 100%);z-index:1}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,9,12,.25) 0%,rgba(5,9,12,0) 35%,rgba(5,9,12,.35) 100%);z-index:1}
+.hero-inner{position:relative;z-index:2;padding:180px 0 110px;display:block;max-width:860px}
+.eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:rgba(247,251,255,.8);margin-bottom:18px}
+.hero h1{font-size:clamp(42px,6vw,72px);letter-spacing:-.06em;line-height:1.08;margin-bottom:20px}
+.hero-copy{font-size:18px;line-height:1.6;color:rgba(247,251,255,.88);max-width:680px;letter-spacing:-.02em}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.hero-actions .btn{border-color:rgba(247,251,255,.4);color:#f7fbff}
+.hero-actions .btn-primary{background:var(--accent);color:#041018;border-color:var(--accent)}
+.hero-actions .btn-primary:hover{background:var(--accent-dark)}
 
-/* WHATSAPP FLOATING */
-.sc-wa{position:fixed;bottom:24px;right:24px;z-index:100;width:56px;height:56px;border-radius:50%;background:#25d366;color:#fff;display:flex;align-items:center;justify-content:center;font-size:28px;text-decoration:none;box-shadow:0 4px 20px rgba(37,211,102,0.35);transition:transform .2s,box-shadow .2s}
-.sc-wa:hover{transform:scale(1.08);box-shadow:0 6px 28px rgba(37,211,102,0.5)}
-@media(max-width:640px){.sc-wa{width:48px;height:48px;font-size:24px;bottom:16px;right:16px}}
+section{padding:88px 0}
+.section-head{margin-bottom:36px}
+.kicker{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.section-head h2{font-size:clamp(30px,4vw,52px);letter-spacing:-.03em;max-width:820px}
+.lead{font-size:18px;color:var(--ink-soft);max-width:680px;margin-top:14px}
 
-/* RESPONSIVE */
-@media(max-width:768px){
-  .sc-nav-links,.sc-nav-right .sc-btn-ghost,.sc-nav-right .sc-btn-primary{display:none}
-  .sc-hamburger{display:flex}
-  .sc-hero{padding:60px 20px 48px}
-  .sc-hero-h1{font-size:34px;letter-spacing:-1px}
-  .sc-hero-sub{font-size:15px}
-  .sc-diff{padding:32px 20px}
-  .sc-diff-text{font-size:16px}
-  .sc-milestones{padding:48px 20px}
-  .sc-milestones .sc-section-h2{font-size:26px;margin-bottom:32px}
-  .sc-products{padding:48px 20px}
-  .sc-section-h2{font-size:26px;margin-bottom:32px}
-  .sc-tabs{overflow-x:auto;width:100%}
-  .sc-tab-panel.active{grid-template-columns:1fr;gap:24px}
-  .sc-tab-content h3{font-size:22px}
-  .sc-tab-screen{aspect-ratio:4/3}
-  .sc-cases{padding:48px 20px}
-  .sc-case-grid{grid-template-columns:1fr}
-  .sc-case-card{padding:24px}
-  .sc-case-card h3{font-size:17px}
-  .sc-testimonials{padding:48px 20px}
-  .sc-test-grid{grid-template-columns:1fr}
-  .sc-test-card{padding:24px}
-  .sc-test-quote{font-size:15px}
-  .sc-faq{padding:48px 20px}
-  .sc-about{padding:48px 20px}
-  .sc-about-grid{grid-template-columns:1fr;gap:24px}
-  .sc-about-cards{grid-template-columns:1fr 1fr}
-  .sc-blog{padding:48px 20px}
-  .sc-blog-grid{grid-template-columns:1fr}
-  .sc-cta-banner{margin:0 16px 40px;padding:40px 24px}
-  .sc-cta-banner h2{font-size:26px}
-  .sc-cta-banner p{font-size:14px}
-  .sc-footer{flex-direction:column;gap:12px;text-align:center;padding:24px 20px}
-  .sc-nav{padding:12px 16px}
-  .sc-nav-right{gap:8px}
-  .sc-section-label{font-size:11px}
+.apps{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.snap-row{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:10px 4px 20px;-webkit-overflow-scrolling:touch}
+.snap-row::-webkit-scrollbar{height:8px}
+.snap-row::-webkit-scrollbar-thumb{background:var(--line);border-radius:99px}
+.app-card{flex:0 0 66vw;max-width:320px;scroll-snap-align:center;background:#05090c;color:#f7fbff;border-radius:22px;overflow:hidden;position:relative;aspect-ratio:9/16;border:1px solid var(--line);text-decoration:none;transform:scale(.94);opacity:.72;transition:transform .45s ease,opacity .45s ease,box-shadow .45s ease}
+.app-card.active{transform:scale(1.04);opacity:1;z-index:2;box-shadow:0 18px 40px rgba(0,0,0,.25)}
+.app-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.app-card .ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px;background:linear-gradient(180deg,#163040,#081018);color:rgba(247,251,255,.88)}
+.app-card .ph i{font-size:34px;margin-bottom:10px;color:var(--accent)}
+.app-card .progress{position:absolute;left:10px;right:10px;top:10px;display:flex;gap:6px;z-index:3}
+.app-card .progress span{flex:1;height:3px;border-radius:99px;background:rgba(255,255,255,.28);overflow:hidden}
+.app-card .progress span i{display:block;height:100%;width:0;background:#fff;border-radius:99px}
+.app-card.active .progress span i{animation:reelFill 4.5s linear forwards}
+@keyframes reelFill{from{width:0}to{width:100%}}
+.app-card .meta{position:absolute;left:0;right:0;bottom:0;padding:18px 16px;background:linear-gradient(180deg,transparent,rgba(0,0,0,.78));z-index:2}
+.app-card .meta strong{display:block;font-family:"Sora",sans-serif;font-weight:600;font-size:16px;letter-spacing:-.02em}
+.app-card .meta span{font-size:13px;color:rgba(247,251,255,.75)}
+.app-card .chip{position:absolute;left:12px;top:22px;z-index:3;font-size:11px;font-weight:700;background:rgba(0,0,0,.45);border:1px solid rgba(255,255,255,.2);padding:4px 8px;border-radius:999px;display:inline-flex;align-items:center;gap:6px}
+.app-card .chip b{width:6px;height:6px;border-radius:50%;background:var(--accent);display:inline-block}
+@media(min-width:900px){.snap-row{justify-content:center;overflow:visible}.app-card{flex:0 0 220px;max-width:none}}
+
+.work-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:22px}
+.work-card{border:1px solid var(--line);border-radius:22px;overflow:hidden;background:var(--paper)}
+.work-card .media{aspect-ratio:16/10;background:#ddd6c8;overflow:hidden}
+@media(prefers-color-scheme:dark){.work-card .media{background:#1f2830}}
+.work-card .media img{width:100%;height:100%;object-fit:cover}
+.work-card .body{padding:22px}
+.work-card h3{font-size:28px;margin-bottom:10px;letter-spacing:-.02em}
+.work-card p{color:var(--ink-soft);margin-bottom:10px;font-size:15px}
+.work-card .label{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
+.work-card a.link{color:var(--accent);font-weight:700;text-decoration:none}
+.work-card a.link:hover{text-decoration:underline}
+.stack{display:grid;gap:22px}
+
+.services-list{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.service{border-top:1.5px solid var(--ink);padding:18px 0}
+.service h3{font-size:30px;margin-bottom:8px}
+.service p{color:var(--ink-soft);max-width:520px}
+
+.quote-band{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center}
+.quote-band blockquote{font-family:"Sora",sans-serif;font-weight:400;font-size:clamp(26px,3vw,40px);line-height:1.2;letter-spacing:-.04em}
+.quote-band .attrib{margin-top:16px;font-size:16px;color:var(--ink-soft)}
+.quote-band .attrib strong{color:var(--ink)}
+
+.cta{background:#0b141a;color:#eaf2f7;border-radius:28px;padding:48px;display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center;border:1px solid rgba(0,176,240,.25)}
+.cta h2{font-size:clamp(30px,4vw,46px);color:#f7fbff}
+.cta p{color:rgba(234,242,247,.8);margin-top:10px;font-size:18px}
+.cta .actions{display:flex;flex-direction:column;gap:12px}
+.cta .btn{border-color:rgba(234,242,247,.35);color:#eaf2f7;justify-content:center}
+.cta .btn-primary{background:var(--accent);border-color:var(--accent);color:#041018}
+
+footer{padding:36px 0 48px;border-top:1px solid var(--line);color:var(--ink-soft);font-size:14px}
+.footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+.footer-inner a{text-decoration:none;color:var(--ink-soft)}
+.footer-inner a:hover{color:var(--ink)}
+
+.wa{position:fixed;right:18px;bottom:18px;z-index:60;display:inline-flex;align-items:center;gap:10px;background:var(--accent);color:#041018;text-decoration:none;padding:14px 18px;border-radius:999px;font-weight:700;box-shadow:0 10px 30px rgba(0,0,0,.18)}
+.wa i{font-size:22px}
+
+@media(max-width:1000px){
+  .nav-center .seg,.product-links,.nav-actions .btn-outline{display:none}
+  .menu-btn{display:inline-flex;align-items:center;justify-content:center}
+  .hero{min-height:100svh}
+  .hero-inner{padding:140px 0 80px;max-width:100%}
+  .work-grid,.quote-band,.cta,.services-list{grid-template-columns:1fr}
 }
-@media(max-width:480px){
-  .sc-hero-h1{font-size:26px}
-  .sc-hero-sub{font-size:14px}
-  .sc-eyebrow{font-size:11px;padding:4px 12px}
-  .sc-cta-banner{padding:32px 16px}
-  .sc-cta-banner h2{font-size:22px}
-  .sc-about-cards{grid-template-columns:1fr}
-  .sc-tab-screen{aspect-ratio:3/2}
+@media(max-width:640px){
+  .container{width:min(1200px,100% - 32px)}
+  section{padding:64px 0}
+  .topbar-inner{min-height:64px}
+  .hero{min-height:auto}
+  .hero h1{font-size:38px}
+  .hero-copy{font-size:16px}
+  .cta{padding:28px}
+  .wa span{display:none}
+  .wa{padding:14px;border-radius:50%}
 }
 </style>
 </head>
 <body>
 
-<div style="background:var(--bg);min-height:100vh">
-
-<a href="https://wa.me/233545733798" target="_blank" rel="noopener" class="sc-wa" aria-label="Chat on WhatsApp"><i class="ti ti-brand-whatsapp"></i></a>
-
-<!-- NAV -->
-<nav class="sc-nav">
-  <a href="#" class="sc-logo" style="display:flex;align-items:center;gap:8px"><img src="/logo.png" alt="SynUp" style="height:32px;width:auto;display:block"><span style="font-size:20px;font-weight:700;letter-spacing:-0.5px;background:linear-gradient(135deg,#E0EAFF 0%,#00AEEF 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">SynUp</span></a>
-  <div class="sc-nav-links">
-    <a href="#">Home</a>
-    <a href="#services">Services</a>
-    <a href="#projects">Projects</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
+<header class="topbar">
+  <div class="container topbar-inner">
+    <a href="/" class="brand"><img src="/logo.png" alt="SynUp logo"><span>SynUp</span></a>
+    <div class="nav-center" aria-label="Primary">
+      <div class="seg" role="tablist" aria-label="Audience">
+        <button role="tab" aria-selected="true" data-seg="everyday" onclick="setSeg('everyday')">Everyday business</button>
+        <button role="tab" aria-selected="false" data-seg="custom" onclick="setSeg('custom')">Customizations</button>
+      </div>
+      <nav class="product-links" id="product-links" aria-label="Services">
+        <a href="#services" data-for="everyday" class="active">Systems</a>
+        <a href="#services" data-for="everyday">Websites</a>
+        <a href="#services" data-for="everyday">Networks</a>
+        <a href="#services" data-for="everyday">Design</a>
+        <a href="/school-solution.html" data-for="custom">School Pro</a>
+        <a href="/hotel-solution.html" data-for="custom">Hotel Pro</a>
+        <a href="/autoparts-solution.html" data-for="custom">AutoParts</a>
+        <a href="#work" data-for="custom">Results</a>
+      </nav>
+    </div>
+    <div class="nav-actions">
+      <a class="btn btn-outline" href="/projects.html">Projects</a>
+      <a class="btn btn-primary" href="https://wa.me/233549984981?text=Hi%20SynUp%2C%20I%27d%20like%20to%20book%20a%20free%20site%20visit." target="_blank" rel="noopener">Book a free site visit</a>
+      <button class="menu-btn" aria-label="Menu" onclick="toggleMenu()"><i class="ti ti-menu-2"></i></button>
+    </div>
   </div>
-  <div class="sc-nav-right">
-    <a href="#about" class="sc-btn-ghost">Learn more</a>
-    <a href="#" class="sc-btn-primary" onclick="openModal('get-started')">Get Started</a>
-    <button class="sc-theme-btn" onclick="toggleTheme()" aria-label="Toggle theme"><i class="ti ti-moon" id="theme-icon"></i></button>
-    <button class="sc-hamburger" onclick="openMobileMenu()" aria-label="Menu"><i class="ti ti-menu-2"></i></button>
+  <div class="mobile-drawer" id="mobile-drawer">
+    <a href="/school-solution.html" onclick="toggleMenu()">School Pro</a>
+    <a href="/hotel-solution.html" onclick="toggleMenu()">Hotel Pro</a>
+    <a href="/autoparts-solution.html" onclick="toggleMenu()">AutoParts</a>
+    <a href="/projects.html" onclick="toggleMenu()">Projects</a>
+    <a href="#work" onclick="toggleMenu()">Work</a>
+    <a href="#contact" onclick="toggleMenu()">Contact</a>
+    <div class="drawer-actions">
+      <a class="btn btn-primary" href="https://wa.me/233549984981?text=Hi%20SynUp%2C%20I%27d%20like%20to%20book%20a%20free%20site%20visit." target="_blank" rel="noopener">Book a free site visit</a>
+      <a class="btn btn-outline" href="https://wa.me/233549984981" target="_blank" rel="noopener">Message us on WhatsApp</a>
+    </div>
   </div>
-</nav>
+</header>
 
-<div class="sc-mobile-overlay" id="mobile-overlay" onclick="closeMobileMenu()"></div>
-<div class="sc-mobile-menu" id="mobile-menu">
-  <button class="sc-mobile-close" onclick="closeMobileMenu()"><i class="ti ti-x"></i></button>
-  <a href="#" onclick="closeMobileMenu()">Home</a>
-  <a href="#services" onclick="closeMobileMenu()">Services</a>
-  <a href="#projects" onclick="closeMobileMenu()">Projects</a>
-  <a href="#about" onclick="closeMobileMenu()">About</a>
-  <a href="#contact" onclick="closeMobileMenu()">Contact</a>
-  <a href="#about" class="sc-mobile-ghost" onclick="closeMobileMenu()">Learn more</a>
-  <a href="#" class="sc-mobile-primary" onclick="closeMobileMenu();openModal('get-started')">Get Started</a>
-</div>
-
-<!-- HERO -->
-<section class="sc-hero" id="home">
-  <div class="sc-eyebrow"><span></span> Ghana's IT team for schools, shops, and growing businesses</div>
-  <h1 class="sc-hero-h1">Stop juggling vendors.<br>One team that does it all.</h1>
-  <p class="sc-hero-sub">Most Ghanaian businesses manage 3+ vendors for IT. SynUp handles your systems, website, network, and design — from one number in Kumasi.</p>
-  <div class="sc-hero-ctas">
-    <a href="#" class="sc-hero-cta-main" onclick="openModal('get-started')"><i class="ti ti-arrow-right"></i> Get started free</a>
-    <a href="mailto:Synupinfo@gmail.com?subject=Book%20a%20call" class="sc-hero-cta-sec">Book a call</a>
-  </div>
-</section>
-
-<!-- DIFFERENTIATOR -->
-<div class="sc-diff">
-  <p class="sc-diff-text"><strong>We don't just build what you ask for — we build what you actually need.</strong> Most agencies take a brief and disappear. SynUp stays embedded in your business, so your systems, website, and network evolve as you grow.</p>
-</div>
-
-<!-- MILESTONES -->
-<section class="sc-milestones">
-  <div class="sc-section-label">How we got here</div>
-  <h2 class="sc-section-h2">Five years of building real infrastructure</h2>
-  <div class="sc-timeline">
-    <div class="sc-tl-item">
-      <div class="sc-tl-dot"></div>
-      <div class="sc-tl-content">
-        <div class="sc-tl-year">2019</div>
-        <div class="sc-tl-text">SynUp founded in Kumasi. First project: a school management system for Atasemanso M/A J.H.S — built to replace paper attendance and manual report cards.</div>
+<main>
+  <section class="hero" id="home">
+    <video id="hero-video" autoplay muted playsinline preload="auto"></video>
+    <div class="container hero-inner">
+      <div>
+        <div class="eyebrow">Kumasi, Ghana · Since 2019</div>
+        <h1>We run IT for businesses, small and large.</h1>
+        <p class="hero-copy">Systems, websites, networks, design. One phone number. We work with businesses of every size, and we also build custom products like School Pro, our first global product for schools. When something breaks or needs building, you talk to us and we handle it.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://wa.me/233549984981?text=Hi%20SynUp%2C%20I%20need%20help%20with..." target="_blank" rel="noopener"><i class="ti ti-brand-whatsapp"></i> Message us on WhatsApp</a>
+          <a class="btn" href="https://wa.me/233549984981?text=Hi%20SynUp%2C%20I%27d%20like%20to%20book%20a%20free%20site%20visit." target="_blank" rel="noopener"><i class="ti ti-calendar-event"></i> Book a free site visit</a>
+        </div>
       </div>
     </div>
-    <div class="sc-tl-item">
-      <div class="sc-tl-dot"></div>
-      <div class="sc-tl-content">
-        <div class="sc-tl-year">2021</div>
-        <div class="sc-tl-text">Expanded into website development and brand design. First catering and beauty clients onboarded — Dockys Catering, Nailed by Kay.</div>
+  </section>
+
+  <section class="apps" id="apps">
+    <div class="container">
+      <div class="section-head">
+        <div class="kicker">Our apps</div>
+        <h2>Log in and get to work.</h2>
+        <p class="lead">Reel-style looks at the systems we run. Tap a card to focus it.</p>
+      </div>
+      <div class="snap-row reel-row" aria-label="App login screenshots" id="reel-row">
+        <a class="app-card active" href="https://srv1810937.hstgr.cloud:8444/" target="_blank" rel="noopener" data-reel>
+          <div class="progress"><span><i></i></span></div>
+          <div class="chip"><b></b> AutoParts</div>
+          <img src="/app-login-school.png" alt="AutoParts login screen">
+          <div class="meta"><strong>AutoParts</strong><span>Auto parts management</span></div>
+        </a>
+        <a class="app-card" href="/school-solution.html" data-reel>
+          <div class="progress"><span><i></i></span></div>
+          <div class="chip"><b></b> School Pro</div>
+          <img src="/app-login-hotel.png" alt="School Pro login screen">
+          <div class="meta"><strong>School Pro</strong><span>School management</span></div>
+        </a>
+        <a class="app-card" href="https://srv1810937.hstgr.cloud:8443/" target="_blank" rel="noopener" data-reel>
+          <div class="progress"><span><i></i></span></div>
+          <div class="chip"><b></b> Hotel Pro</div>
+          <img src="/app-login-autoparts.png" alt="Hotel Pro login screen">
+          <div class="meta"><strong>Hotel Pro</strong><span>Hotel management</span></div>
+        </a>
       </div>
     </div>
-    <div class="sc-tl-item">
-      <div class="sc-tl-dot"></div>
-      <div class="sc-tl-content">
-        <div class="sc-tl-year">2023</div>
-        <div class="sc-tl-text">Added networking and IT infrastructure. Office network deployments for growing businesses across Kumasi. Team grows to 5.</div>
+  </section>
+
+  <section id="work">
+    <div class="container">
+      <div class="section-head">
+        <div class="kicker">Real work</div>
+        <h2>What was broken, what we changed.</h2>
+      </div>
+      <div class="work-grid">
+        <article class="work-card">
+          <div class="media"><img src="/pro-new.png" alt="School Pro managing students and attendance"></div>
+          <div class="body">
+            <div class="label">School Pro · Atasemanso M/A J.H.S</div>
+            <h3>Paper records to one system for the whole school.</h3>
+            <p><strong>Before:</strong> Student records, attendance, and grades lived on paper and in spreadsheets. Morning attendance took teachers about 40 minutes.</p>
+            <p><strong>After:</strong> Attendance, records, and reports run in a browser. Teachers mark attendance in minutes and staff can find what they need without digging through files.</p>
+            <a class="link" href="/school-solution.html">See School Pro <i class="ti ti-arrow-right"></i></a>
+          </div>
+        </article>
+        <div class="stack">
+          <article class="work-card">
+            <div class="body">
+              <div class="label">Website · Dockys Catering</div>
+              <h3>From WhatsApp-only orders to a real web presence.</h3>
+              <p><strong>Before:</strong> No website. New customers could only find them through WhatsApp.</p>
+              <p><strong>After:</strong> A simple site that shows the menu and makes it easy to enquire. Dorcas Owusu, CEO, says they booked new corporate events through the site in the first month.</p>
+            </div>
+          </article>
+          <article class="work-card">
+            <div class="body">
+              <div class="label">Booking · Nailed by Kay</div>
+              <h3>Missed DMs turned into an online booking flow.</h3>
+              <p><strong>Before:</strong> Bookings came through DMs and phone calls and were easy to miss.</p>
+              <p><strong>After:</strong> Customers book online. Afia, CEO, says weekly bookings grew from around 15 to over 40.</p>
+            </div>
+          </article>
+          <article class="work-card">
+            <div class="media"><img src="/church.png" alt="Church Connect management system"></div>
+            <div class="body">
+              <div class="label">Church Connect</div>
+              <h3>Members, attendance, and finances in one place.</h3>
+              <p><strong>Before:</strong> Church records spread across books and chats.</p>
+              <p><strong>After:</strong> One dashboard for members, attendance, events, and giving.</p>
+              <a class="link" href="/church-solution.html">See Church Connect <i class="ti ti-arrow-right"></i></a>
+            </div>
+          </article>
+        </div>
       </div>
     </div>
-    <div class="sc-tl-item">
-      <div class="sc-tl-dot"></div>
-      <div class="sc-tl-content">
-        <div class="sc-tl-year">2025</div>
-        <div class="sc-tl-text">600+ clients served across education, retail, catering, beauty, and professional services. School Pro system managing 800+ students across 4 schools.</div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <div class="section-head">
+        <div class="kicker">What we do</div>
+        <h2>One team for the things that keep your work running.</h2>
+        <p class="lead">We build and look after the systems, sites, networks, and visuals our clients rely on every day. If it involves your IT, you can call us.</p>
+      </div>
+      <div class="services-list">
+        <div class="service">
+          <h3>Systems</h3>
+          <p>School and business systems that replace paper and spreadsheets. We also build custom products like <a href="/school-solution.html">School Pro</a>, our first global product for schools.</p>
+        </div>
+        <div class="service">
+          <h3>Websites</h3>
+          <p>Clear websites that explain what you do and make it easy for people to contact or book you.</p>
+        </div>
+        <div class="service">
+          <h3>Networks</h3>
+          <p>Office and school networks, Wi-Fi, cabling, and the fixes that keep everyone connected.</p>
+        </div>
+        <div class="service">
+          <h3>Design</h3>
+          <p>Logos, posters, and social graphics that look consistent wherever people see your name.</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ABOUT -->
-<section class="sc-about" id="about">
-  <div class="sc-section-label">About SynUp</div>
-  <h2 class="sc-section-h2">Built for businesses that want more than a vendor</h2>
-  <div class="sc-about-grid">
-    <div class="sc-about-text">
-      <p>SynUp Digital Solutions is a Ghana-based technology partner that helps businesses manage their digital infrastructure — systems, websites, networks, and design — from one dependable team. We started in 2019 in Kumasi with a simple belief: businesses should not have to juggle multiple vendors to get reliable IT support.</p>
-      <p>Over 5 years we've served 600+ clients across education, catering, beauty, retail, and professional services. Our school management system alone supports 4+ schools with 800+ students and 40+ staff. Every project we take on is backed by the same commitment: build it right, support it long-term, and make it simple for the people using it every day.</p>
-    </div>
-    <div class="sc-about-cards">
-      <div class="sc-about-card"><i class="ti ti-users"></i><h4>5+</h4><p>team members</p></div>
-      <div class="sc-about-card"><i class="ti ti-calendar"></i><h4>2019</h4><p>founded in Kumasi</p></div>
-      <div class="sc-about-card"><i class="ti ti-building"></i><h4>600+</h4><p>clients since 2019</p></div>
-      <div class="sc-about-card"><i class="ti ti-clock"></i><h4>48hr</h4><p>support response</p></div>
-    </div>
-  </div>
-  <div style="text-align:center;margin-top:40px">
-    <a href="#contact" class="sc-tab-link" style="font-size:15px">Contact us <i class="ti ti-arrow-right"></i></a>
-  </div>
-</section>
-
-<!-- PRODUCTS -->
-<section class="sc-products" id="services">
-  <div class="sc-section-label">Our services</div>
-  <h2 class="sc-section-h2">Meet the SynUp service ecosystem</h2>
-  <div class="sc-tabs">
-    <button class="sc-tab active" onclick="switchTab(0)">Systems</button>
-    <button class="sc-tab" onclick="switchTab(1)">Websites</button>
-    <button class="sc-tab" onclick="switchTab(2)">Networking</button>
-    <button class="sc-tab" onclick="switchTab(3)">Design</button>
-  </div>
-
-  <div class="sc-tab-panel active" id="tab-0">
-    <div class="sc-tab-content">
-      <h3>SynUp Systems Management</h3>
-      <p>Configure, monitor, and maintain servers, devices, software, and daily IT support so your operations stay steady and interruptions stay rare.</p>
-      <p>Our <strong>School Management System</strong> serves 4+ schools with 800+ students and 40+ staff — handling records, attendance, reporting, and more from one platform.</p>
-      <a href="/projects.html" class="sc-tab-link">Explore systems support <i class="ti ti-arrow-right"></i></a>
-    </div>
-    <div class="sc-tab-screen" style="background:transparent;border:none">
-      <img src="/schoolpro_ad_banner.png" alt="School Pro Management System" style="width:100%;height:100%;object-fit:contain;border-radius:14px">
-    </div>
-  </div>
-
-  <div class="sc-tab-panel" id="tab-1">
-    <div class="sc-tab-content">
-      <h3>SynUp Website Development</h3>
-      <p>Fast, responsive websites built around clear content, smooth UX, and real business goals — not just good-looking templates that won't convert.</p>
-      <a href="#" class="sc-tab-link">See web projects <i class="ti ti-arrow-right"></i></a>
-    </div>
-    <div class="sc-tab-screen">
-      <div class="sc-mock-dash" style="background:url('/hero_website.png') center/cover no-repeat"></div>
-    </div>
-  </div>
-
-  <div class="sc-tab-panel" id="tab-2">
-    <div class="sc-tab-content">
-      <h3>SynUp Networking</h3>
-      <p>Secure network infrastructure for offices, wireless systems, remote access, and firewalls — reliable connectivity you can depend on every day.</p>
-      <a href="#" class="sc-tab-link">View networking services <i class="ti ti-arrow-right"></i></a>
-    </div>
-    <div class="sc-tab-screen">
-      <div class="sc-mock-dash" style="background:url('/hero_office_network.png') center/cover no-repeat"></div>
-    </div>
-  </div>
-
-  <div class="sc-tab-panel" id="tab-3">
-    <div class="sc-tab-content">
-      <h3>SynUp Graphics Design</h3>
-      <p>Brand identity, marketing assets, social visuals, and UI graphics that keep your business looking consistent and professional everywhere it shows up.</p>
-      <a href="#" class="sc-tab-link" onclick="openGallery();return false">View design work <i class="ti ti-arrow-right"></i></a>
-    </div>
-    <div class="sc-tab-screen">
-      <div class="sc-mock-dash" style="background:url('/gd1.jpeg') center/cover no-repeat"></div>
-    </div>
-  </div>
-</section>
-
-<!-- CASE STUDIES -->
-<section class="sc-cases" id="projects">
-  <div class="sc-section-label">Case studies</div>
-  <h2 class="sc-section-h2">Built on systems. Proven by results.</h2>
-  <div class="sc-case-grid">
-    <div class="sc-case-card">
-      <div class="sc-case-img" style="overflow:hidden;background:transparent"><img src="/sms-dashboard.png" alt="School Pro" style="width:100%;height:100%;object-fit:cover"></div>
-      <div class="sc-case-meta"><span class="sc-case-tag">Systems</span></div>
-      <h3>School management system serving 4+ schools with 800+ students and 40+ staff.</h3>
-      <div class="sc-case-stats">
-        <div><div class="sc-case-stat-num">4+</div><div class="sc-case-stat-desc">schools on the platform</div></div>
-        <div><div class="sc-case-stat-num">800+</div><div class="sc-case-stat-desc">students managed daily</div></div>
+  <section style="padding-top:0">
+    <div class="container quote-band">
+      <blockquote>"We came to SynUp with three separate problems: a school system, a logo, and a website that hadn't been touched in years. They handled all three. One team, one point of contact."</blockquote>
+      <div>
+        <div class="attrib"><strong>Richard Arthur</strong><br>Proprietor, N and A Mustard Seed School</div>
+        <p class="lead" style="margin-top:18px;font-size:16px">We've been building for schools and small businesses in Kumasi since 2019. You get the same people who answer the phone when you need support.</p>
       </div>
     </div>
-    <div class="sc-case-card">
-      <div class="sc-case-img" style="overflow:hidden;background:transparent"><img src="/hero_website.png" alt="Website project" style="width:100%;height:100%;object-fit:cover"></div>
-      <div class="sc-case-meta"><span class="sc-case-tag">Website</span></div>
-      <h3>Online visibility improved almost immediately after launch.</h3>
-      <div class="sc-case-stats">
-        <div><div class="sc-case-stat-num">3x</div><div class="sc-case-stat-desc">more inbound enquiries</div></div>
-        <div><div class="sc-case-stat-num">62%</div><div class="sc-case-stat-desc">faster page load time</div></div>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- TESTIMONIALS -->
-<section class="sc-testimonials">
-  <div class="sc-section-label">Testimonials</div>
-  <h2 class="sc-section-h2">What our clients actually say</h2>
-  <div class="sc-test-grid">
-    <div class="sc-test-card">
-      <p class="sc-test-quote">"Before SynUp we tracked 800+ students across 4 schools on paper and scattered spreadsheets. Attendance alone took teachers 40 minutes every morning. Now the whole system runs in the browser — attendance, grades, reports — and our staff actually use it."</p>
-      <div class="sc-test-author">
-        <div class="sc-test-name">Godfred Bonsu</div>
-        <div class="sc-test-title">Headmaster, Atasemanso M/A J.H.S</div>
+  <section id="contact" style="padding-top:32px">
+    <div class="container">
+      <div class="cta">
+        <div>
+          <h2>Talk to us on WhatsApp.</h2>
+          <p>Tell us what's not working or what you want to build. We'll reply and, if it helps, come see it in person.</p>
+          <p style="margin-top:14px;font-size:15px;color:rgba(234,242,247,.72)">hello@synupdigital.com · +233 54 998 4981 · Kumasi, Ghana</p>
+        </div>
+        <div class="actions">
+          <a class="btn btn-primary" href="https://wa.me/233549984981?text=Hi%20SynUp%2C%20I%20need%20help%20with..." target="_blank" rel="noopener"><i class="ti ti-brand-whatsapp"></i> Message us on WhatsApp</a>
+          <a class="btn" href="https://wa.me/233549984981?text=Hi%20SynUp%2C%20I%27d%20like%20to%20book%20a%20free%20site%20visit." target="_blank" rel="noopener">Book a free site visit</a>
+          <a class="btn" href="mailto:hello@synupdigital.com?subject=Hello%20SynUp">Email hello@synupdigital.com</a>
+        </div>
       </div>
     </div>
-    <div class="sc-test-card">
-      <p class="sc-test-quote">"We had no website and relied entirely on WhatsApp orders. SynUp built us a professional site in under a week and suddenly we were getting enquiries from people who didn't even know we existed. The first month we booked 3 new corporate events through the site alone."</p>
-      <div class="sc-test-author">
-        <div class="sc-test-name">Dorcas Owusu</div>
-        <div class="sc-test-title">CEO, Dockys Catering</div>
-      </div>
-    </div>
-    <div class="sc-test-card">
-      <p class="sc-test-quote">"Our bookings used to go through DMs and phone calls — easy to miss, easy to forget. SynUp set up an online booking system and our customers love it. We went from maybe 15 bookings a week to consistently hitting 40+."</p>
-      <div class="sc-test-author">
-        <div class="sc-test-name">Afia</div>
-        <div class="sc-test-title">CEO, Nailed by Kay</div>
-      </div>
-    </div>
-    <div class="sc-test-card">
-      <p class="sc-test-quote">"We needed designs for our 20th anniversary reunion — posters, social media graphics, event programme. SynUp nailed the brief on the first round. What usually takes us days of back-and-forth with other designers was done in 48 hours."</p>
-      <div class="sc-test-author">
-        <div class="sc-test-name">Dionne Kusi-Poku</div>
-        <div class="sc-test-title">President, Yaa Asantewaa SHS 2006 Year Group</div>
-      </div>
-    </div>
-    <div class="sc-test-card">
-      <p class="sc-test-quote">"We came to SynUp with three separate problems: no school management system, an outdated logo, and a website that hadn't been touched in years. They handled all three as one project. One team, one invoice, one point of contact — that's what sold us."</p>
-      <div class="sc-test-author">
-        <div class="sc-test-name">Richard Arthur</div>
-        <div class="sc-test-title">Proprietor, N and A Mustard Seed School</div>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
+</main>
 
-<!-- FAQ -->
-<section class="sc-faq">
-  <div class="sc-section-label">FAQ</div>
-  <h2 class="sc-section-h2">Frequently asked questions</h2>
-  <div class="sc-faq-grid">
-    <div class="sc-faq-item">
-      <button class="sc-faq-q" onclick="toggleFaq(this)">What services does SynUp offer? <i class="ti ti-chevron-down"></i></button>
-      <div class="sc-faq-a"><p>We offer four core services: Systems Management (including our School Management System), Website Development, Networking (office infrastructure, security, remote access), and Graphics Design (brand identity, marketing assets, social visuals). We act as your all-in-one digital partner so you don't have to juggle multiple vendors.</p></div>
-    </div>
-    <div class="sc-faq-item">
-      <button class="sc-faq-q" onclick="toggleFaq(this)">How long does it take to build a website? <i class="ti ti-chevron-down"></i></button>
-      <div class="sc-faq-a"><p>Most business websites are delivered within 5-10 business days, depending on complexity. We follow a streamlined process — discovery, design, development, review, and launch — so your site goes live fast without sacrificing quality.</p></div>
-    </div>
-    <div class="sc-faq-item">
-      <button class="sc-faq-q" onclick="toggleFaq(this)">Do you offer ongoing support after a project is done? <i class="ti ti-chevron-down"></i></button>
-      <div class="sc-faq-a"><p>Yes. We provide maintenance and support plans for all our services — website updates, network monitoring, system backups, and design revisions. You get a dedicated contact and quick turnaround whenever you need help.</p></div>
-    </div>
-    <div class="sc-faq-item">
-      <button class="sc-faq-q" onclick="toggleFaq(this)">How does the School Management System work? <i class="ti ti-chevron-down"></i></button>
-      <div class="sc-faq-a"><p>Our School Management System digitises student records, attendance, reporting, billing, and communication in one platform. It is already serving 4+ schools with 800+ students and 40+ staff, and we tailor it to each school's workflow.</p></div>
-    </div>
-    <div class="sc-faq-item">
-      <button class="sc-faq-q" onclick="toggleFaq(this)">Can you help with my existing network or IT setup? <i class="ti ti-chevron-down"></i></button>
-      <div class="sc-faq-a"><p>Absolutely. We assess your current infrastructure, identify bottlenecks and security gaps, and recommend upgrades that fit your budget. Whether you need better Wi-Fi coverage, structured cabling, or a full network redesign, we handle it end to end.</p></div>
-    </div>
-    <div class="sc-faq-item">
-      <button class="sc-faq-q" onclick="toggleFaq(this)">What if I'm not satisfied with the work? <i class="ti ti-chevron-down"></i></button>
-      <div class="sc-faq-a"><p>Your satisfaction is our priority. We work iteratively with your feedback throughout every project and offer revisions until you're happy. If something isn't right after launch, we fix it promptly — no unnecessary hassle.</p></div>
+<footer>
+  <div class="container footer-inner">
+    <div>SynUp · Kumasi, Ghana · Since 2019</div>
+    <div style="display:flex;gap:16px;flex-wrap:wrap">
+      <a href="/school-solution.html">School Pro</a>
+      <a href="/projects.html">Projects</a>
+      <a href="mailto:hello@synupdigital.com">hello@synupdigital.com</a>
+      <a href="tel:+233549984981">+233 54 998 4981</a>
     </div>
   </div>
-</section>
-
-<!-- BLOG -->
-<section class="sc-blog">
-  <div class="sc-section-label">Insights</div>
-  <h2 class="sc-section-h2">Resources that help your business grow</h2>
-  <div class="sc-blog-grid" style="display:flex;align-items:center;justify-content:center;min-height:200px">
-    <p style="color:var(--muted);font-size:15px;text-align:center;max-width:400px">Real articles coming soon. In the meantime, <a href="#contact" style="color:var(--accent)">contact us</a> with any IT question — we'll answer it directly.</p>
-  </div>
-</section>
-
-<!-- CTA / CONTACT BANNER -->
-<div class="sc-cta-banner" id="contact">
-  <h2>Let's Build Something Great Together</h2>
-  <p style="margin-bottom:8px">Reach out and we'll tell you exactly how SynUp can help.</p>
-  <div style="display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin-bottom:28px;position:relative">
-    <div style="background:rgba(0,174,239,0.12);border:1px solid rgba(0,174,239,0.2);border-radius:12px;padding:16px 24px;min-width:180px;text-align:center">
-      <div style="font-size:11px;color:#7c5cfc;letter-spacing:0.1em;margin-bottom:6px;text-transform:uppercase;font-weight:600"><i class="ti ti-mail" style="font-size:14px;margin-right:4px;vertical-align:-1px"></i>EMAIL</div>
-      <a href="mailto:Synupinfo@gmail.com" style="color:var(--text);text-decoration:none;font-size:14px;font-weight:500;word-break:break-all">Synupinfo@gmail.com</a>
-    </div>
-    <div style="background:rgba(0,174,239,0.12);border:1px solid rgba(0,174,239,0.2);border-radius:12px;padding:16px 24px;min-width:180px;text-align:center">
-      <div style="font-size:11px;color:#7c5cfc;letter-spacing:0.1em;margin-bottom:6px;text-transform:uppercase;font-weight:600"><i class="ti ti-phone" style="font-size:14px;margin-right:4px;vertical-align:-1px"></i>PHONE</div>
-      <a href="tel:+233549984981" style="color:var(--text);text-decoration:none;font-size:14px;font-weight:500">+233 (0) 54 998 4981</a>
-    </div>
-    <div style="background:rgba(0,174,239,0.12);border:1px solid rgba(0,174,239,0.2);border-radius:12px;padding:16px 24px;min-width:180px;text-align:center">
-      <div style="font-size:11px;color:#7c5cfc;letter-spacing:0.1em;margin-bottom:6px;text-transform:uppercase;font-weight:600"><i class="ti ti-map-pin" style="font-size:14px;margin-right:4px;vertical-align:-1px"></i>LOCATION</div>
-      <span style="color:var(--text);font-size:14px;font-weight:500">EF 17 JDK Docia Owusu Avenue<br>Ak-290-6686</span>
-    </div>
-  </div>
-  <a href="#" class="sc-cta-banner-btn" onclick="openModal('get-started')"><i class="ti ti-arrow-right"></i> Get started free</a>
-</div>
-
-<!-- FOOTER -->
-<footer class="sc-footer">
-  <div class="sc-footer-logo">SynUp Digital Solutions</div>
-  <div class="sc-footer-links">
-    <a href="#">Services</a>
-    <a href="#">Projects</a>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
-  </div>
-  <div class="sc-footer-copy">&copy; 2026 SynUp. All rights reserved.</div>
 </footer>
 
-</div>
-
-<!-- INSIGHT MODAL -->
-<div class="sc-insight-overlay" id="insight-modal">
-  <div class="sc-insight-modal">
-    <button class="sc-insight-close" onclick="closeInsight()"><i class="ti ti-x"></i></button>
-    <div class="sc-insight-tag" id="insight-tag"></div>
-    <h3 id="insight-title"></h3>
-    <div class="sc-insight-section-label">The Problem</div>
-    <div class="sc-insight-desc" id="insight-desc"></div>
-    <div class="sc-insight-solution">
-      <div class="sc-insight-section-label">How SynUp Helps</div>
-      <p id="insight-solution"></p>
-    </div>
-  </div>
-</div>
-
-<!-- GALLERY -->
-<div class="sc-gallery-overlay" id="gallery-modal">
-  <button class="sc-gallery-close" onclick="closeGallery()"><i class="ti ti-x"></i></button>
-  <button class="sc-gallery-nav prev" onclick="galleryNav(-1)"><i class="ti ti-chevron-left"></i></button>
-  <img class="sc-gallery-img" id="gallery-img" alt="Design work" />
-  <button class="sc-gallery-nav next" onclick="galleryNav(1)"><i class="ti ti-chevron-right"></i></button>
-  <div class="sc-gallery-counter" id="gallery-counter"></div>
-</div>
-
-<!-- CONTACT MODAL -->
-<div class="sc-modal-overlay" id="contact-modal">
-  <div class="sc-modal">
-    <button class="sc-modal-close" onclick="closeModal()"><i class="ti ti-x"></i></button>
-    <h3 id="modal-title">Get started with SynUp</h3>
-    <p id="modal-desc">Tell us what you need and we'll get back to you within 24 hours.</p>
-    <form id="modal-form">
-      <input type="hidden" name="subject" id="modal-subject" value="New enquiry" />
-      <div class="sc-form-row">
-        <div class="sc-form-group">
-          <label for="modal-name">Name</label>
-          <input type="text" id="modal-name" name="name" autocomplete="name" required />
-        </div>
-        <div class="sc-form-group">
-          <label for="modal-phone">Phone</label>
-          <input type="tel" id="modal-phone" name="phone" autocomplete="tel" />
-        </div>
-      </div>
-      <div class="sc-form-group">
-        <label for="modal-email">Email</label>
-        <input type="email" id="modal-email" name="email" autocomplete="email" required />
-      </div>
-      <div class="sc-form-group">
-        <label for="modal-service">Service interested in</label>
-        <select id="modal-service" name="service">
-          <option value="">Select a service</option>
-          <option value="Systems Management">Systems Management</option>
-          <option value="Website Development">Website Development</option>
-          <option value="Networking">Networking</option>
-          <option value="Graphics Design">Graphics Design</option>
-          <option value="Other">Other</option>
-        </select>
-      </div>
-      <div class="sc-form-group">
-        <label for="modal-message">Message</label>
-        <textarea id="modal-message" name="message" required></textarea>
-      </div>
-      <div class="sc-form-result" id="form-result"></div>
-      <button type="submit" class="sc-btn-submit" id="modal-submit-btn">Send message</button>
-    </form>
-  </div>
-</div>
-
-<!-- REPORT MODAL -->
-<div class="sc-report-overlay" id="report-modal">
-  <div class="sc-report-modal">
-    <button class="sc-report-close" onclick="closeReport()"><i class="ti ti-x"></i></button>
-    <h3>Report an issue</h3>
-    <p>Found something wrong? Tell us what happened so we can fix it.</p>
-    <form id="report-form">
-      <div class="sc-form-row">
-        <div class="sc-form-group">
-          <label for="report-name">Name</label>
-          <input type="text" id="report-name" name="name" autocomplete="name" required />
-        </div>
-        <div class="sc-form-group">
-          <label for="report-email">Email</label>
-          <input type="email" id="report-email" name="email" autocomplete="email" required />
-        </div>
-      </div>
-      <div class="sc-form-group">
-        <label for="report-type">Issue type</label>
-        <select id="report-type" name="type" required>
-          <option value="">Select type</option>
-          <option value="Bug">Bug / Error</option>
-          <option value="Broken Link">Broken Link</option>
-          <option value="Content Issue">Content Issue</option>
-          <option value="Security">Security Concern</option>
-          <option value="Other">Other</option>
-        </select>
-      </div>
-      <div class="sc-form-group">
-        <label for="report-url">Page URL (optional)</label>
-        <input type="text" id="report-url" name="url" autocomplete="url" placeholder="https://" />
-      </div>
-      <div class="sc-form-group">
-        <label for="report-desc">Description</label>
-        <textarea id="report-desc" name="message" required placeholder="Tell us what happened in detail..."></textarea>
-      </div>
-      <div class="sc-form-result" id="report-result"></div>
-      <button type="submit" class="sc-btn-submit" id="report-submit-btn">Submit report</button>
-    </form>
-  </div>
-</div>
+<a class="wa" href="https://wa.me/233549984981?text=Hi%20SynUp%2C%20I%20need%20help%20with..." target="_blank" rel="noopener" aria-label="Message us on WhatsApp"><i class="ti ti-brand-whatsapp"></i><span>WhatsApp</span></a>
 
 <script>
-// Scroll spy
-const sections = ['home','services','projects','about','contact'];
-const navLinks = document.querySelectorAll('.sc-nav-links a');
-const obs = new IntersectionObserver((entries) => {
-  let active = 'home';
-  entries.forEach(e => { if (e.isIntersecting) active = e.target.id; });
-  navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + active));
-}, { threshold: 0.3, rootMargin: '-80px 0px 0px 0px' });
-sections.forEach(id => { const el = document.getElementById(id); if (el) obs.observe(el); });
-
-function switchTab(idx) {
-  document.querySelectorAll('.sc-tab').forEach((t,i) => t.classList.toggle('active', i===idx));
-  document.querySelectorAll('.sc-tab-panel').forEach((p,i) => p.classList.toggle('active', i===idx));
+function setSeg(which){
+  document.querySelectorAll('.seg button').forEach(b=>b.setAttribute('aria-selected', b.dataset.seg===which ? 'true':'false'));
+  document.querySelectorAll('.product-links a').forEach(a=>{
+    a.style.display = a.dataset.for===which ? 'flex' : 'none';
+  });
+}
+setSeg('everyday');
+function toggleMenu(){
+  document.getElementById('mobile-drawer').classList.toggle('open');
 }
 
-// Mobile menu
-function openMobileMenu() {
-  document.getElementById('mobile-menu').classList.add('open');
-  document.getElementById('mobile-overlay').classList.add('open');
-  document.body.style.overflow = 'hidden';
-}
-function closeMobileMenu() {
-  document.getElementById('mobile-menu').classList.remove('open');
-  document.getElementById('mobile-overlay').classList.remove('open');
-  document.body.style.overflow = '';
-}
-
-// Theme
-const savedTheme = localStorage.getItem('theme');
-const sysDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-const theme = savedTheme || (sysDark ? 'dark' : 'light');
-document.documentElement.setAttribute('data-theme', theme);
-document.getElementById('theme-icon').className = theme === 'dark' ? 'ti ti-moon' : 'ti ti-sun';
-
-function toggleTheme() {
-  const cur = document.documentElement.getAttribute('data-theme');
-  const next = cur === 'dark' ? 'light' : 'dark';
-  document.documentElement.setAttribute('data-theme', next);
-  document.getElementById('theme-icon').className = next === 'dark' ? 'ti ti-moon' : 'ti ti-sun';
-  localStorage.setItem('theme', next);
-}
-
-// Gallery
-const galleryImages = ['/gd1.jpeg','/gd2.jpeg','/gd3.jpeg','/gd4.jpeg','/yaa.jpeg','/yaa2.jpeg','/kwaku1.jpeg','/kwaku2.jpeg'];
-let galleryIdx = 0;
-
-function openGallery(idx) {
-  galleryIdx = idx || 0;
-  showGallery();
-  document.getElementById('gallery-modal').classList.add('open');
-  document.body.style.overflow = 'hidden';
-}
-
-function closeGallery() {
-  document.getElementById('gallery-modal').classList.remove('open');
-  document.body.style.overflow = '';
-}
-
-function galleryNav(dir) {
-  galleryIdx = (galleryIdx + dir + galleryImages.length) % galleryImages.length;
-  showGallery();
-}
-
-function showGallery() {
-  document.getElementById('gallery-img').src = galleryImages[galleryIdx];
-  document.getElementById('gallery-counter').textContent = (galleryIdx + 1) + ' / ' + galleryImages.length;
-}
-
-document.getElementById('gallery-modal')?.addEventListener('click', (e) => {
-  if (e.target === e.currentTarget) closeGallery();
-});
-
-// FAQ
-function toggleFaq(btn) {
-  btn.classList.toggle('open');
-  btn.nextElementSibling.classList.toggle('open');
-}
-
-// Insight data
-const insights = [
-  {
-    tag: 'Website',
-    title: 'Why your website speed directly affects how many leads you get',
-    desc: 'A slow website costs you real revenue. Research shows that 53% of mobile users abandon sites that take longer than 3 seconds to load. Every second of delay means fewer leads, fewer sales, and a weaker online presence — yet many businesses overlook this until it is too late.',
-    solution: 'SynUp builds lean, high-performance websites using modern frameworks and optimized hosting. We compress assets, streamline code, and implement caching strategies so your site loads in under 2 seconds — keeping visitors engaged and converting from the moment they arrive.'
-  },
-  {
-    tag: 'Networking',
-    title: 'The hidden cost of weak network infrastructure in growing companies',
-    desc: 'As your team grows, so do the demands on your network. Slow internet, dead zones, unsecured connections, and frequent downtime silently drain productivity and frustrate employees. Most businesses do not realise how much they are losing until they finally upgrade.',
-    solution: 'SynUp designs and deploys robust office networks tailored to your team size and workflow. From structured cabling and mesh Wi-Fi to VLAN segmentation, firewalls, and secure remote access — we build reliable infrastructure that scales with your company without skipping a beat.'
-  },
-  {
-    tag: 'Design',
-    title: 'How brand consistency across every channel builds faster trust',
-    desc: 'When your branding is inconsistent across platforms, it signals disorganisation and erodes trust. Customers notice when your logo, colours, or tone keep changing. A unified brand presence makes your business look established and professional from day one.',
-    solution: 'SynUp creates complete brand identity systems — logos, colour palettes, typography, and usage guidelines — then produces every asset you need, from social media graphics to print collateral. We ensure every touchpoint reflects the same polished, professional image.'
+// Hero video playlist (cropped clips, not full length)
+(function(){
+  const vids = ['/hero-2.mov','/hero-3.mov'];
+  const v = document.getElementById('hero-video');
+  if(!v) return;
+  let i = 0, clipTimer;
+  function playIdx(idx){
+    clearTimeout(clipTimer);
+    i = (idx + vids.length) % vids.length;
+    v.src = vids[i];
+    v.load();
+    const p = v.play();
+    if(p && p.catch) p.catch(()=>{});
+    clipTimer = setTimeout(() => playIdx(i+1), 7000);
   }
-];
+  v.addEventListener('ended', () => playIdx(i+1));
+  v.addEventListener('error', () => playIdx(i+1));
+  playIdx(0);
+})();
 
-function openInsight(idx) {
-  const modal = document.getElementById('insight-modal');
-  const d = insights[idx];
-  document.getElementById('insight-tag').textContent = d.tag;
-  document.getElementById('insight-title').textContent = d.title;
-  document.getElementById('insight-desc').textContent = d.desc;
-  document.getElementById('insight-solution').textContent = d.solution;
-  modal.classList.add('open');
-  document.body.style.overflow = 'hidden';
-}
-
-function closeInsight() {
-  document.getElementById('insight-modal').classList.remove('open');
-  document.body.style.overflow = '';
-}
-
-document.getElementById('insight-modal')?.addEventListener('click', (e) => {
-  if (e.target === e.currentTarget) closeInsight();
-});
-
-// Modal
-function openModal(type) {
-  const modal = document.getElementById('contact-modal');
-  const title = document.getElementById('modal-title');
-  const desc = document.getElementById('modal-desc');
-  const subject = document.getElementById('modal-subject');
-  if (type === 'book-call') {
-    title.textContent = 'Book a call';
-    desc.textContent = 'Tell us your availability and we\'ll schedule a call within 24 hours.';
-    subject.value = 'Book a call';
-  } else {
-    title.textContent = 'Get started with SynUp';
-    desc.textContent = 'Tell us what you need and we\'ll get back to you within 24 hours.';
-    subject.value = 'New enquiry';
-  }
-  modal.classList.add('open');
-  document.body.style.overflow = 'hidden';
-}
-
-function closeModal() {
-  document.getElementById('contact-modal').classList.remove('open');
-  document.body.style.overflow = '';
-}
-
-document.getElementById('contact-modal')?.addEventListener('click', (e) => {
-  if (e.target === e.currentTarget) closeModal();
-});
-
-// Report modal
-function openReport() {
-  document.getElementById('report-modal').classList.add('open');
-  document.body.style.overflow = 'hidden';
-}
-function closeReport() {
-  document.getElementById('report-modal').classList.remove('open');
-  document.body.style.overflow = '';
-}
-document.getElementById('report-modal')?.addEventListener('click', (e) => {
-  if (e.target === e.currentTarget) closeReport();
-});
-
-// Web3Forms — Contact
-document.getElementById('modal-form')?.addEventListener('submit', async (e) => {
-  e.preventDefault();
-  const form = e.target;
-  const btn = document.getElementById('modal-submit-btn');
-  const result = document.getElementById('form-result');
-  const origText = btn.textContent;
-  btn.textContent = 'Sending...';
-  btn.disabled = true;
-  result.className = 'sc-form-result';
-  result.style.display = 'none';
-
-  const formData = new FormData(form);
-  formData.append('access_key', '2670e917-ed10-4734-879e-13741d883768');
-
-  try {
-    const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: formData });
-    const data = await res.json();
-    if (data.success) {
-      result.textContent = 'Thanks! We\'ll get back to you soon.';
-      result.className = 'sc-form-result success';
-      form.reset();
-    } else {
-      result.textContent = 'Something went wrong. Try emailing us directly at Synupinfo@gmail.com.';
-      result.className = 'sc-form-result error';
+// Reel-like cards: active state + auto-cycle with progress
+(function(){
+  const row = document.getElementById('reel-row');
+  if(!row) return;
+  const cards = Array.from(row.querySelectorAll('[data-reel]'));
+  let idx = 0, timer;
+  function setActive(n, scroll){
+    idx = (n + cards.length) % cards.length;
+    cards.forEach((c, j) => {
+      c.classList.toggle('active', j === idx);
+      const bar = c.querySelector('.progress span i');
+      if(bar){ bar.style.animation = 'none'; void bar.offsetHeight; if(j===idx) bar.style.animation = 'reelFill 4.5s linear forwards'; else bar.style.width = '0'; }
+    });
+    if(scroll && window.matchMedia('(max-width: 899px)').matches){
+      const c = cards[idx];
+      row.scrollTo({left: c.offsetLeft - (row.clientWidth - c.clientWidth)/2, behavior:'smooth'});
     }
-  } catch {
-    result.textContent = 'Something went wrong. Try emailing us directly at Synupinfo@gmail.com.';
-    result.className = 'sc-form-result error';
   }
-
-  result.style.display = 'block';
-  btn.textContent = origText;
-  btn.disabled = false;
-});
-
-// Web3Forms — Report
-document.getElementById('report-form')?.addEventListener('submit', async (e) => {
-  e.preventDefault();
-  const form = e.target;
-  const btn = document.getElementById('report-submit-btn');
-  const result = document.getElementById('report-result');
-  const origText = btn.textContent;
-  btn.textContent = 'Sending...';
-  btn.disabled = true;
-  result.className = 'sc-form-result';
-  result.style.display = 'none';
-
-  const formData = new FormData(form);
-  formData.append('access_key', '2670e917-ed10-4734-879e-13741d883768');
-  formData.set('subject', '[Report] ' + (formData.get('type') || 'Issue'));
-
-  try {
-    const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: formData });
-    const data = await res.json();
-    if (data.success) {
-      result.textContent = 'Report submitted. We\'ll look into it right away.';
-      result.className = 'sc-form-result success';
-      form.reset();
-    } else {
-      result.textContent = 'Something went wrong. Email us at Synupinfo@gmail.com.';
-      result.className = 'sc-form-result error';
-    }
-  } catch {
-    result.textContent = 'Something went wrong. Email us at Synupinfo@gmail.com.';
-    result.className = 'sc-form-result error';
-  }
-
-  result.style.display = 'block';
-  btn.textContent = origText;
-  btn.disabled = false;
-});
+  function start(){ clearInterval(timer); timer = setInterval(()=> setActive(idx+1, true), 4500); }
+  cards.forEach((c, j) => c.addEventListener('click', () => { setActive(j, false); start(); }));
+  setActive(0, false); start();
+})();
 </script>
 </body>
 </html>

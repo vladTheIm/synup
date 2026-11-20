@@ -11,7 +11,11 @@ export default defineConfig({
     rollupOptions: {
       input: {
         index: resolve(__dirname, 'index.html'),
-        projects: resolve(__dirname, 'projects.html')
+        projects: resolve(__dirname, 'projects.html'),
+        school: resolve(__dirname, 'school-solution.html'),
+        hotel: resolve(__dirname, 'hotel-solution.html'),
+        autoparts: resolve(__dirname, 'autoparts-solution.html'),
+        church: resolve(__dirname, 'church-solution.html')
       }
     }
   }

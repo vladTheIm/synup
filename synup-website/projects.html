@@ -3,146 +3,120 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Systems Management Projects — SynUp Digital Solutions</title>
-<meta name="description" content="Explore SynUp's systems management projects including school management systems, IT infrastructure, and more." />
+<title>Projects | SynUp</title>
+<meta name="description" content="Systems and projects built by SynUp for schools and businesses in Kumasi." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.32.0/dist/tabler-icons.min.css" />
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Inter',sans-serif;background:#0a0a0a;color:#fff}
-.sc-nav{display:flex;align-items:center;justify-content:space-between;padding:18px 48px;background:#0a0a0a;border-bottom:1px solid rgba(255,255,255,0.08);position:sticky;top:0;z-index:100}
-.sc-logo{font-size:20px;font-weight:700;color:#fff;text-decoration:none;letter-spacing:-0.5px}
-.sc-nav-links{display:flex;gap:32px}
-.sc-nav-links a{color:rgba(255,255,255,0.6);text-decoration:none;font-size:14px;font-weight:500;transition:color .2s;position:relative;padding:4px 0}
-.sc-nav-links a::before,.sc-nav-links a::after{content:'';position:absolute;bottom:0;height:2px;width:0;background:linear-gradient(90deg,#7c5cfc,#a78bfa);transition:width 0.35s cubic-bezier(0.22,1,0.36,1)}
-.sc-nav-links a::before{left:50%}
-.sc-nav-links a::after{right:50%}
-.sc-nav-links a:hover::before,.sc-nav-links a:hover::after{width:50%}
-.sc-nav-links a:hover{color:#fff}
-.sc-nav-right{display:flex;gap:12px;align-items:center}
-.sc-btn-primary{background:#fff;color:#0a0a0a;padding:8px 18px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;text-decoration:none;transition:opacity .2s;border:none}
-.sc-btn-primary:hover{opacity:0.88}
-.sc-section-label{font-size:12px;color:#2d5016;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;margin-bottom:14px}
-.sc-section-h2{font-size:42px;font-weight:800;letter-spacing:-1.5px;color:#fff;margin-bottom:16px;line-height:1.1}
-.sc-projects-sub{font-size:17px;color:rgba(255,255,255,0.5);max-width:560px;line-height:1.7;font-weight:400;margin-bottom:48px}
-.sc-hero{padding:80px 48px 40px}
-.sc-project-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;padding:0 48px 80px}
-.sc-project-card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:14px;overflow:hidden;transition:border-color .2s}
-.sc-project-card:hover{border-color:rgba(255,255,255,0.16)}
-.sc-project-img{aspect-ratio:16/10;overflow:hidden;display:flex;align-items:center;justify-content:center}
-.sc-project-img img{width:100%;height:100%;object-fit:cover}
-.sc-project-body{padding:24px}
-.sc-project-meta{display:flex;gap:8px;align-items:center;margin-bottom:10px}
-.sc-project-tag{font-size:11px;font-weight:600;color:#2d5016;background:rgba(45,80,22,0.1);padding:3px 8px;border-radius:100px}
-.sc-project-card h3{font-size:18px;font-weight:700;letter-spacing:-0.3px;color:#fff;margin-bottom:8px;line-height:1.35}
-.sc-project-card p{font-size:14px;color:rgba(255,255,255,0.5);line-height:1.6;margin-bottom:16px}
-.sc-project-stats{display:flex;gap:24px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.06)}
-.sc-project-stat-num{font-size:18px;font-weight:800;color:#2d5016}
-.sc-project-stat-desc{font-size:12px;color:rgba(255,255,255,0.35);margin-top:2px}
-.sc-back-link{display:inline-flex;align-items:center;gap:6px;color:rgba(255,255,255,0.5);text-decoration:none;font-size:14px;margin-bottom:32px;transition:color .2s}
-.sc-back-link:hover{color:#fff}
-@media(max-width:768px){
-  .sc-nav-links,.sc-nav-right{display:none}
-  .sc-nav{padding:16px 20px}
-  .sc-hero{padding:60px 20px 24px}
-  .sc-section-h2{font-size:28px}
-  .sc-project-grid{grid-template-columns:1fr;padding:0 20px 60px}
-}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{color-scheme:light dark;--paper:#f4efe6;--ink:#161412;--ink-soft:rgba(22,20,18,.72);--accent:#00b0f0;--accent-dark:#0086c9;--line:rgba(22,20,18,.12);--card:#fbf8f2;--header-bg:rgba(244,239,230,.94)}
+@media(prefers-color-scheme:dark){:root{--paper:#0f1418;--ink:#eaf2f7;--ink-soft:rgba(234,242,247,.72);--accent:#00b0f0;--accent-dark:#4fd2ff;--line:rgba(234,242,247,.14);--card:#151c22;--header-bg:rgba(15,20,24,.88)}}
+body{font-family:"Sora",system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6}
+a{color:inherit} img{max-width:100%;display:block}
+h1,h2,h3{font-family:"Sora",system-ui,sans-serif;font-weight:400;line-height:1.1;letter-spacing:-.04em}
+.container{width:min(1100px,100% - 48px);margin:0 auto}
+.topbar{position:sticky;top:0;z-index:50;background:var(--header-bg);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.topbar-inner{display:flex;align-items:center;justify-content:space-between;min-height:72px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}.brand img{height:34px}.brand span{font-family:"Sora",sans-serif;font-size:22px;font-weight:700;letter-spacing:-.03em}
+.nav{display:flex;gap:18px}.nav a{text-decoration:none;font-size:14px;font-weight:600;letter-spacing:-.02em;color:var(--ink-soft)}.nav a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 16px;border-radius:999px;text-decoration:none;font-weight:700;letter-spacing:-.03em;font-size:14px;border:1.5px solid var(--accent);background:var(--accent);color:#041018}
+main{padding:56px 0 72px}
+.back{display:inline-flex;align-items:center;gap:6px;text-decoration:none;color:var(--ink-soft);font-weight:600;font-size:14px;margin-bottom:22px}
+.kicker{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+h1{font-size:clamp(34px,5vw,56px);letter-spacing:-.03em;margin-bottom:12px}
+.lead{font-size:18px;color:var(--ink-soft);max-width:700px;margin-bottom:36px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.card{border:1px solid var(--line);border-radius:20px;overflow:hidden;background:var(--card)}
+.media{aspect-ratio:16/10;background:#ddd6c8;overflow:hidden}
+@media(prefers-color-scheme:dark){.media{background:#1f2830}}.media img{width:100%;height:100%;object-fit:cover}
+.body{padding:20px}
+.tag{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
+.card h3{font-size:26px;margin-bottom:8px}
+.card p{color:var(--ink-soft);font-size:15px;margin-bottom:12px}
+.link{color:var(--accent);font-weight:700;text-decoration:none}
+footer{padding:32px 0 44px;border-top:1px solid var(--line);color:var(--ink-soft);font-size:14px}
+.footer-inner{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+@media(max-width:800px){.nav{display:none}.grid{grid-template-columns:1fr}}
+@media(max-width:640px){.container{width:min(1100px,100% - 32px)}}
 </style>
 </head>
 <body>
-
-<nav class="sc-nav">
-  <a href="/" class="sc-logo"><img src="/logo.png" alt="SynUp" style="height:32px;width:auto;display:block"></a>
-  <div class="sc-nav-links">
-    <a href="/">Home</a>
-    <a href="/#services">Services</a>
-    <a href="/#projects">Projects</a>
-    <a href="/#about">About</a>
-    <a href="/#contact">Contact</a>
+<header class="topbar">
+  <div class="container topbar-inner">
+    <a href="/" class="brand"><img src="/logo.png" alt="SynUp"><span>SynUp</span></a>
+    <nav class="nav"><a href="/">Home</a><a href="/school-solution.html">School Pro</a><a href="/hotel-solution.html">Hotel Pro</a><a href="/autoparts-solution.html">AutoParts</a></nav>
+    <a class="btn" href="https://wa.me/233549984981" target="_blank" rel="noopener"><i class="ti ti-brand-whatsapp"></i> WhatsApp</a>
   </div>
-  <div class="sc-nav-right">
-    <a href="/#contact" class="sc-btn-primary">Get Started</a>
-  </div>
-</nav>
-
-<section class="sc-hero">
-  <a href="/" class="sc-back-link"><i class="ti ti-arrow-left"></i> Back to home</a>
-  <div class="sc-section-label">Systems Management</div>
-  <h1 class="sc-section-h2">Our Systems Management Projects</h1>
-  <p class="sc-projects-sub">From school management platforms to enterprise IT infrastructure — here are some of the systems we've built and managed for our clients.</p>
-</section>
-
-<div class="sc-project-grid">
-  <div class="sc-project-card">
-    <div class="sc-project-img"><img src="/sms-dashboard.png" alt="School Pro"></div>
-    <div class="sc-project-body">
-      <div class="sc-project-meta"><span class="sc-project-tag">Education</span></div>
-      <h3>School Pro — School Management System</h3>
-      <p>A comprehensive platform for managing student records, attendance, report cards, staff data, and multi-school administration.</p>
-      <a href="school-solution.html" style="color:#7c5cfc;font-size:14px;font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:6px;margin-bottom:16px">Explore solution <i class="ti ti-arrow-right"></i></a>
-      <div class="sc-project-stats">
-        <div><div class="sc-project-stat-num">4+</div><div class="sc-project-stat-desc">schools</div></div>
-        <div><div class="sc-project-stat-num">800+</div><div class="sc-project-stat-desc">students</div></div>
-        <div><div class="sc-project-stat-num">40+</div><div class="sc-project-stat-desc">staff</div></div>
-      </div>
+</header>
+<main>
+  <div class="container">
+    <a class="back" href="/"><i class="ti ti-arrow-left"></i> Back to home</a>
+    <div class="kicker">Projects</div>
+    <h1>Systems we run and build</h1>
+    <p class="lead">A look at the products and setups behind our work. School Pro is our main system for schools; we also build and support networks, websites, and other tools.</p>
+    <div class="grid">
+      <article class="card">
+        <div class="media"><img src="/pro-new.png" alt="School Pro dashboard"></div>
+        <div class="body">
+          <div class="tag">School management</div>
+          <h3>School Pro</h3>
+          <p>Attendance, student records, grades, report cards, and fees in one browser system. Our first global product, used by schools including Atasemanso M/A J.H.S in Kumasi.</p>
+          <a class="link" href="/school-solution.html">See School Pro <i class="ti ti-arrow-right"></i></a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="media"><img src="/app-login-autoparts.png" alt="Hotel Pro login"></div>
+        <div class="body">
+          <div class="tag">Hotel management</div>
+          <h3>Hotel Pro</h3>
+          <p>A management system for hotels to handle bookings, guests, rooms, and day-to-day operations in one place.</p>
+          <a class="link" href="/hotel-solution.html">See Hotel Pro <i class="ti ti-arrow-right"></i></a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="media"><img src="/app-login-school.png" alt="AutoParts login"></div>
+        <div class="body">
+          <div class="tag">Auto parts management</div>
+          <h3>AutoParts</h3>
+          <p>A system for auto parts businesses to manage inventory, sales, and customers without spreadsheets.</p>
+          <a class="link" href="/autoparts-solution.html">See AutoParts <i class="ti ti-arrow-right"></i></a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="media"><img src="/church.png" alt="Church Connect"></div>
+        <div class="body">
+          <div class="tag">Church management</div>
+          <h3>Church Connect</h3>
+          <p>Members, attendance, events, groups, and giving tracked in one dashboard for church leaders and teams.</p>
+          <a class="link" href="/church-solution.html">See Church Connect <i class="ti ti-arrow-right"></i></a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="media"><img src="/hero_office_network.png" alt="Office network setup"></div>
+        <div class="body">
+          <div class="tag">Networks</div>
+          <h3>Office and school networks</h3>
+          <p>Wi-Fi, cabling, routers, and secure access set up so staff and students can stay connected without constant dropouts.</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="media"><img src="/hero_website.png" alt="Website project"></div>
+        <div class="body">
+          <div class="tag">Websites</div>
+          <h3>Business websites</h3>
+          <p>Simple sites that explain what a business does and make it easy for customers to call or message. Built for clients like Dockys Catering.</p>
+        </div>
+      </article>
     </div>
   </div>
-
-  <div class="sc-project-card">
-    <div class="sc-project-img"><img src="/church.png" alt="Gracefield CMS"></div>
-    <div class="sc-project-body">
-      <div class="sc-project-meta"><span class="sc-project-tag">Church Management</span></div>
-      <h3>Church Management System</h3>
-      <p>A full-featured church management platform for members, ministries, finances, attendance, and pastoral care.</p>
-      <a href="church-solution.html" style="color:#7c5cfc;font-size:14px;font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:6px;margin-bottom:16px">Explore solution <i class="ti ti-arrow-right"></i></a>
-      <div class="sc-project-stats">
-        <div><div class="sc-project-stat-num">Live</div><div class="sc-project-stat-desc">deployed on Render</div></div>
-        <div><div class="sc-project-stat-num">5</div><div class="sc-project-stat-desc">user roles</div></div>
-      </div>
-    </div>
+</main>
+<footer>
+  <div class="container footer-inner">
+    <div>SynUp · Kumasi, Ghana · hello@synupdigital.com · +233 54 998 4981</div>
+    <div><a href="/">Home</a></div>
   </div>
-
-  <div class="sc-project-card">
-    <div class="sc-project-img" style="background:rgba(124,92,252,0.08)"><div style="font-size:48px;color:rgba(124,92,252,0.3)">🖥️</div></div>
-    <div class="sc-project-body">
-      <div class="sc-project-meta"><span class="sc-project-tag">IT Infrastructure</span></div>
-      <h3>Office Network & Systems Setup</h3>
-      <p>Complete IT infrastructure setup for a mid-size business including servers, workstations, firewall configuration, and backup systems.</p>
-      <div class="sc-project-stats">
-        <div><div class="sc-project-stat-num">30+</div><div class="sc-project-stat-desc">workstations</div></div>
-        <div><div class="sc-project-stat-num">99.9%</div><div class="sc-project-stat-desc">uptime</div></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="sc-project-card">
-    <div class="sc-project-img" style="background:rgba(124,92,252,0.08)"><div style="font-size:48px;color:rgba(124,92,252,0.3)">☁️</div></div>
-    <div class="sc-project-body">
-      <div class="sc-project-meta"><span class="sc-project-tag">Cloud</span></div>
-      <h3>Cloud Migration & Management</h3>
-      <p>Migrated on-premise systems to cloud infrastructure, reducing costs and improving accessibility for remote teams.</p>
-      <div class="sc-project-stats">
-        <div><div class="sc-project-stat-num">40%</div><div class="sc-project-stat-desc">cost reduction</div></div>
-        <div><div class="sc-project-stat-num">3x</div><div class="sc-project-stat-desc">faster access</div></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="sc-project-card">
-    <div class="sc-project-img" style="background:rgba(124,92,252,0.08)"><div style="font-size:48px;color:rgba(124,92,252,0.3)">🔐</div></div>
-    <div class="sc-project-body">
-      <div class="sc-project-meta"><span class="sc-project-tag">Security</span></div>
-      <h3>Network Security & Firewall Setup</h3>
-      <p>Comprehensive security audit, firewall configuration, and monitoring system for a financial services firm handling sensitive data.</p>
-      <div class="sc-project-stats">
-        <div><div class="sc-project-stat-num">100%</div><div class="sc-project-stat-desc">threat blocked</div></div>
-        <div><div class="sc-project-stat-num">24/7</div><div class="sc-project-stat-desc">monitoring</div></div>
-      </div>
-    </div>
-  </div>
-</div>
+</footer>
 </body>
 </html>
