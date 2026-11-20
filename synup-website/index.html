@@ -46,8 +46,8 @@ h1,h2,h3,h4{font-family:"Sora",system-ui,sans-serif;font-weight:400;line-height:
 .mobile-drawer a{display:block;padding:12px 0;text-decoration:none;font-weight:600;border-bottom:1px solid var(--line)}
 .mobile-drawer .drawer-actions{display:grid;gap:10px;margin-top:16px}
 
-.hero{position:relative;min-height:100vh;display:flex;align-items:flex-end;color:var(--hero-fg);overflow:hidden;background:#05090c}
-.hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:right center;transform:scale(1.08);filter:saturate(.9) brightness(.9)}
+.hero{position:relative;min-height:100vh;display:flex;align-items:flex-end;color:var(--hero-fg);overflow:hidden;background:#05090c url('/hero_website.png') center/cover no-repeat}
+.hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:right center;transform:scale(1.08);filter:saturate(.9) brightness(.9);background:#05090c}
 .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,9,12,.94) 0%,rgba(5,9,12,.88) 38%,rgba(5,9,12,.62) 62%,rgba(5,9,12,.18) 82%,rgba(5,9,12,.08) 100%);z-index:1}
 .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,9,12,.25) 0%,rgba(5,9,12,0) 35%,rgba(5,9,12,.35) 100%);z-index:1}
 .hero-inner{position:relative;z-index:2;padding:180px 0 110px;display:block;max-width:860px}
@@ -371,14 +371,18 @@ function toggleMenu(){
   function playIdx(idx){
     clearTimeout(clipTimer);
     i = (idx + vids.length) % vids.length;
+    v.style.opacity = '0';
     v.src = vids[i];
     v.load();
     const p = v.play();
     if(p && p.catch) p.catch(()=>{});
     clipTimer = setTimeout(() => playIdx(i+1), 7000);
   }
+  v.style.transition = 'opacity .4s ease';
+  v.addEventListener('playing', () => { v.style.opacity = '1'; });
   v.addEventListener('ended', () => playIdx(i+1));
-  v.addEventListener('error', () => playIdx(i+1));
+  v.addEventListener('error', () => { v.style.opacity = '0'; playIdx(i+1); });
+  v.addEventListener('stalled', () => { if(v.readyState < 2) v.style.opacity = '0'; });
   playIdx(0);
 })();
 
