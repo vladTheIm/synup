@@ -47,10 +47,17 @@ h1,h2,h3,h4{font-family:"Sora",system-ui,sans-serif;font-weight:400;line-height:
 .mobile-drawer .drawer-actions{display:grid;gap:10px;margin-top:16px}
 
 .hero{position:relative;min-height:100vh;display:flex;align-items:flex-end;color:var(--hero-fg);overflow:hidden;background:#05090c url('/hero_website.png') center/cover no-repeat}
-.hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:right center;transform:scale(1.08);filter:saturate(.9) brightness(.9);background:#05090c}
+.hero video,.hero canvas#hero-canvas{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:right center;transform:scale(1.08);filter:saturate(.9) brightness(.9);background:#05090c}
+.hero canvas#hero-canvas{display:none;transform:none;filter:none;object-fit:unset}
 .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,9,12,.94) 0%,rgba(5,9,12,.88) 38%,rgba(5,9,12,.62) 62%,rgba(5,9,12,.18) 82%,rgba(5,9,12,.08) 100%);z-index:1}
 .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,9,12,.25) 0%,rgba(5,9,12,0) 35%,rgba(5,9,12,.35) 100%);z-index:1}
 .hero-inner{position:relative;z-index:2;padding:180px 0 110px;display:block;max-width:860px}
+body.mode-custom .hero video{display:none}
+body.mode-custom .hero canvas#hero-canvas{display:block}
+body.mode-custom .hero::before{background:linear-gradient(90deg,rgba(5,9,12,.9) 0%,rgba(5,9,12,.78) 40%,rgba(5,9,12,.45) 70%,rgba(5,9,12,.2) 100%)}
+.custom-only{display:none}
+body.mode-custom .custom-only{display:block}
+body.mode-custom .everyday-only{display:none}
 .eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:rgba(247,251,255,.8);margin-bottom:18px}
 .hero h1{font-size:clamp(42px,6vw,72px);letter-spacing:-.06em;line-height:1.08;margin-bottom:20px}
 .hero-copy{font-size:18px;line-height:1.6;color:rgba(247,251,255,.88);max-width:680px;letter-spacing:-.02em}
@@ -59,7 +66,7 @@ h1,h2,h3,h4{font-family:"Sora",system-ui,sans-serif;font-weight:400;line-height:
 .hero-actions .btn-primary{background:var(--accent);color:#041018;border-color:var(--accent)}
 .hero-actions .btn-primary:hover{background:var(--accent-dark)}
 
-section{padding:88px 0}
+section{padding:88px 0;scroll-margin-top:84px}
 .section-head{margin-bottom:36px}
 .kicker{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
 .section-head h2{font-size:clamp(30px,4vw,52px);letter-spacing:-.03em;max-width:820px}
@@ -155,28 +162,32 @@ footer{padding:36px 0 48px;border-top:1px solid var(--line);color:var(--ink-soft
         <button role="tab" aria-selected="false" data-seg="custom" onclick="setSeg('custom')">Customizations</button>
       </div>
       <nav class="product-links" id="product-links" aria-label="Services">
-        <a href="#services" data-for="everyday" class="active">Systems</a>
-        <a href="#services" data-for="everyday">Websites</a>
-        <a href="#services" data-for="everyday">Networks</a>
+        <a href="#home" data-for="everyday" class="active">Home</a>
+        <a href="#work" data-for="everyday">Our works</a>
+        <a href="#work" data-for="everyday">Growth</a>
+        <a href="#how-it-works" data-for="everyday">How it works</a>
         <a href="/design.html" data-for="everyday">Design</a>
-        <a href="/school-solution.html" data-for="custom">School Pro</a>
-        <a href="/hotel-solution.html" data-for="custom">Hotel Pro</a>
-        <a href="/autoparts-solution.html" data-for="custom">AutoParts</a>
-        <a href="#work" data-for="custom">Results</a>
+        <a href="#school-pro" data-for="custom">School Pro</a>
+        <a href="#hotel-pro" data-for="custom">Hotel Pro</a>
+        <a href="#autoparts" data-for="custom">AutoParts</a>
       </nav>
     </div>
     <div class="nav-actions">
-      <a class="btn btn-outline" href="/projects.html">Projects</a>
+      <a class="btn btn-outline" href="/projects.html">Systems</a>
       <a class="btn btn-primary" href="https://wa.me/233549984981?text=Hi%20SynUp%2C%20I%27d%20like%20to%20book%20a%20free%20site%20visit." target="_blank" rel="noopener">Book a free site visit</a>
       <button class="menu-btn" aria-label="Menu" onclick="toggleMenu()"><i class="ti ti-menu-2"></i></button>
     </div>
   </div>
   <div class="mobile-drawer" id="mobile-drawer">
-    <a href="/school-solution.html" onclick="toggleMenu()">School Pro</a>
-    <a href="/hotel-solution.html" onclick="toggleMenu()">Hotel Pro</a>
-    <a href="/autoparts-solution.html" onclick="toggleMenu()">AutoParts</a>
-    <a href="/projects.html" onclick="toggleMenu()">Projects</a>
-    <a href="#work" onclick="toggleMenu()">Work</a>
+    <a href="#home" data-for="everyday" onclick="toggleMenu()">Home</a>
+    <a href="#work" data-for="everyday" onclick="toggleMenu()">Our works</a>
+    <a href="#work" data-for="everyday" onclick="toggleMenu()">Growth</a>
+    <a href="#how-it-works" data-for="everyday" onclick="toggleMenu()">How it works</a>
+    <a href="/design.html" data-for="everyday" onclick="toggleMenu()">Design</a>
+    <a href="#school-pro" data-for="custom" onclick="toggleMenu()">School Pro</a>
+    <a href="#hotel-pro" data-for="custom" onclick="toggleMenu()">Hotel Pro</a>
+    <a href="#autoparts" data-for="custom" onclick="toggleMenu()">AutoParts</a>
+    <a href="/projects.html" onclick="toggleMenu()">Systems</a>
     <a href="#contact" onclick="toggleMenu()">Contact</a>
     <div class="drawer-actions">
       <a class="btn btn-primary" href="https://wa.me/233549984981?text=Hi%20SynUp%2C%20I%27d%20like%20to%20book%20a%20free%20site%20visit." target="_blank" rel="noopener">Book a free site visit</a>
@@ -188,11 +199,12 @@ footer{padding:36px 0 48px;border-top:1px solid var(--line);color:var(--ink-soft
 <main>
   <section class="hero" id="home">
     <video id="hero-video" autoplay muted playsinline preload="auto"></video>
+    <canvas id="hero-canvas" aria-hidden="true"></canvas>
     <div class="container hero-inner">
       <div>
-        <div class="eyebrow">Kumasi, Ghana · Since 2019</div>
-        <h1>We run IT for businesses, small and large.</h1>
-        <p class="hero-copy">Systems, websites, networks, design. One phone number. We work with businesses of every size, and we also build custom products like School Pro, our first global product for schools. When something breaks or needs building, you talk to us and we handle it.</p>
+        <div class="eyebrow" id="hero-eyebrow">Kumasi, Ghana · Since 2019</div>
+        <h1 id="hero-title">We run IT for businesses, small and large.</h1>
+        <p class="hero-copy" id="hero-copy">Systems, websites, networks, design. One phone number. We work with businesses of every size, and we also build custom products like School Pro, our first global product for schools. When something breaks or needs building, you talk to us and we handle it.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="https://wa.me/233549984981?text=Hi%20SynUp%2C%20I%20need%20help%20with..." target="_blank" rel="noopener"><i class="ti ti-brand-whatsapp"></i> Message us on WhatsApp</a>
           <a class="btn" href="https://wa.me/233549984981?text=Hi%20SynUp%2C%20I%27d%20like%20to%20book%20a%20free%20site%20visit." target="_blank" rel="noopener"><i class="ti ti-calendar-event"></i> Book a free site visit</a>
@@ -201,7 +213,7 @@ footer{padding:36px 0 48px;border-top:1px solid var(--line);color:var(--ink-soft
     </div>
   </section>
 
-  <section class="apps" id="apps">
+  <section class="apps everyday-only" id="apps">
     <div class="container">
       <div class="section-head">
         <div class="kicker">Our apps</div>
@@ -237,7 +249,7 @@ footer{padding:36px 0 48px;border-top:1px solid var(--line);color:var(--ink-soft
     </div>
   </section>
 
-  <section id="work">
+  <section id="work" class="everyday-only">
     <div class="container">
       <div class="section-head">
         <div class="kicker">Real work</div>
@@ -270,7 +282,6 @@ footer{padding:36px 0 48px;border-top:1px solid var(--line);color:var(--ink-soft
               <h3>A perfume brand with a real place online.</h3>
               <p><strong>Before:</strong> Customers had no simple website to browse the brand and find what they needed.</p>
               <p><strong>After:</strong> A clean website that shows the perfumes, tells the brand story, and makes it easy for customers to reach out.</p>
-              <img src="/perfume.png" alt="Reages Perfumery mobile view" style="width:100%;border-radius:12px;margin:10px 0 12px;border:1px solid var(--line)">
               <a class="link" href="https://vladtheim.github.io/perfume-free/" target="_blank" rel="noopener">Visit Reages Perfumery <i class="ti ti-arrow-up-right"></i></a>
             </div>
           </article>
@@ -289,7 +300,35 @@ footer{padding:36px 0 48px;border-top:1px solid var(--line);color:var(--ink-soft
     </div>
   </section>
 
-  <section id="services">
+  <section id="how-it-works" class="everyday-only">
+    <div class="container">
+      <div class="section-head">
+        <div class="kicker">How it works</div>
+        <h2>Simple process. Clear results.</h2>
+        <p class="lead">We listen, we build, and we support you after launch. One team, one phone number.</p>
+      </div>
+      <div class="services-list">
+        <div class="service">
+          <h3>1. Talk to us</h3>
+          <p>Message us on WhatsApp or book a free site visit. Tell us what’s not working or what you want to build.</p>
+        </div>
+        <div class="service">
+          <h3>2. We plan it</h3>
+          <p>We look at your business, recommend the right setup, and give you a clear plan and price.</p>
+        </div>
+        <div class="service">
+          <h3>3. We build and set up</h3>
+          <p>We build the system, website, network, or design and get it working in your business.</p>
+        </div>
+        <div class="service">
+          <h3>4. We support you</h3>
+          <p>When something needs fixing or improving, you call the same team that built it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="everyday-only">
     <div class="container">
       <div class="section-head">
         <div class="kicker">What we do</div>
@@ -317,12 +356,90 @@ footer{padding:36px 0 48px;border-top:1px solid var(--line);color:var(--ink-soft
     </div>
   </section>
 
-  <section style="padding-top:0">
+  <section style="padding-top:0" class="everyday-only">
     <div class="container quote-band">
       <blockquote>"We came to SynUp with three separate problems: a school system, a logo, and a website that hadn't been touched in years. They handled all three. One team, one point of contact."</blockquote>
       <div>
         <div class="attrib"><strong>Richard Arthur</strong><br>Proprietor, N and A Mustard Seed School</div>
         <p class="lead" style="margin-top:18px;font-size:16px">We've been building for schools and small businesses in Kumasi since 2019. You get the same people who answer the phone when you need support.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="school-pro" class="custom-only">
+    <div class="container">
+      <div class="section-head">
+        <div class="kicker">Custom product</div>
+        <h2>School Pro</h2>
+        <p class="lead">Our first global product. A browser-based school management system for attendance, records, grades, and fees.</p>
+      </div>
+      <div class="work-grid">
+        <article class="work-card">
+          <div class="media"><img src="/pro-new.png" alt="School Pro dashboard"></div>
+          <div class="body">
+            <div class="label">School management</div>
+            <h3>Built for schools that want less paper and more clarity.</h3>
+            <p><strong>Before:</strong> Student records, attendance, and grades lived on paper and in spreadsheets.</p>
+            <p><strong>After:</strong> Attendance, records, and reports run in one browser system your staff can actually use.</p>
+            <a class="link" href="/school-solution.html">See full School Pro page <i class="ti ti-arrow-right"></i></a>
+          </div>
+        </article>
+        <div class="stack">
+          <article class="work-card"><div class="body"><div class="label">What it handles</div><h3>Attendance, grades, fees, reports.</h3><p>Take attendance, record grades, manage fees, and print reports from one place.</p></div></article>
+          <article class="work-card"><div class="body"><div class="label">Get started</div><h3>See it in your school.</h3><p>We can visit, show you the system, and set it up around how your school works.</p><a class="link" href="https://wa.me/233549984981?text=Hi%20SynUp%2C%20I%27d%20like%20a%20School%20Pro%20demo." target="_blank" rel="noopener">Ask for a demo <i class="ti ti-arrow-up-right"></i></a></div></article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="hotel-pro" class="custom-only">
+    <div class="container">
+      <div class="section-head">
+        <div class="kicker">Custom product</div>
+        <h2>Hotel Pro</h2>
+        <p class="lead">A browser-based system for hotels to manage bookings, guests, rooms, and daily operations.</p>
+      </div>
+      <div class="work-grid">
+        <article class="work-card">
+          <div class="media"><img src="/app-login-autoparts.png" alt="Hotel Pro login screen"></div>
+          <div class="body">
+            <div class="label">Hotel management</div>
+            <h3>One place for bookings, guests, and rooms.</h3>
+            <p><strong>Before:</strong> Bookings, guest details, and room status spread across paper, chats, and spreadsheets.</p>
+            <p><strong>After:</strong> Your team works from one system with a clear view of what’s happening each day.</p>
+            <a class="link" href="/hotel-solution.html">See full Hotel Pro page <i class="ti ti-arrow-right"></i></a>
+          </div>
+        </article>
+        <div class="stack">
+          <article class="work-card"><div class="body"><div class="label">What it handles</div><h3>Bookings, check-ins, room status.</h3><p>Track reservations, manage guests, and see room availability at a glance.</p></div></article>
+          <article class="work-card"><div class="body"><div class="label">Get started</div><h3>See it for your hotel.</h3><p>Tell us how your hotel runs and we’ll show you how Hotel Pro can fit.</p><a class="link" href="https://srv1810937.hstgr.cloud:8443/" target="_blank" rel="noopener">Open login <i class="ti ti-arrow-up-right"></i></a></div></article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="autoparts" class="custom-only">
+    <div class="container">
+      <div class="section-head">
+        <div class="kicker">Custom product</div>
+        <h2>AutoParts</h2>
+        <p class="lead">A browser-based system for auto parts businesses to manage inventory, sales, and customers.</p>
+      </div>
+      <div class="work-grid">
+        <article class="work-card">
+          <div class="media"><img src="/app-login-school.png" alt="AutoParts login screen"></div>
+          <div class="body">
+            <div class="label">Auto parts management</div>
+            <h3>Stock, sales, and customers in one system.</h3>
+            <p><strong>Before:</strong> Parts, sales, and customer details tracked in notebooks or spreadsheets.</p>
+            <p><strong>After:</strong> One browser system for inventory, sales, and customer history.</p>
+            <a class="link" href="/autoparts-solution.html">See full AutoParts page <i class="ti ti-arrow-right"></i></a>
+          </div>
+        </article>
+        <div class="stack">
+          <article class="work-card"><div class="body"><div class="label">What it handles</div><h3>Inventory, sales, customers.</h3><p>Know what’s in stock, record sales, and keep customer details easy to find.</p></div></article>
+          <article class="work-card"><div class="body"><div class="label">Get started</div><h3>See it for your shop.</h3><p>Tell us how you sell parts today and we’ll show you how AutoParts can fit.</p><a class="link" href="https://srv1810937.hstgr.cloud:8444/" target="_blank" rel="noopener">Open login <i class="ti ti-arrow-up-right"></i></a></div></article>
+        </div>
       </div>
     </div>
   </section>
@@ -350,7 +467,7 @@ footer{padding:36px 0 48px;border-top:1px solid var(--line);color:var(--ink-soft
     <div>SynUp · Kumasi, Ghana · Since 2019</div>
     <div style="display:flex;gap:16px;flex-wrap:wrap">
       <a href="/school-solution.html">School Pro</a>
-      <a href="/projects.html">Projects</a>
+      <a href="/projects.html">Systems</a>
       <a href="mailto:hello@synupdigital.com">hello@synupdigital.com</a>
       <a href="tel:+233549984981">+233 54 998 4981</a>
     </div>
@@ -360,25 +477,28 @@ footer{padding:36px 0 48px;border-top:1px solid var(--line);color:var(--ink-soft
 <a class="wa" href="https://wa.me/233549984981?text=Hi%20SynUp%2C%20I%20need%20help%20with..." target="_blank" rel="noopener" aria-label="Message us on WhatsApp"><i class="ti ti-brand-whatsapp"></i><span>WhatsApp</span></a>
 
 <script>
-function setSeg(which){
-  document.querySelectorAll('.seg button').forEach(b=>b.setAttribute('aria-selected', b.dataset.seg===which ? 'true':'false'));
-  document.querySelectorAll('.product-links a').forEach(a=>{
-    a.style.display = a.dataset.for===which ? 'flex' : 'none';
-  });
-}
-setSeg('everyday');
-function toggleMenu(){
-  document.getElementById('mobile-drawer').classList.toggle('open');
-}
+const heroCopy = {
+  everyday: {
+    eyebrow: 'Kumasi, Ghana · Since 2019',
+    title: 'We run IT for businesses, small and large.',
+    copy: 'Systems, websites, networks, design. One phone number. We work with businesses of every size, and we also build custom products like School Pro, our first global product for schools. When something breaks or needs building, you talk to us and we handle it.'
+  },
+  custom: {
+    eyebrow: 'Custom products · Built by SynUp',
+    title: 'Custom systems built around how you work.',
+    copy: 'When off-the-shelf tools don\u2019t fit, we build the system your business actually needs. From School Pro to Hotel Pro to AutoParts, we design, build, and support custom products that make daily work simpler.'
+  }
+};
 
 // Hero video playlist (cropped clips, not full length)
-(function(){
+const heroVideo = (function(){
   const vids = ['/hero-1.mp4','/hero-2.mp4','/hero-3.mp4'];
   const v = document.getElementById('hero-video');
-  if(!v) return;
-  let i = 0, clipTimer;
+  if(!v) return { pause(){}, resume(){} };
+  let i = 0, clipTimer, active = true;
   function playIdx(idx){
     clearTimeout(clipTimer);
+    if(!active) return;
     i = (idx + vids.length) % vids.length;
     v.style.opacity = '0';
     v.src = vids[i];
@@ -388,12 +508,98 @@ function toggleMenu(){
     clipTimer = setTimeout(() => playIdx(i+1), 7000);
   }
   v.style.transition = 'opacity .4s ease';
-  v.addEventListener('playing', () => { v.style.opacity = '1'; });
-  v.addEventListener('ended', () => playIdx(i+1));
-  v.addEventListener('error', () => { v.style.opacity = '0'; playIdx(i+1); });
-  v.addEventListener('stalled', () => { if(v.readyState < 2) v.style.opacity = '0'; });
+  v.addEventListener('playing', () => { if(active) v.style.opacity = '1'; });
+  v.addEventListener('ended', () => { if(active) playIdx(i+1); });
+  v.addEventListener('error', () => { if(active){ v.style.opacity = '0'; playIdx(i+1); } });
+  v.addEventListener('stalled', () => { if(active && v.readyState < 2) v.style.opacity = '0'; });
   playIdx(0);
+  return {
+    pause(){ active = false; clearTimeout(clipTimer); v.pause(); },
+    resume(){ if(active) return; active = true; playIdx(i); }
+  };
 })();
+
+// Custom hero canvas animation (SynUp logo)
+const heroCanvas = (function(){
+  const canvas = document.getElementById('hero-canvas');
+  if(!canvas) return { start(){}, stop(){} };
+  const ctx = canvas.getContext('2d');
+  const logo = new Image();
+  logo.src = '/logo.png';
+  let w=0,h=0,dpr=1,particles=[],t=0,raf=0,running=false;
+  function resize(){
+    const r = canvas.getBoundingClientRect();
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    w = Math.floor(r.width * dpr); h = Math.floor(r.height * dpr);
+    canvas.width = w; canvas.height = h;
+  }
+  function build(){
+    particles = [];
+    const count = Math.min(140, Math.floor((w*h)/(14000*dpr*dpr)));
+    for(let i=0;i<count;i++) particles.push({x:Math.random()*w,y:Math.random()*h,r:Math.random()*2.2+.6,vx:(Math.random()-.5)*.35,vy:(Math.random()-.5)*.35,a:Math.random()*.6+.15});
+  }
+  function draw(){
+    if(!running) return;
+    t += 0.008;
+    ctx.clearRect(0,0,w,h);
+    const g = ctx.createRadialGradient(w*.5,h*.45,10,w*.5,h*.5,Math.max(w,h)*.7);
+    g.addColorStop(0,'#0b2230'); g.addColorStop(1,'#05090c');
+    ctx.fillStyle = g; ctx.fillRect(0,0,w,h);
+    ctx.save(); ctx.globalAlpha=.12; ctx.strokeStyle='#00b0f0'; ctx.lineWidth=1;
+    const gap = Math.max(36, Math.floor(w/24)); const ox = Math.sin(t)*20;
+    for(let x=-gap;x<w+gap;x+=gap){ctx.beginPath();ctx.moveTo(x+ox,0);ctx.lineTo(x-ox,h);ctx.stroke();}
+    for(let y=-gap;y<h+gap;y+=gap){ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(w,y);ctx.stroke();}
+    ctx.restore();
+    for(const p of particles){
+      p.x += p.vx + Math.sin(t + p.y*.002)*.15; p.y += p.vy + Math.cos(t + p.x*.002)*.12;
+      if(p.x<-10)p.x=w+10; if(p.x>w+10)p.x=-10; if(p.y<-10)p.y=h+10; if(p.y>h+10)p.y=-10;
+      ctx.beginPath(); ctx.fillStyle=`rgba(0,176,240,${p.a})`; ctx.arc(p.x,p.y,p.r*dpr,0,Math.PI*2); ctx.fill();
+    }
+    if(logo.complete && logo.naturalWidth){
+      const scale = Math.min((w*.34)/logo.naturalWidth,(h*.34)/logo.naturalHeight);
+      const lw=logo.naturalWidth*scale, lh=logo.naturalHeight*scale;
+      const cx=w/2+Math.sin(t*.8)*w*.01, cy=h/2+Math.cos(t*.7)*h*.015;
+      const pulse=.5+Math.sin(t*1.5)*.5;
+      ctx.save(); ctx.shadowColor='rgba(0,176,240,.55)'; ctx.shadowBlur=40*dpr+pulse*25*dpr; ctx.globalAlpha=.95;
+      ctx.drawImage(logo,cx-lw/2,cy-lh/2,lw,lh); ctx.restore();
+      ctx.save(); ctx.translate(cx,cy); ctx.rotate(t*.35); ctx.strokeStyle='rgba(0,176,240,.35)'; ctx.lineWidth=1.5*dpr;
+      ctx.beginPath(); ctx.ellipse(0,0,lw*.72,lh*.52,0,0,Math.PI*2); ctx.stroke();
+      ctx.fillStyle='#7fdcff';
+      for(let k=0;k<3;k++){const a=t*1.2+k*Math.PI*2/3; ctx.beginPath(); ctx.arc(Math.cos(a)*lw*.72,Math.sin(a)*lh*.52,3.5*dpr,0,Math.PI*2); ctx.fill();}
+      ctx.restore();
+    }
+    raf = requestAnimationFrame(draw);
+  }
+  window.addEventListener('resize', () => { if(running){ resize(); build(); } });
+  return {
+    start(){ if(running) return; running=true; resize(); build(); draw(); },
+    stop(){ running=false; cancelAnimationFrame(raf); }
+  };
+})();
+
+function setSeg(which){
+  document.querySelectorAll('.seg button').forEach(b=>b.setAttribute('aria-selected', b.dataset.seg===which ? 'true':'false'));
+  document.querySelectorAll('.product-links a').forEach(a=>{
+    a.style.display = a.dataset.for===which ? 'flex' : 'none';
+  });
+  document.querySelectorAll('.mobile-drawer a[data-for]').forEach(a=>{
+    a.style.display = a.dataset.for===which ? 'block' : 'none';
+  });
+  document.body.classList.toggle('mode-custom', which === 'custom');
+  const c = heroCopy[which] || heroCopy.everyday;
+  const eyebrow = document.getElementById('hero-eyebrow');
+  const title = document.getElementById('hero-title');
+  const copy = document.getElementById('hero-copy');
+  if(eyebrow) eyebrow.textContent = c.eyebrow;
+  if(title) title.textContent = c.title;
+  if(copy) copy.textContent = c.copy;
+  if(which === 'custom'){ heroVideo.pause(); heroCanvas.start(); }
+  else { heroCanvas.stop(); heroVideo.resume(); }
+}
+setSeg('everyday');
+function toggleMenu(){
+  document.getElementById('mobile-drawer').classList.toggle('open');
+}
 
 // Reel-like cards: active state + auto-cycle with progress
 (function(){
