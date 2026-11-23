@@ -66,14 +66,14 @@ footer{padding:36px 0 48px;border-top:1px solid var(--line);color:var(--ink-soft
 .showcase-feature .cap{padding:18px 20px;border-top:1px solid var(--line)}
 .showcase-feature h3{font-family:"Sora",sans-serif;font-size:20px;font-weight:700;letter-spacing:-.02em;margin-bottom:4px}
 .showcase-feature p{color:var(--ink-soft);font-size:15px;margin:0}
-.showcase-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px;align-items:start}
-.showcase-card{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--card)}
+.showcase-grid{column-count:3;column-gap:18px;margin-top:18px}
+.showcase-card{break-inside:avoid;margin-bottom:18px;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--card);display:inline-block;width:100%}
 .showcase-card img{width:100%;height:auto;display:block;border-bottom:1px solid var(--line)}
 .showcase-card .cap{padding:14px 16px}
 .showcase-card h3{font-family:"Sora",sans-serif;font-size:16px;font-weight:700;letter-spacing:-.02em;margin-bottom:4px}
 .showcase-card p{color:var(--ink-soft);font-size:14px;margin:0;line-height:1.5}
-@media(max-width:900px){.showcase-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:640px){.showcase-grid{grid-template-columns:1fr}}
+@media(max-width:900px){.showcase-grid{column-count:2}}
+@media(max-width:640px){.showcase-grid{column-count:1}}
 </style>
 </head>
 <body>
@@ -156,12 +156,12 @@ footer{padding:36px 0 48px;border-top:1px solid var(--line);color:var(--ink-soft
       </article>
       <div class="showcase-grid">
         <article class="showcase-card"><img src="/school-pro/full-view-student.png" alt="School Pro student profile"><div class="cap"><h3>Student profiles</h3><p>Full student records in one place.</p></div></article>
-        <article class="showcase-card"><img src="/school-pro/sms-report.png" alt="School Pro SMS report"><div class="cap"><h3>SMS reports</h3><p>Send and track messages to parents and staff.</p></div></article>
-        <article class="showcase-card"><img src="/school-pro/audit-log.png" alt="School Pro audit log"><div class="cap"><h3>Audit log</h3><p>See who did what and when for accountability.</p></div></article>
         <article class="showcase-card"><img src="/school-pro/backup-manager-.png" alt="School Pro backup manager"><div class="cap"><h3>Backup manager</h3><p>Keep school data safe with backups.</p></div></article>
-        <article class="showcase-card"><img src="/school-pro/chatbot.png" alt="School Pro chatbot"><div class="cap"><h3>Chatbot</h3><p>Quick help and answers inside the system.</p></div></article>
-        <article class="showcase-card"><img src="/school-pro/flagging-system.png" alt="School Pro flagging system"><div class="cap"><h3>Flagging system</h3><p>Flag issues and follow up on what needs attention.</p></div></article>
         <article class="showcase-card"><img src="/school-pro/Screenshot-2026-11-20-111552.png" alt="School Pro screen"><div class="cap"><h3>School management</h3><p>Day-to-day school operations in one view.</p></div></article>
+        <article class="showcase-card"><img src="/school-pro/sms-report.png" alt="School Pro SMS report"><div class="cap"><h3>SMS reports</h3><p>Send and track messages to parents and staff.</p></div></article>
+        <article class="showcase-card"><img src="/school-pro/chatbot.png" alt="School Pro chatbot"><div class="cap"><h3>Chatbot</h3><p>Quick help and answers inside the system.</p></div></article>
+        <article class="showcase-card"><img src="/school-pro/audit-log.png" alt="School Pro audit log"><div class="cap"><h3>Audit log</h3><p>See who did what and when for accountability.</p></div></article>
+        <article class="showcase-card"><img src="/school-pro/flagging-system.png" alt="School Pro flagging system"><div class="cap"><h3>Flagging system</h3><p>Flag issues and follow up on what needs attention.</p></div></article>
         <article class="showcase-card"><img src="/school-pro/Screenshot-2026-11-20-154617.png" alt="School Pro screen"><div class="cap"><h3>Clear overview</h3><p>Key information where staff need it.</p></div></article>
       </div>
     </div>
