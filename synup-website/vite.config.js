@@ -12,7 +12,6 @@ export default defineConfig({
       input: {
         index: resolve(__dirname, 'index.html'),
         projects: resolve(__dirname, 'projects.html'),
-        design: resolve(__dirname, 'design.html'),
         school: resolve(__dirname, 'school-solution.html'),
         hotel: resolve(__dirname, 'hotel-solution.html'),
         autoparts: resolve(__dirname, 'autoparts-solution.html'),
