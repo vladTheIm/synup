@@ -733,7 +733,7 @@ function toggleMenu(){
       pin: true,
       scrub: 1,
       start: 'top top+=72',
-      end: () => '+=' + getScroll(),
+      end: () => '+=' + Math.round(getScroll() * 0.55),
       invalidateOnRefresh: true
     }
   });
