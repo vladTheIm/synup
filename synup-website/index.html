@@ -158,7 +158,7 @@ footer{padding:36px 0 48px;border-top:1px solid var(--line);color:var(--ink-soft
         <a href="#services" data-for="everyday" class="active">Systems</a>
         <a href="#services" data-for="everyday">Websites</a>
         <a href="#services" data-for="everyday">Networks</a>
-        <a href="#services" data-for="everyday">Design</a>
+        <a href="/design.html" data-for="everyday">Design</a>
         <a href="/school-solution.html" data-for="custom">School Pro</a>
         <a href="/hotel-solution.html" data-for="custom">Hotel Pro</a>
         <a href="/autoparts-solution.html" data-for="custom">AutoParts</a>
@@ -227,6 +227,12 @@ footer{padding:36px 0 48px;border-top:1px solid var(--line);color:var(--ink-soft
           <img src="/app-login-autoparts.png" alt="Hotel Pro login screen">
           <div class="meta"><strong>Hotel Pro</strong><span>Hotel management</span></div>
         </a>
+        <div class="app-card" data-reel>
+          <div class="progress"><span><i></i></span></div>
+          <div class="chip"><b></b> VotSystem</div>
+          <img src="/v-login.png" alt="VotSystem login screen">
+          <div class="meta"><strong>VotSystem</strong><span>Voting system</span></div>
+        </div>
       </div>
     </div>
   </section>
@@ -258,11 +264,14 @@ footer{padding:36px 0 48px;border-top:1px solid var(--line);color:var(--ink-soft
             </div>
           </article>
           <article class="work-card">
+            <div class="media"><img src="/perfume-web.png" alt="Reages Perfumery website"></div>
             <div class="body">
-              <div class="label">Booking · Nailed by Kay</div>
-              <h3>Missed DMs turned into an online booking flow.</h3>
-              <p><strong>Before:</strong> Bookings came through DMs and phone calls and were easy to miss.</p>
-              <p><strong>After:</strong> Customers book online. Afia, CEO, says weekly bookings grew from around 15 to over 40.</p>
+              <div class="label">Website · Reages Perfumery</div>
+              <h3>A perfume brand with a real place online.</h3>
+              <p><strong>Before:</strong> Customers had no simple website to browse the brand and find what they needed.</p>
+              <p><strong>After:</strong> A clean website that shows the perfumes, tells the brand story, and makes it easy for customers to reach out.</p>
+              <img src="/perfume.png" alt="Reages Perfumery mobile view" style="width:100%;border-radius:12px;margin:10px 0 12px;border:1px solid var(--line)">
+              <a class="link" href="https://vladtheim.github.io/perfume-free/" target="_blank" rel="noopener">Visit Reages Perfumery <i class="ti ti-arrow-up-right"></i></a>
             </div>
           </article>
           <article class="work-card">
@@ -364,7 +373,7 @@ function toggleMenu(){
 
 // Hero video playlist (cropped clips, not full length)
 (function(){
-  const vids = ['/hero-2.mov','/hero-3.mov'];
+  const vids = ['/hero-1.mp4','/hero-2.mp4','/hero-3.mp4'];
   const v = document.getElementById('hero-video');
   if(!v) return;
   let i = 0, clipTimer;

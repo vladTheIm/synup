@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Design | SynUp</title>
+<meta name="description" content="Design by SynUp — logos, flyers, social graphics, and brand visuals for businesses in Kumasi and beyond." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.32.0/dist/tabler-icons.min.css" />
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{color-scheme:light dark;--paper:#f4efe6;--ink:#161412;--ink-soft:rgba(22,20,18,.72);--ink-faint:rgba(22,20,18,.5);--accent:#00b0f0;--accent-dark:#0086c9;--line:rgba(22,20,18,.12);--card:#fbf8f2;--header-bg:rgba(244,239,230,.94)}
+@media(prefers-color-scheme:dark){:root{--paper:#0f1418;--ink:#eaf2f7;--ink-soft:rgba(234,242,247,.72);--ink-faint:rgba(234,242,247,.5);--accent:#00b0f0;--accent-dark:#4fd2ff;--line:rgba(234,242,247,.14);--card:#151c22;--header-bg:rgba(15,20,24,.88)}}
+body{font-family:"Sora",system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6}
+img{max-width:100%;display:block} a{color:inherit}
+h1,h2,h3{font-family:"Sora",system-ui,sans-serif;font-weight:400;line-height:1.1;letter-spacing:-.04em}
+.container{width:min(1200px,100% - 48px);margin:0 auto}
+.topbar{position:sticky;top:0;z-index:50;background:var(--header-bg);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.topbar-inner{display:flex;align-items:center;justify-content:space-between;min-height:72px;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:700}.brand img{height:34px;width:auto}.brand span{font-family:"Sora",sans-serif;font-size:22px;font-weight:700;letter-spacing:-.03em}
+.nav{display:flex;gap:18px;align-items:center}.nav a{text-decoration:none;font-size:14px;font-weight:600;letter-spacing:-.02em;color:var(--ink-soft)}.nav a:hover,.nav a.active{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 18px;border-radius:999px;text-decoration:none;font-weight:700;letter-spacing:-.03em;font-size:14px;border:1.5px solid var(--ink);transition:background .2s,color .2s}
+.btn-primary{background:var(--accent);border-color:var(--accent);color:#041018}.btn-primary:hover{background:var(--accent-dark)}
+.btn-outline{background:transparent}
+.hero{padding:72px 0 40px}
+.kicker{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+.hero h1{font-size:clamp(40px,6vw,72px);margin-bottom:16px}
+.lead{font-size:19px;color:var(--ink-soft);max-width:720px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.canvas-wrap{margin-top:42px;border:1px solid var(--line);border-radius:28px;overflow:hidden;background:#05090c;position:relative;min-height:520px}
+#logo-canvas{display:block;width:100%;height:520px}
+.canvas-label{position:absolute;left:24px;bottom:24px;z-index:2;color:rgba(247,251,255,.78);font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;background:rgba(5,9,12,.45);padding:8px 12px;border-radius:999px;border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(6px)}
+section{padding:72px 0}
+.section-head{margin-bottom:34px}
+.section-head h2{font-size:clamp(30px,4vw,52px);margin-bottom:12px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{border:1px solid var(--line);background:var(--card);border-radius:20px;padding:22px}
+.card .icon{width:44px;height:44px;border-radius:12px;display:inline-flex;align-items:center;justify-content:center;background:rgba(0,176,240,.12);color:var(--accent);font-size:22px;margin-bottom:14px}
+.card h3{font-family:"Sora",sans-serif;font-size:20px;font-weight:700;letter-spacing:-.02em;margin-bottom:8px}
+.card p{color:var(--ink-soft);font-size:15px}
+.cta{background:#0b141a;color:#eaf2f7;border-radius:24px;padding:36px;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;border:1px solid rgba(0,176,240,.25)}
+.cta h2{color:#f7fbff;margin:0;font-size:34px}.cta p{color:rgba(234,242,247,.8);margin-top:6px}
+footer{padding:36px 0 48px;border-top:1px solid var(--line);color:var(--ink-soft);font-size:14px}
+.footer-inner{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+@media(max-width:900px){.nav{display:none}.grid{grid-template-columns:1fr}#logo-canvas,.canvas-wrap{min-height:420px;height:420px}}
+@media(max-width:640px){.container{width:min(1200px,100% - 32px)}.hero{padding:48px 0 24px}#logo-canvas,.canvas-wrap{min-height:320px;height:320px}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="container topbar-inner">
+    <a href="/" class="brand"><img src="/logo.png" alt="SynUp"><span>SynUp</span></a>
+    <nav class="nav">
+      <a href="/">Home</a>
+      <a href="/projects.html">Projects</a>
+      <a href="/design.html" class="active">Design</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+    <a class="btn btn-primary" href="https://wa.me/233549984981?text=Hi%20SynUp%2C%20I%20need%20help%20with%20design." target="_blank" rel="noopener"><i class="ti ti-brand-whatsapp"></i> WhatsApp us</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container">
+      <div class="kicker">Design</div>
+      <h1>Design that makes your business clear.</h1>
+      <p class="lead">Logos, flyers, social graphics, and brand visuals that look consistent wherever people see your name. Built for businesses in Kumasi and beyond.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="https://wa.me/233549984981?text=Hi%20SynUp%2C%20I%20need%20help%20with%20design." target="_blank" rel="noopener"><i class="ti ti-brand-whatsapp"></i> Message us on WhatsApp</a>
+        <a class="btn btn-outline" href="https://wa.me/233549984981?text=Hi%20SynUp%2C%20I%27d%20like%20to%20book%20a%20free%20site%20visit." target="_blank" rel="noopener">Book a free site visit</a>
+      </div>
+
+      <div class="canvas-wrap" aria-label="Animated SynUp logo canvas">
+        <canvas id="logo-canvas"></canvas>
+        <div class="canvas-label">SynUp visual identity</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-head">
+        <div class="kicker">What we design</div>
+        <h2>Visuals people remember.</h2>
+        <p class="lead">From a logo to the flyer you post tomorrow, we keep your look clean and consistent.</p>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <div class="icon"><i class="ti ti-vector-bezier"></i></div>
+          <h3>Logos & identity</h3>
+          <p>A clear mark and visual style that works on signs, socials, and documents.</p>
+        </div>
+        <div class="card">
+          <div class="icon"><i class="ti ti-photo"></i></div>
+          <h3>Flyers & posters</h3>
+          <p>Promotional designs for events, products, and offers that are easy to read at a glance.</p>
+        </div>
+        <div class="card">
+          <div class="icon"><i class="ti ti-brand-instagram"></i></div>
+          <h3>Social graphics</h3>
+          <p>Templates and posts that keep your brand looking consistent across platforms.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="container">
+      <div class="cta">
+        <div>
+          <h2>Need design for your business?</h2>
+          <p>Tell us what you’re working on and we’ll make it look right.</p>
+        </div>
+        <a class="btn btn-primary" style="border-color:var(--accent)" href="https://wa.me/233549984981?text=Hi%20SynUp%2C%20I%20need%20help%20with%20design." target="_blank" rel="noopener">Message us on WhatsApp</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <div>SynUp · Kumasi, Ghana · hello@synupdigital.com · +233 54 998 4981</div>
+    <div style="display:flex;gap:14px"><a href="/">Home</a><a href="/projects.html">Projects</a></div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  const canvas = document.getElementById('logo-canvas');
+  const ctx = canvas.getContext('2d');
+  const logo = new Image();
+  logo.src = '/logo.png';
+  let w=0,h=0,dpr=1,particles=[],mouse={x:0,y:0,active:false},t=0;
+
+  function resize(){
+    const r = canvas.getBoundingClientRect();
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    w = Math.floor(r.width * dpr);
+    h = Math.floor(r.height * dpr);
+    canvas.width = w; canvas.height = h;
+  }
+
+  function buildParticles(){
+    particles = [];
+    const count = Math.min(140, Math.floor(w*dpr/12));
+    for(let i=0;i<count;i++){
+      particles.push({
+        x: Math.random()*w,
+        y: Math.random()*h,
+        r: Math.random()*2.2 + 0.6,
+        vx: (Math.random()-0.5)*0.35,
+        vy: (Math.random()-0.5)*0.35,
+        a: Math.random()*0.6 + 0.15
+      });
+    }
+  }
+
+  function draw(){
+    t += 0.008;
+    ctx.clearRect(0,0,w,h);
+    const g = ctx.createRadialGradient(w*0.5,h*0.45,10,w*0.5,h*0.5,Math.max(w,h)*0.7);
+    g.addColorStop(0,'#0b2230');
+    g.addColorStop(1,'#05090c');
+    ctx.fillStyle = g;
+    ctx.fillRect(0,0,w,h);
+
+    // grid glow
+    ctx.save();
+    ctx.globalAlpha = 0.12;
+    ctx.strokeStyle = '#00b0f0';
+    ctx.lineWidth = 1;
+    const gap = Math.max(36, Math.floor(w/24));
+    const ox = (Math.sin(t)*20);
+    for(let x=-gap; x<w+gap; x+=gap){ ctx.beginPath(); ctx.moveTo(x+ox,0); ctx.lineTo(x-ox,h); ctx.stroke(); }
+    for(let y=-gap; y<h+gap; y+=gap){ ctx.beginPath(); ctx.moveTo(0,y); ctx.lineTo(w,y); ctx.stroke(); }
+    ctx.restore();
+
+    // particles
+    for(const p of particles){
+      p.x += p.vx + Math.sin(t + p.y*0.002)*0.15;
+      p.y += p.vy + Math.cos(t + p.x*0.002)*0.12;
+      if(p.x < -10) p.x = w+10; if(p.x > w+10) p.x = -10;
+      if(p.y < -10) p.y = h+10; if(p.y > h+10) p.y = -10;
+      ctx.beginPath();
+      ctx.fillStyle = `rgba(0,176,240,${p.a})`;
+      ctx.arc(p.x,p.y,p.r*dpr,0,Math.PI*2);
+      ctx.fill();
+    }
+
+    // logo
+    if(logo.complete && logo.naturalWidth){
+      const maxW = w * 0.34;
+      const maxH = h * 0.34;
+      const scale = Math.min(maxW/logo.naturalWidth, maxH/logo.naturalHeight);
+      const lw = logo.naturalWidth * scale;
+      const lh = logo.naturalHeight * scale;
+      const cx = w/2 + Math.sin(t*0.8)*w*0.01;
+      const cy = h/2 + Math.cos(t*0.7)*h*0.015;
+      const pulse = 0.5 + Math.sin(t*1.5)*0.5;
+      ctx.save();
+      ctx.shadowColor = 'rgba(0,176,240,0.55)';
+      ctx.shadowBlur = 40*dpr + pulse*25*dpr;
+      ctx.globalAlpha = 0.95;
+      ctx.drawImage(logo, cx-lw/2, cy-lh/2, lw, lh);
+      ctx.restore();
+
+      // orbit ring
+      ctx.save();
+      ctx.translate(cx,cy);
+      ctx.rotate(t*0.35);
+      ctx.strokeStyle = 'rgba(0,176,240,0.35)';
+      ctx.lineWidth = 1.5*dpr;
+      ctx.beginPath();
+      ctx.ellipse(0,0,lw*0.72, lh*0.52, 0, 0, Math.PI*2);
+      ctx.stroke();
+      ctx.fillStyle = '#7fdcff';
+      for(let i=0;i<3;i++){
+        const a = t*1.2 + i*Math.PI*2/3;
+        const x = Math.cos(a)*lw*0.72;
+        const y = Math.sin(a)*lh*0.52;
+        ctx.beginPath(); ctx.arc(x,y,3.5*dpr,0,Math.PI*2); ctx.fill();
+      }
+      ctx.restore();
+    }
+
+    requestAnimationFrame(draw);
+  }
+
+  window.addEventListener('resize', () => { resize(); buildParticles(); });
+  resize();
+  buildParticles();
+  logo.onload = () => {};
+  draw();
+})();
+</script>
+</body>
+</html>
