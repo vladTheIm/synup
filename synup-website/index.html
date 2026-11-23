@@ -160,9 +160,19 @@ footer{padding:36px 0 48px;border-top:1px solid var(--line);color:var(--ink-soft
 .design-card p{color:var(--ink-soft);font-size:15px;margin:0}
 #branding{padding-bottom:0;overflow:clip}
 .brand-pin-wrap{overflow:hidden}
-.brand-track{display:flex;gap:24px;padding:10px max(24px,calc((100vw - 1200px)/2 + 24px)) 40px;will-change:transform}
-.brand-item{flex:0 0 clamp(280px,72vw,420px);aspect-ratio:3/4;border-radius:18px;overflow:hidden;border:1px solid var(--line);background:var(--card);box-shadow:0 16px 28px rgba(0,0,0,.08)}
+.brand-track{display:flex;gap:28px;align-items:center;padding:60px max(24px,calc((100vw - 1200px)/2 + 24px)) 80px;will-change:transform;min-height:78vh}
+.brand-item{flex:0 0 clamp(280px,68vw,400px);aspect-ratio:3/4;border-radius:18px;overflow:hidden;border:1px solid var(--line);background:var(--card);box-shadow:0 16px 28px rgba(0,0,0,.08);transition:transform .3s ease}
 .brand-item img{width:100%;height:100%;object-fit:cover;display:block;pointer-events:none}
+.brand-item:nth-child(1){transform:translateY(-52px) rotate(-2deg)}
+.brand-item:nth-child(2){transform:translateY(36px) rotate(1.5deg)}
+.brand-item:nth-child(3){transform:translateY(-28px) rotate(-1.2deg)}
+.brand-item:nth-child(4){transform:translateY(48px) rotate(1.8deg)}
+.brand-item:nth-child(5){transform:translateY(-18px) rotate(-1deg)}
+.brand-item:nth-child(6){transform:translateY(40px) rotate(1.4deg)}
+.brand-item:nth-child(7){transform:translateY(-44px) rotate(-1.8deg)}
+.brand-item:nth-child(8){transform:translateY(24px) rotate(1.1deg)}
+.brand-item:nth-child(9){transform:translateY(-34px) rotate(-1.5deg)}
+.brand-item:nth-child(10){transform:translateY(32px) rotate(1.2deg)}
 @media(max-width:900px){.design-grid{grid-template-columns:1fr}.design-canvas-wrap,.design-canvas-wrap canvas{min-height:320px;height:320px}}
 </style>
 </head>
