@@ -15,7 +15,8 @@ export default defineConfig({
         school: resolve(__dirname, 'school-solution.html'),
         hotel: resolve(__dirname, 'hotel-solution.html'),
         autoparts: resolve(__dirname, 'autoparts-solution.html'),
-        church: resolve(__dirname, 'church-solution.html')
+        church: resolve(__dirname, 'church-solution.html'),
+        votsystem: resolve(__dirname, 'votsystem-solution.html')
       }
     }
   }

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>VotSystem | Voting system project | SynUp</title>
+<meta name="description" content="VotSystem is a voting system built by SynUp for AAMUSTED IT Class E Group 2, Batch of 2024." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.32.0/dist/tabler-icons.min.css" />
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{color-scheme:light dark;--paper:#f4efe6;--ink:#161412;--ink-soft:rgba(22,20,18,.72);--ink-faint:rgba(22,20,18,.5);--accent:#00b0f0;--accent-dark:#0086c9;--line:rgba(22,20,18,.12);--card:#fbf8f2;--header-bg:rgba(244,239,230,.94)}
+@media(prefers-color-scheme:dark){:root{--paper:#0f1418;--ink:#eaf2f7;--ink-soft:rgba(234,242,247,.72);--ink-faint:rgba(234,242,247,.5);--accent:#00b0f0;--accent-dark:#4fd2ff;--line:rgba(234,242,247,.14);--card:#151c22;--header-bg:rgba(15,20,24,.88)}}
+body{font-family:"Sora",system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6}
+img{max-width:100%;display:block} a{color:inherit}
+h1,h2,h3{font-family:"Sora",system-ui,sans-serif;font-weight:400;line-height:1.1;letter-spacing:-.04em}
+.container{width:min(1100px,100% - 48px);margin:0 auto}
+.topbar{position:sticky;top:0;z-index:50;background:var(--header-bg);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.topbar-inner{display:flex;align-items:center;justify-content:space-between;min-height:72px;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:700}.brand img{height:34px;width:auto}.brand span{font-family:"Sora",sans-serif;font-size:22px;font-weight:700;letter-spacing:-.03em}
+.nav{display:flex;gap:18px;align-items:center}.nav a{text-decoration:none;font-size:14px;font-weight:600;letter-spacing:-.02em;color:var(--ink-soft)}.nav a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 18px;border-radius:999px;text-decoration:none;font-weight:700;letter-spacing:-.03em;font-size:14px;border:1.5px solid var(--ink);transition:background .2s,color .2s}
+.btn-primary{background:var(--accent);border-color:var(--accent);color:#041018}.btn-primary:hover{background:var(--accent-dark)}
+.btn-outline{background:transparent}
+.hero{padding:64px 0 40px}.back{display:inline-flex;align-items:center;gap:6px;text-decoration:none;color:var(--ink-soft);font-weight:600;font-size:14px;margin-bottom:24px}
+.kicker{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+h1{font-size:clamp(38px,6vw,68px);letter-spacing:-.03em;margin-bottom:16px}
+.lead{font-size:19px;color:var(--ink-soft);max-width:720px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:start;margin-top:36px}
+.shot{border:1px solid var(--line);border-radius:20px;overflow:hidden;background:var(--card)}.shot img{width:100%;height:auto}
+section{padding:56px 0}
+h2{font-size:clamp(28px,4vw,42px);letter-spacing:-.02em;margin-bottom:14px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:24px}
+.feature{border-top:1.5px solid var(--ink);padding:16px 0}.feature h3{font-family:"Sora",sans-serif;font-size:18px;font-weight:700;margin-bottom:6px}.feature p{color:var(--ink-soft);font-size:15px}
+.cta{background:#0b141a;color:#eaf2f7;border-radius:24px;padding:36px;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;border:1px solid rgba(0,176,240,.25)}
+.cta h2{color:#f7fbff;margin:0;font-size:34px}.cta p{color:rgba(234,242,247,.8);margin-top:6px}
+footer{padding:36px 0 48px;border-top:1px solid var(--line);color:var(--ink-soft);font-size:14px}
+.footer-inner{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+@media(max-width:900px){.nav{display:none}.hero-grid,.grid{grid-template-columns:1fr}}
+@media(max-width:640px){.container{width:min(1100px,100% - 32px)}.hero{padding:40px 0 24px}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="container topbar-inner">
+    <a href="/" class="brand"><img src="/logo.png" alt="SynUp"><span>SynUp</span></a>
+    <nav class="nav">
+      <a href="/">Home</a>
+      <a href="/projects.html">Projects</a>
+      <a href="/school-solution.html">School Pro</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+    <a class="btn btn-primary" href="https://wa.me/233549984981?text=Hi%20SynUp%2C%20I%27d%20like%20to%20ask%20about%20a%20voting%20system." target="_blank" rel="noopener"><i class="ti ti-brand-whatsapp"></i> WhatsApp us</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container">
+      <a class="back" href="/#work"><i class="ti ti-arrow-left"></i> Back to work</a>
+      <div class="kicker">Project · VotSystem</div>
+      <h1>A voting system for student elections.</h1>
+      <p class="lead">VotSystem is a voting system built by SynUp for AAMUSTED IT Class E Group 2, Batch of 2024. It was designed to make student elections clear, organized, and easy to run.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="https://wa.me/233549984981?text=Hi%20SynUp%2C%20I%27d%20like%20to%20ask%20about%20a%20voting%20system." target="_blank" rel="noopener"><i class="ti ti-brand-whatsapp"></i> Ask about a similar project</a>
+      </div>
+      <div class="hero-grid">
+        <div class="shot"><img src="/votesystem.png" alt="VotSystem voting interface"></div>
+        <div>
+          <p class="lead" style="font-size:17px">A contracted student project built to handle the real flow of an election — from setup to voting to results.</p>
+          <p style="color:var(--ink-soft);font-size:15px;margin-top:14px"><strong>Client:</strong> AAMUSTED IT Class E Group 2, Batch of 2024.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>What it handles</h2>
+      <div class="grid">
+        <div class="feature"><h3>Election setup</h3><p>Organize positions, candidates, and voting details in one place.</p></div>
+        <div class="feature"><h3>Simple voting</h3><p>A clear voting flow so students can cast their votes without confusion.</p></div>
+        <div class="feature"><h3>Organized process</h3><p>Keep the election process structured and easy to manage.</p></div>
+        <div class="feature"><h3>Built for the client</h3><p>Designed around the needs of AAMUSTED IT Class E Group 2’s election.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="cta">
+        <div>
+          <h2>Need a custom system?</h2>
+          <p>We build systems for schools, businesses, and organizations. Tell us what you need.</p>
+        </div>
+        <a class="btn btn-primary" style="border-color:var(--accent)" href="https://wa.me/233549984981?text=Hi%20SynUp%2C%20I%27d%20like%20to%20talk%20about%20a%20custom%20system." target="_blank" rel="noopener">Message us on WhatsApp</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <div>SynUp · Kumasi, Ghana · hello@synupdigital.com · +233 54 998 4981</div>
+    <div style="display:flex;gap:14px"><a href="/">Home</a><a href="/projects.html">Projects</a></div>
+  </div>
+</footer>
+</body>
+</html>
