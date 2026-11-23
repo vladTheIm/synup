@@ -35,6 +35,14 @@ section{padding:56px 0}
 h2{font-size:clamp(28px,4vw,42px);letter-spacing:-.02em;margin-bottom:14px}
 .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:24px}
 .feature{border-top:1.5px solid var(--ink);padding:16px 0}.feature h3{font-family:"Sora",sans-serif;font-size:18px;font-weight:700;margin-bottom:6px}.feature p{color:var(--ink-soft);font-size:15px}
+.guide-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:28px}
+.guide-card{border:1px solid var(--line);border-radius:20px;overflow:hidden;background:var(--card)}
+.guide-card img{width:100%;height:auto;display:block;border-bottom:1px solid var(--line)}
+.guide-card .body{padding:18px}
+.guide-card .step{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+.guide-card h3{font-family:"Sora",sans-serif;font-size:18px;font-weight:700;letter-spacing:-.02em;margin-bottom:6px}
+.guide-card p{color:var(--ink-soft);font-size:14px;margin:0;line-height:1.6}
+@media(max-width:900px){.guide-grid{grid-template-columns:1fr}}
 .cta{background:#0b141a;color:#eaf2f7;border-radius:24px;padding:36px;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;border:1px solid rgba(0,176,240,.25)}
 .cta h2{color:#f7fbff;margin:0;font-size:34px}.cta p{color:rgba(234,242,247,.8);margin-top:6px}
 footer{padding:36px 0 48px;border-top:1px solid var(--line);color:var(--ink-soft);font-size:14px}
@@ -85,6 +93,40 @@ footer{padding:36px 0 48px;border-top:1px solid var(--line);color:var(--ink-soft
         <div class="feature"><h3>Simple voting</h3><p>A clear voting flow so students can cast their votes without confusion.</p></div>
         <div class="feature"><h3>Organized process</h3><p>Keep the election process structured and easy to manage.</p></div>
         <div class="feature"><h3>Built for the client</h3><p>Designed around the needs of AAMUSTED IT Class E Group 2’s election.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+    <div class="container">
+      <div class="kicker">Admin management</div>
+      <h2>How admins manage elections in VotSystem</h2>
+      <p class="lead" style="max-width:760px">From voter groups and centre verification to ballot setup, live monitoring, and results — admins have one clear workflow for running elections.</p>
+      <div class="guide-grid">
+        <article class="guide-card">
+          <img src="/vote/vote-admin.png" alt="VotSystem admin dashboard">
+          <div class="body"><div class="step">Step 1</div><h3>Admin dashboard</h3><p>Admins sign in to a central dashboard with access to reports, elections, voters, ballot structure, and configuration.</p></div>
+        </article>
+        <article class="guide-card">
+          <img src="/vote/reg-centers-admin.png" alt="Registration centres and schedule">
+          <div class="body"><div class="step">Step 2</div><h3>Centres and schedule</h3><p>Set up registration centres, generate daily batches, and manage capacity so voters can book and attend verification slots.</p></div>
+        </article>
+        <article class="guide-card">
+          <img src="/vote/verification-and-registering-admin.png" alt="Verify and register voters">
+          <div class="body"><div class="step">Step 3</div><h3>Verify and register voters</h3><p>At the centre, staff find bookings, check ID, capture details, assign voter groups, and activate voter accounts.</p></div>
+        </article>
+        <article class="guide-card">
+          <img src="/vote/positions.png" alt="Election positions setup">
+          <div class="body"><div class="step">Step 4</div><h3>Positions and ballot setup</h3><p>Create elections, choose audience groups, set opening/closing times, and define positions, candidates, and ballot order.</p></div>
+        </article>
+        <article class="guide-card">
+          <img src="/vote/booking-management-admin.png" alt="Booking management">
+          <div class="body"><div class="step">Step 5</div><h3>Bookings and operations</h3><p>Track bookings, reschedules, attendance, and voter flow while the election process is running.</p></div>
+        </article>
+        <article class="guide-card">
+          <img src="/vote/live-results-admin.png" alt="Live results and monitoring">
+          <div class="body"><div class="step">Step 6</div><h3>Monitor and view results</h3><p>Monitor risk flags during voting, set election timers, and view results after the election closes.</p></div>
+        </article>
       </div>
     </div>
   </section>
